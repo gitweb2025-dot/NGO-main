@@ -113,7 +113,7 @@
 
         <div class="hidden md:flex text-sm font-medium">
           <a
-            class="px-6 py-2 bg-orange-500 rounded-3xl text-white text-sm"
+            class="px-6 py-3 bg-orange-500 rounded-3xl text-white text-sm"
             href="./404.html"
             >Donate Now</a
           >
@@ -178,7 +178,7 @@
 
     <!-- Home  -->
     <section
-      class="relative m-4 rounded-4xl min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-yellow-400 via-orange-500 to-yellow-700 dark:from-yellow-900 dark:via-yellow-800 dark:to-yellow-950 transition-colors duration-700 overflow-hidden"
+      class="relative m-4 rounded-4xl min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-yellow-400 via-orange-500 to-yellow-700 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 transition-colors duration-700 overflow-hidden"
     >
       <div class="absolute w-full h-full">
         <img
@@ -192,10 +192,10 @@
       <div class="relative z-10 text-center p-4 m-4">
         <!-- Headline -->
         <h1
-          class="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-yellow-200 dark:from-yellow-400 dark:to-yellow-600 opacity-0 translate-y-10 animate-hero"
+          class="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-yellow-200 dark:from-orange-400 dark:to-orange-600 opacity-0 translate-y-10 animate-hero"
         >
           Empowering
-          <span class="decoration-white/40 dark:decoration-yellow-600"
+          <span class="decoration-white/40 dark:decoration-orange-600"
             >Communities</span
           >
           Together
@@ -256,6 +256,80 @@
       }
     </style>
 
+    <!-- Scroll-section  -->
+
+    <section class="dark:text-black my-12">
+      <div
+        class="text-4xl md:text-5xl font-extrabold text-center dark:text-white"
+      >
+        <h1 class="pb-8">Our Top Donors</h1>
+        <p class="text-sm font-light">
+          We believe true impact is only possible when compassionate people come
+          together. Our donors are the heart of our mission—each contribution
+          helps us provide hope, dignity, and opportunities to those in need.
+        </p>
+      </div>
+
+      <div
+        class="overflow-hidden w-full relative max-w-5xl mx-auto select-none my-8"
+      >
+        <div
+          class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent dark:from-gray-950 dark:to-transparent"
+        ></div>
+
+        <div class="marquee-inner flex will-change-transform min-w-[200%]">
+          <div class="flex">
+            <template id="logo-template">
+              <img class="w-full h-full object-cover mx-6" draggable="false" />
+            </template>
+
+            <script>
+              const logos = [
+                "slack",
+                "framer",
+                "netflix",
+                "google",
+                "linkedin",
+                "instagram",
+                "facebook",
+              ];
+
+              const track = document.currentScript.parentElement;
+              const template = document.getElementById("logo-template");
+
+              [...logos, ...logos].forEach((name) => {
+                const img = template.content
+                  .cloneNode(true)
+                  .querySelector("img");
+                img.src = `https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/${name}.svg`;
+                img.alt = name.charAt(0).toUpperCase() + name.slice(1);
+                track.appendChild(img);
+              });
+            </script>
+          </div>
+        </div>
+
+        <div
+          class="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent dark:from-gray-950 dark:to-transparent"
+        ></div>
+      </div>
+      <style>
+        .marquee-inner {
+          animation: marqueeScroll 15s linear infinite;
+        }
+
+        @keyframes marqueeScroll {
+          0% {
+            transform: translateX(0%);
+          }
+
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      </style>
+    </section>
+
     <!-- About  -->
 
     <section
@@ -279,10 +353,10 @@
         <!-- Content -->
         <div class="space-y-6">
           <h2
-            class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight"
+            class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight"
             data-aos="fade-up-left"
           >
-            We Are <span class="text-yellow-500">Change Makers</span>
+            We Are <span class="text-orange-500">Change Makers</span>
           </h2>
           <p
             class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl"
@@ -302,7 +376,7 @@
               class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-500 text-center"
               data-aos="fade-up-right"
             >
-              <div class="text-yellow-500 text-3xl mb-2">👥</div>
+              <div class="text-orange-500 text-3xl mb-2">👥</div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
                 1M+
               </h3>
@@ -314,7 +388,7 @@
               class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-500 text-center"
               data-aos="fade-up-left"
             >
-              <div class="text-yellow-500 text-3xl mb-2">🌍</div>
+              <div class="text-orange-500 text-3xl mb-2">🌍</div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
                 50+
               </h3>
@@ -324,7 +398,7 @@
               class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-500 text-center"
               data-aos="fade-up-right"
             >
-              <div class="text-yellow-500 text-3xl mb-2">⏳</div>
+              <div class="text-orange-500 text-3xl mb-2">⏳</div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
                 25+
               </h3>
@@ -347,7 +421,9 @@
 
     <!-- Banner section  -->
 
-    <section class="dark:bg-gray-950 dark:text-gray-400 mx-auto">
+    <section
+      class="dark:bg-gray-950 dark:text-gray-400 mx-auto overflow-hidden overflow-x-hidden"
+    >
       <div
         class="text-2xl sm:text-3lx md:text-6xl font-bold text-black dark:text-white text-center"
       >
@@ -357,7 +433,11 @@
       <div
         class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center p-12 mx-auto gap-4 w-full"
       >
-        <div class="flex items-center justify-center px-0 gap-8">
+        <div
+          class="flex items-center justify-center px-0 gap-8"
+          data-aos="fade-right"
+          data-aos-delay="50"
+        >
           <img
             class="p-4 rounded-xl object-contain bg-white/5 w-full h-full"
             src="https://img.icons8.com/?size=100&id=24761&format=png&color=000000"
@@ -368,7 +448,11 @@
             <h1 class="text-[15px]">Active Cases</h1>
           </div>
         </div>
-        <div class="flex items-center justify-center gap-8">
+        <div
+          class="flex items-center justify-center gap-8"
+          data-aos="fade-up"
+          data-aos-delay="75"
+        >
           <img
             class="p-4 rounded-xl object-contain bg-white/5 w-full h-full"
             src="https://img.icons8.com/?size=100&id=TfpGQpJYLI6U&format=png&color=000000"
@@ -379,7 +463,11 @@
             <h1 class="text-[15px]">People Donate</h1>
           </div>
         </div>
-        <div class="flex items-center justify-center gap-8">
+        <div
+          class="flex items-center justify-center gap-8"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <img
             class="p-4 rounded-xl object-contain bg-white/5 w-full h-full"
             src="https://img.icons8.com/?size=100&id=65b2uIuWNKJm&format=png&color=000000"
@@ -390,7 +478,11 @@
             <h1 class="text-[15px]">People get help</h1>
           </div>
         </div>
-        <div class="flex items-center justify-center gap-8">
+        <div
+          class="flex items-center justify-center gap-8"
+          data-aos="fade-left"
+          data-aos-delay="125"
+        >
           <img
             class="p-4 rounded-xl object-contain bg-white/5 w-full h-full"
             src="https://img.icons8.com/?size=100&id=AhV8Rz3lEr4R&format=png&color=000000"
@@ -404,16 +496,83 @@
       </div>
     </section>
 
-    <!-- We serve peoples  -->
+    <!-- welcome to charity  -->
 
     <section
-      class="text-black dark:bg-gray-950 dark:text-black pt-6 min-h-screen"
+      class="h-[700px] relative dark:bg-gray-950 text-black dark:text-white overflow-hidden overflow-x-hidden"
     >
+      <div
+        class="grid md:grid-cols-2 justify-center items-center gap-6 p-10 h-full"
+      >
+        <div class="flex flex-col space-y-4 justify-center z-10" >
+          <h1
+            class="text-2xl md:text-4xl lg:text-5xl font-bold"
+            data-aos="zoom-in-up"
+            data-aos-delay="50"
+          >
+            Welcome to our charity
+          </h1>
+
+          <div
+            class="w-36 h-1 bg-orange-500 rounded-full"
+            data-aos="zoom-in-up"
+          ></div>
+
+          <p
+            class="dark:text-gray-400 text-[13px] md:text-[16px]"
+            data-aos="zoom-in-up"
+            data-aos-delay="200"
+          >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Consectetur debitis nesciunt reiciendis, adipisci ipsum, soluta
+            omnis cupiditate magnam inventore illo vero est similique, dolorem
+            maiores optio dolores laudantium perferendis praesentium. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Iste harum
+            tempore doloremque error ut quos ducimus, alias eveniet facere est
+            aperiam. Mollitia perspiciatis quos quidem laboriosam consequuntur
+            dolorem pariatur quia!
+          </p>
+
+          <a href="./404.html"
+            class="bg-transparent border-2 rounded-xl border-orange-700 dark:bg-orange-700 text-black dark:text-white px-4 py-2 max-w-[150px]"
+          >
+            Read More
+          </a>
+        </div>
+
+        <div class="bg-black rounded-4xl" data-aos="fade-up-left">
+          <img
+            class="w-full rounded-4xl"
+            src="https://i.postimg.cc/TYmcG9vp/image.png"
+            alt="image"
+          />
+        </div>
+      </div>
+      <div class="w-full">
+        <img
+          class="w-full object-center h-[700px] object-cover opacity-20 absolute top-0"
+          src="https://i.postimg.cc/8CmdvnXY/image.png"
+          alt="background"
+        />
+      </div>
+    </section>
+
+    <!-- We serve peoples  -->
+
+    <section class="text-black dark:bg-gray-950 dark:text-black pt-6">
       <div class="text-black dark:text-white text-center space-y-8 p-2">
-        <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold">
+        <h1
+          class="text-2xl sm:text-3xl md:text-5xl font-bold"
+          data-aos="zoom-in-right"
+          data-aos-delay="50"
+        >
           We <span class="text-orange-500">serve </span>for peoples
         </h1>
-        <p class="text-[12px] md:text-[16px]">
+        <p
+          class="text-[12px] md:text-[16px]"
+          data-aos="zoom-in-right"
+          data-aos-delay="100"
+        >
           Sedac odio aliquet, fringilla odio eget, tincidunt nunc duis aliquet
           pulvinar ante.
         </p>
@@ -424,6 +583,8 @@
       >
         <div
           class="space-y-4 text-black bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl"
+          data-aos="fade-right"
+          data-aos-delay="50"
         >
           <img
             class="bg-orange-200 rounded-full py-4 px-4"
@@ -438,6 +599,8 @@
         </div>
         <div
           class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl"
+          data-aos="fade-up"
+          data-aos-delay="100"
         >
           <img
             class="bg-orange-200 rounded-full py-4 px-4"
@@ -452,6 +615,8 @@
         </div>
         <div
           class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl"
+          data-aos="fade-left"
+          data-aos-delay="150"
         >
           <img
             class="bg-orange-200 rounded-full py-4 px-4"
@@ -466,6 +631,8 @@
         </div>
         <div
           class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl"
+          data-aos="fade-right"
+          data-aos-delay="150"
         >
           <img
             class="bg-orange-200 rounded-full py-4 px-4"
@@ -480,6 +647,8 @@
         </div>
         <div
           class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl"
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
           <img
             class="bg-orange-200 rounded-full py-4 px-4"
@@ -494,6 +663,8 @@
         </div>
         <div
           class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl"
+          data-aos="fade-left"
+          data-aos-delay="250"
         >
           <img
             class="bg-orange-200 rounded-full py-4 px-4"
@@ -510,8 +681,14 @@
     </section>
 
     <!-- connect with us  -->
-    <section class="dark:bg-gray-950 dark:text-white pt-6">
-      <div class="grid md:grid-cols-2 place-items-center mx-4 md:mx-auto p-6">
+    <section
+      class="dark:bg-gray-950 dark:text-white pt-14 overflow-hidden overflow-x-hidden"
+    >
+      <div
+        class="grid md:grid-cols-2 place-items-center mx-4 md:mx-auto p-6"
+        data-aos="zoom-in-right"
+        data-aos-delay="50"
+      >
         <img
           class="rounded-2xl"
           src="https://i.postimg.cc/NFL4gqRm/image.png"
@@ -526,11 +703,15 @@
               varies between countries and in some instances regions of the
               country. The regulation, the tax treatment, and the way.
             </p>
-            <form class="mt-8 md:flex space-y-4 md:space-y-0 md:space-x-4">
+            <form
+              class="mt-8 md:flex space-y-4 md:space-y-0 md:space-x-4"
+              data-aos="zoom-in-left"
+              data-aos-delay="100"
+            >
               <input
                 type="email"
                 placeholder="Your email address"
-                class="w-full outline-none rounded-md border border-gray-300 p-4 text-gray-900"
+                class="w-full outline-none rounded-md border border-gray-300 p-4 text-white"
               />
               <button
                 type="submit"
@@ -576,6 +757,8 @@
 
     <footer
       class="px-6 md:px-4 lg:px-8 xl:px-16 pt-2 w-full text-gray-500 dark:bg-gray-950"
+      data-aos="fade-up"
+      data-aos-delay="50"
     >
       <div
         class="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6"
