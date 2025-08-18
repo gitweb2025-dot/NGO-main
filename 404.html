@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Error</title>
+
+    <link rel="stylesheet" href="./output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap");
+
+      body {
+        font-family: "Noto Serif Georgian", serif;
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <section
+      class="flex flex-col justify-center items-center h-screen dark:bg-gray-950 p-6"
+    >
+      <div
+        class="flex flex-col items-center justify-center text-sm shadow-2xl rounded-4xl max-w-md border-2 border-gray-100 px-12 py-12"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <!-- <p>
+          <img class="h-16"
+            src="https://img.icons8.com/?size=100&id=45967&format=png&color=000000"
+            alt="not-found"
+          />
+        </p> -->
+        <h1
+          class="text-2xl sm:text-3xl font-bold pb-2 pt-4 bg-gradient-to-r from-red-200 to-red-500 bg-clip-text text-transparent"
+        >
+          404 Not Found
+        </h1>
+        <div class="rounded bg-gradient-to-r from-red-400 to-red-800"></div>
+        <p class="text-gray-400 text-center">
+          The page you are looking for does not exist or has been moved.
+        </p>
+        <a
+          href="./index.html"
+          class="group flex items-center gap-1 shadow-gray-400 bg-white hover:shadow-2xl px-7 py-2.5 text-gray-800 rounded-full mt-6 font-medium active:scale-95 transition-all duration-300 ease-linear"
+        >
+          Back to Home
+          <svg
+            class="group-hover:translate-x-0.5 transition"
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.583 11h12.833m0 0L11 4.584M17.416 11 11 17.417"
+              stroke="#1E1E1E"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        // delay: 200, // default delay for all elements
+        once: false,
+        mirror: true,
+      });
+    </script>
+  </body>
+</html>
