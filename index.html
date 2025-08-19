@@ -26,10 +26,10 @@
     <link rel="stylesheet" href="./output.css" />
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
       body {
-        font-family: "Noto Serif Georgian", serif;
+        font-family: "Poppins", sans-serif;
         overflow-x: hidden;
       }
 
@@ -113,7 +113,7 @@
 
         <div class="hidden md:flex text-sm font-medium">
           <a
-            class="px-6 py-3 bg-violet-500 rounded-3xl text-white text-sm"
+            class="px-6 py-3 bg-gradient-to-r from-[#A992F2] to-[rgb(118,3,200)] rounded-3xl text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
             href="./404.html"
             >Donate Now</a
           >
@@ -178,13 +178,13 @@
 
     <!-- Home  -->
     <main
-      class="h-[700px] m-4 relative dark:bg-gray-950 text-black dark:text-white overflow-hidden overflow-x-hidden"
+      class="h-[600px] m-4 relative dark:bg-gray-950 text-black dark:text-white overflow-hidden overflow-x-hidden"
     >
       <div
-        class="h-[700px] py-16 mx-2 md:mx-auto flex flex-col items-center justify-center text-center bg-gradient-to-b from-[rgb(19,0,56)] to-black rounded-2xl p-10 text-white z-50"
+        class="h-[600px] py-16 md:mx-auto flex flex-col items-center justify-center text-center bg-gradient-to-b from-[rgb(19,0,56)] to-black rounded-2xl p-10 text-white z-50"
       >
         <p
-          class="px-6 py-2 rounded-full text-sm border border-[#54487B] bg-gradient-to-r from-[#A992F2] to-[#DFAB9B] bg-clip-text text-transparent"
+          class="px-6 py-2 rounded-full text-sm border border-[#54487B]"
           data-aos="fade-up-right"
           data-aos-delay="0"
         >
@@ -211,18 +211,18 @@
           who need it most. By standing with us, you become part of a growing
           family of changemakers who believe in compassion without limits.
         </p>
-        <a
-          href="./404.html"
-          data-aos="zoom-in-up"
-          data-aos-delay="200"
-          class="px-12 py-2.5 mt-6 rounded-full text-sm border border-[#54487B] bg-gradient-to-r from-[#A992F2] to-[#DFAB9B] bg-clip-text text-transparent"
-        >
-          Donate Now
-        </a>
+        <div class="mt-8 z-10" data-aos="zoom-in-up" data-aos-delay="200">
+          <a
+            href="./404.html"
+            class="px-12 py-2.5 rounded-full text-sm border border-[#54487B] bg-gradient-to-r from-[#A992F2] to-[#DFAB9B] bg-clip-text text-transparent transform hover:scale-95 transition duration-200 ease-out z-10"
+          >
+            Donate Now
+          </a>
+        </div>
       </div>
-      <div class="w-full z-0 rounded-2xl">
+      <div class="w-full rounded-2xl z-0">
         <img
-          class="w-full h-[700px] object-center object-cover opacity-20 absolute top-0 left-0 rounded-2xl"
+          class="w-full h-[600px] object-center object-cover opacity-20 absolute top-0 left-0 rounded-2xl"
           src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1200&auto=format&fit=crop"
           alt="background"
         />
@@ -237,8 +237,14 @@
       <div
         class="text-4xl md:text-5xl font-extrabold text-center dark:text-white"
       >
-        <h1 class="pb-8">Our Top Donors</h1>
-        <p class="text-sm font-light">
+        <h1 class="pb-8" data-aos="zoom-in-up" data-aos-delay="100">
+          Our Top Donors
+        </h1>
+        <p
+          class="text-sm font-light"
+          data-aos="zoom-in-up"
+          data-aos-delay="150"
+        >
           We believe true impact is only possible when compassionate people come
           together. Our donors are the heart of our mission—each contribution
           helps us provide hope, dignity, and opportunities to those in need.
@@ -247,6 +253,8 @@
 
       <div
         class="overflow-hidden w-full relative max-w-5xl mx-auto select-none my-8"
+        data-aos="zoom-in-up"
+        data-aos-delay="200"
       >
         <div
           class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent dark:from-gray-950 dark:to-transparent"
@@ -330,12 +338,18 @@
           <h2
             class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight"
             data-aos="fade-up-left"
+            data-aos-delay="50"
           >
-            We Are <span class="text-violet-500">Change Makers</span>
+            We Are
+            <span
+              class="bg-gradient-to-r from-[#A992F2] to-[#DFAB9B] bg-clip-text text-transparent"
+              >Change Makers</span
+            >
           </h2>
           <p
             class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl"
             data-aos="fade-up-left"
+            data-aos-delay="100"
           >
             For over two decades, our mission has been to uplift communities
             through education, healthcare, and sustainable solutions. Every
@@ -422,6 +436,8 @@
       >
         <h1
           class="bg-gradient-to-r from-yellow-600 via-violet-500 to-yellow-400 text-transparent bg-clip-text font-bold"
+          data-aos="zoom-in-up"
+          data-aos-delay="100"
         >
           Current Year Status
         </h1>
@@ -512,45 +528,56 @@
       >
         <div class="flex items-center -space-x-7">
           <img
-            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200"  data-aos="zoom-in-up"
+            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200"
+            data-aos="zoom-in-up"
             data-aos-delay="0"
             alt="image"
             class="h-16 w-16 rounded-full border-4 border-white"
           />
           <img
             src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200"
-             data-aos="zoom-in-up"
+            data-aos="zoom-in-up"
             data-aos-delay="50"
             alt="image"
             class="h-16 w-16 rounded-full border-4 border-white"
           />
           <img
             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop"
-             data-aos="zoom-in-up"
+            data-aos="zoom-in-up"
             data-aos-delay="100"
             alt="image"
             class="h-16 w-16 rounded-full border-4 border-white"
           />
           <img
             src="https://randomuser.me/api/portraits/men/75.jpg"
-             data-aos="zoom-in-up"
+            data-aos="zoom-in-up"
             data-aos-delay="150"
             alt="image"
             class="h-16 w-16 rounded-full border-4 border-white"
           />
         </div>
-        <h1 class="text-3xl md:text-4xl font-bold text-black dark:text-white  mt-6"  data-aos="zoom-in-right"
-            data-aos-delay="200">
+        <h1
+          class="text-3xl md:text-4xl font-bold text-black dark:text-white mt-6"
+          data-aos="zoom-in-right"
+          data-aos-delay="200"
+        >
           Our Expert Volunteer Always ready
         </h1>
-        <p class="text-black dark:text-white  mt-4 max-w-4xl"  data-aos="zoom-in-left"
-            data-aos-delay="250">
-         At the heart of NGO are our incredible volunteers — everyday people who dedicate their time, energy, and compassion to help others. They are teachers, students, professionals, and community members who believe that kindness can change lives.
+        <p
+          class="text-black dark:text-white mt-4 max-w-4xl"
+          data-aos="zoom-in-left"
+          data-aos-delay="250"
+        >
+          At the heart of NGO are our incredible volunteers — everyday people
+          who dedicate their time, energy, and compassion to help others. They
+          are teachers, students, professionals, and community members who
+          believe that kindness can change lives.
         </p>
-        <a href="./404.html"
-         data-aos="zoom-in-up"
-            data-aos-delay="250"
-          class="bg-gradient-to-r from-[#6B41FF] to-[#F75BE9] font-medium text-black dark:text-white  rounded-full px-10 py-3 mt-10 text-sm"
+        <a
+          href="./404.html"
+          data-aos="zoom-in-up"
+          data-aos-delay="250"
+          class="bg-gradient-to-r from-[#6B41FF] to-[#F75BE9] font-medium text-black dark:text-white rounded-full px-10 py-3 mt-10 text-sm"
         >
           LEARN MORE
         </a>
@@ -572,7 +599,7 @@
         </h1>
         <p
           class="text-[12px] md:text-[16px]"
-          data-aos="zoom-in-right"
+          data-aos="zoom-in-left"
           data-aos-delay="100"
         >
           Sedac odio aliquet, fringilla odio eget, tincidunt nunc duis aliquet
@@ -583,101 +610,101 @@
       <div
         class="grid md:grid-cols-2 lg:grid-cols-3 py-9 px-6 mx-auto place-items-center w-full gap-6"
       >
-        <div
-          class="space-y-4 text-black bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl"
-          data-aos="zoom-in-right"
-          data-aos-delay="50"
-        >
-          <img
-            class="bg-violet-200 rounded-full py-4 px-4"
-            src="https://img.icons8.com/?size=100&id=Bf2UvtrwZszK&format=png&color=000000"
-            alt="logo"
-          />
-          <h1 class="text-2xl font-bold">Pure Food & Water</h1>
-          <p class="text-[13px] text-center dark:text-gray-400">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-            odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
-          </p>
+        <div data-aos="zoom-in-right" data-aos-delay="50">
+          <div
+            class="space-y-4 text-black bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl transform hover:scale-95 transition duration-200 ease-out"
+          >
+            <img
+              class="bg-violet-200 rounded-full py-4 px-4"
+              src="https://img.icons8.com/?size=100&id=Bf2UvtrwZszK&format=png&color=000000"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Pure Food & Water</h1>
+            <p class="text-[13px] text-center dark:text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
+            </p>
+          </div>
         </div>
-        <div
-          class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl"
-          data-aos="flip-up"
-          data-aos-delay="100"
-        >
-          <img
-            class="bg-violet-200 rounded-full py-4 px-4"
-            src="https://img.icons8.com/?size=100&id=9731&format=png&color=000000"
-            alt="logo"
-          />
-          <h1 class="text-2xl font-bold">Medicine</h1>
-          <p class="text-[13px] text-center dark:text-gray-400">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-            odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
-          </p>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
+          >
+            <img
+              class="bg-violet-200 rounded-full py-4 px-4"
+              src="https://img.icons8.com/?size=100&id=9731&format=png&color=000000"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Medicine</h1>
+            <p class="text-[13px] text-center dark:text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
+            </p>
+          </div>
         </div>
-        <div
-          class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl"
-          data-aos="zoom-in-left"
-          data-aos-delay="150"
-        >
-          <img
-            class="bg-violet-200 rounded-full py-4 px-4"
-            src="https://img.icons8.com/?size=100&id=9437&format=png&color=000000"
-            alt="logo"
-          />
-          <h1 class="text-2xl font-bold">Education</h1>
-          <p class="text-[13px] text-center dark:text-gray-400">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-            odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
-          </p>
+        <div data-aos="zoom-in-left" data-aos-delay="150">
+          <div
+            class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
+          >
+            <img
+              class="bg-violet-200 rounded-full py-4 px-4"
+              src="https://img.icons8.com/?size=100&id=9437&format=png&color=000000"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Education</h1>
+            <p class="text-[13px] text-center dark:text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
+            </p>
+          </div>
         </div>
-        <div
-          class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl"
-          data-aos="fade-right"
-          data-aos-delay="150"
-        >
-          <img
-            class="bg-violet-200 rounded-full py-4 px-4"
-            src="https://img.icons8.com/?size=100&id=9437&format=png&color=000000"
-            alt="logo"
-          />
-          <h1 class="text-2xl font-bold">Education</h1>
-          <p class="text-[13px] text-center dark:text-gray-400">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-            odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
-          </p>
+        <div data-aos="fade-up-right" data-aos-delay="200">
+          <div
+            class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
+          >
+            <img
+              class="bg-violet-200 rounded-full py-4 px-4"
+              src="https://img.icons8.com/?size=100&id=9437&format=png&color=000000"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Education</h1>
+            <p class="text-[13px] text-center dark:text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
+            </p>
+          </div>
         </div>
-        <div
-          class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <img
-            class="bg-violet-200 rounded-full py-4 px-4"
-            src="https://img.icons8.com/?size=100&id=zq7OkVHocxK5&format=png&color=000000"
-            alt="logo"
-          />
-          <h1 class="text-2xl font-bold">Shelter</h1>
-          <p class="text-[13px] text-center dark:text-gray-400">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-            odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
-          </p>
+        <div data-aos="fade-up" data-aos-delay="250">
+          <div
+            class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
+          >
+            <img
+              class="bg-violet-200 rounded-full py-4 px-4"
+              src="https://img.icons8.com/?size=100&id=zq7OkVHocxK5&format=png&color=000000"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Shelter</h1>
+            <p class="text-[13px] text-center dark:text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
+            </p>
+          </div>
         </div>
-        <div
-          class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl"
-          data-aos="fade-left"
-          data-aos-delay="250"
-        >
-          <img
-            class="bg-violet-200 rounded-full py-4 px-4"
-            src="https://img.icons8.com/?size=100&id=76982&format=png&color=000000"
-            alt="logo"
-          />
-          <h1 class="text-2xl font-bold">Protect</h1>
-          <p class="text-[13px] text-center dark:text-gray-400">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-            odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
-          </p>
+        <div data-aos="fade-up-left" data-aos-delay="300">
+          <div
+            class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
+          >
+            <img
+              class="bg-violet-200 rounded-full py-4 px-4"
+              src="https://img.icons8.com/?size=100&id=76982&format=png&color=000000"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Protect</h1>
+            <p class="text-[13px] text-center dark:text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
+            </p>
+          </div>
         </div>
       </div>
     </section>

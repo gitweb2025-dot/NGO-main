@@ -26,10 +26,11 @@
     <link rel="stylesheet" href="../output.css" />
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
       body {
-        font-family: "Noto Serif Georgian", serif;
+        font-family: "Poppins", sans-serif;
+        /* font-family: "Noto Serif Georgian", serif; */
         overflow-x: hidden;
       }
 
@@ -79,7 +80,7 @@
     <!-- Topbar -->
 
     <div
-      class="sticky top-0 bg-green-200 dark:bg-gray-800 w-full flex items-center justify-between overflow-hidden overflow-x-hidden z-100"
+      class="sticky top-0 bg-green-200 dark:bg-gray-800 w-full flex items-center justify-between overflow-hidden overflow-x-hidden z-1000"
     >
       <div class="md:flex items-center space-x-4 hidden">
         <a href="#" class="text-[12px]">
@@ -116,7 +117,7 @@
     </div>
     <!-- Navbar  -->
     <header
-      class="border-b border-slate-200 dark:border-slate-800 sticky top-8 z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur transition-colors duration-500"
+      class="border-b border-slate-200 dark:border-slate-800 sticky top-8 bg-white/90 dark:bg-slate-950/90 backdrop-blur transition-colors duration-500 overflow-x-hidden z-1000"
     >
       <div class="container mx-auto flex items-center justify-between px-4">
         <!-- Logo -->
@@ -151,8 +152,8 @@
 
         <div class="hidden md:flex text-sm font-medium">
           <a
-            class="px-6 py-3 bg-green-300 rounded-3xl text-black"
-            href="./404.html"
+            class="px-6 py-3 bg-green-300 rounded-3xl text-black transform hover:scale-95 transition duration-200 ease-out"
+            href="../404.html"
             >Donate Now</a
           >
         </div>
@@ -216,11 +217,11 @@
 
     <!-- Home-Section  -->
     <main
-      class="bg-black dark:bg-gray-950 z-100 flex h-[650px] overflow-hidden overflow-x-hidden"
+      class="bg-gradient-to-br from-green-950 via-black to-black rounded-2xl relative m-4 dark:bg-gray-950 z-10 flex h-[650px] overflow-hidden overflow-x-hidden"
     >
       <div>
         <img
-          class="absolute z-0 w-full h-[650px] object-cover object-center opacity-10"
+          class="absolute w-full h-[650px] object-cover object-center opacity-20 rounded-2xl"
           src="https://i.postimg.cc/8CmdvnXY/image.png"
           alt="home"
         />
@@ -232,17 +233,22 @@
           class="text-white dark:text-white p-2 md:p-4 flex flex-col justify-center items-center"
         >
           <h1
-            class="text-2xl md:text-6xl pb-4 font-bold"
+            class="text-3xl md:text-6xl pb-4 font-bold"
             data-aos="zoom-in-up"
             data-aos-delay="0"
           >
-            We <span class="text-green-600">Love</span> All People
+            We
+            <span
+              class="bg-gradient-to-r from-green-900 via-green-600 to-green-500 text-transparent bg-clip-text"
+              >Love</span
+            >
+            All People
           </h1>
           <h3 class="text-[15px] md:text-3xl pb-4" data-aos="zoom-in-up">
             Check our latest missions
           </h3>
           <p
-            class="pb-4 text-center"
+            class="pb-4 text-center text-gray-200"
             data-aos="zoom-in-up"
             data-aos-delay="200"
           >
@@ -258,14 +264,14 @@
           >
             <a
               href="../404.html"
-              class="bg-transparent border-2 rounded-xl border-green-700 dark:bg-green-700 text-white dark:text-white px-4 py-2"
+              class="bg-transparent border-2 rounded-xl border-green-700 dark:bg-green-700 hover:bg-green-700 text-white dark:text-white px-4 py-2 transform hover:scale-95 transition duration-200 ease-out"
             >
               Donate Now
             </a>
 
             <a
               href="../404.html"
-              class="text-white dark:bg-transparent border-2 border-green-600 rounded-xl bg-green-600 px-4 py-2"
+              class="text-white dark:bg-transparent border-2 border-green-600 hover:bg-transparent rounded-xl bg-green-600 px-4 py-2 transform hover:scale-95 transition duration-200 ease-out"
             >
               Learn more
             </a>
@@ -285,8 +291,18 @@
       class="pt-10 pb-10 p-4 dark:bg-gray-950 overflow-x-hidden overflow-hidden"
     >
       <div class="text-center pb-10 space-y-4 mx-auto">
-        <h1 class="text-2xl md:text-5xl font-bold">To relief From</h1>
-        <p class="text-[14px] max-w-4xl dark:text-gray-400 mx-auto">
+        <h1
+          class="text-2xl md:text-5xl font-bold"
+          data-aos="zoom-in-up"
+          data-aos-delay="100"
+        >
+          To relief From
+        </h1>
+        <p
+          class="text-[14px] max-w-4xl dark:text-gray-400 mx-auto"
+          data-aos="zoom-in-up"
+          data-aos-delay="150"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
           ratione, adipisci placeat reprehenderit laboriosam nam distinctio
           facilis? Est, libero quis velit deserunt fugiat quaerat alias
@@ -297,68 +313,68 @@
       <div
         class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 place-items-center gap-4"
       >
-        <div
-          class="bg-green-700 h-[300px] space-y-3 p-8 rounded-4xl shadow-2xl flex flex-col justify-center items-center text-center"
-          data-aos="fade-up-right"
-          data-aos-delay="0"
-        >
-          <img
-            src="https://img.icons8.com/?size=100&id=Utu32Z-yKkor&format=png&color=000000"
-            alt="education"
-          />
-          <h1 class="text-2xl font-bold">Education for All</h1>
-          <p class="dark:text-gray-400">
-            Providing learning opportunities, school supplies, and scholarships
-            for underprivileged children.
-          </p>
+        <div data-aos="fade-up-right" data-aos-delay="100">
+          <div
+            class="bg-green-700 h-[300px] space-y-3 p-8 rounded-4xl shadow-2xl flex flex-col justify-center items-center text-center transform hover:scale-95 transition duration-200 ease-out"
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=Utu32Z-yKkor&format=png&color=000000"
+              alt="education"
+            />
+            <h1 class="text-2xl font-bold">Education for All</h1>
+            <p class="dark:text-gray-400">
+              Providing learning opportunities, school supplies, and
+              scholarships for underprivileged children.
+            </p>
+          </div>
         </div>
 
-        <div
-          class="h-[300px] border-2 border-black/5 space-y-3 p-8 rounded-4xl shadow-2xl flex flex-col justify-center items-center text-center dark:bg-white/5 hover:bg-green-600 dark:hover:bg-green-600 transition-all duration-200 ease-linear"
-          data-aos="fade-up-left"
-          data-aos-delay="100"
-        >
-          <img
-            src="https://img.icons8.com/?size=100&id=35583&format=png&color=000000"
-            alt="health"
-          />
-          <h1 class="text-2xl font-bold">Healthcare Access</h1>
-          <p class="dark:text-gray-400">
-            Organizing medical camps, providing essential medicines, and
-            spreading health awareness.
-          </p>
+        <div data-aos="fade-up-left" data-aos-delay="200">
+          <div
+            class="h-[300px] border-2 border-black/5 space-y-3 p-8 rounded-4xl shadow-2xl flex flex-col justify-center items-center text-center dark:bg-white/5 hover:bg-green-600 dark:hover:bg-green-600 transform hover:scale-95 transition duration-200 ease-out"
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=35583&format=png&color=000000"
+              alt="health"
+            />
+            <h1 class="text-2xl font-bold">Healthcare Access</h1>
+            <p class="dark:text-gray-400">
+              Organizing medical camps, providing essential medicines, and
+              spreading health awareness.
+            </p>
+          </div>
         </div>
 
-        <div
-          class="h-[300px] border-2 border-black/5 space-y-3 p-8 rounded-4xl shadow-2xl flex flex-col justify-center items-center text-center dark:bg-white/5 hover:bg-green-600 dark:hover:bg-green-600 transition-all duration-200 ease-linear"
-          data-aos="fade-up-right"
-          data-aos-delay="200"
-        >
-          <img
-            src="https://img.icons8.com/?size=100&id=3tqDsjT8aqDN&format=png&color=000000"
-            alt="hungry"
-          />
-          <h1 class="text-2xl font-bold">Hunger Relief</h1>
-          <p class="dark:text-gray-400">
-            Distributing nutritious meals and fighting food insecurity in
-            vulnerable communities.
-          </p>
+        <div data-aos="fade-up-right" data-aos-delay="300">
+          <div
+            class="h-[300px] border-2 border-black/5 space-y-3 p-8 rounded-4xl shadow-2xl flex flex-col justify-center items-center text-center dark:bg-white/5 hover:bg-green-600 dark:hover:bg-green-600 transform hover:scale-95 transition duration-200 ease-out"
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=3tqDsjT8aqDN&format=png&color=000000"
+              alt="hungry"
+            />
+            <h1 class="text-2xl font-bold">Hunger Relief</h1>
+            <p class="dark:text-gray-400">
+              Distributing nutritious meals and fighting food insecurity in
+              vulnerable communities.
+            </p>
+          </div>
         </div>
 
-        <div
-          class="h-[300px] border-2 border-black/5 space-y-3 p-8 rounded-4xl shadow-2xl flex flex-col justify-center items-center text-center dark:bg-white/5 hover:bg-green-600 dark:hover:bg-green-600 transition-all duration-200 ease-linear"
-          data-aos="fade-up-left"
-          data-aos-delay="400"
-        >
-          <img
-            src="https://img.icons8.com/?size=100&id=dzBg8TxE5xYl&format=png&color=000000"
-            alt="empowerment"
-          />
-          <h1 class="text-2xl font-bold">Women Empowerment</h1>
-          <p class="dark:text-gray-400">
-            Creating vocational training and skill development programs for
-            women’s independence.
-          </p>
+        <div data-aos="fade-up-left" data-aos-delay="400">
+          <div
+            class="h-[300px] border-2 border-black/5 space-y-3 p-8 rounded-4xl shadow-2xl flex flex-col justify-center items-center text-center dark:bg-white/5 hover:bg-green-600 dark:hover:bg-green-600 transform hover:scale-95 transition duration-200 ease-out"
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=dzBg8TxE5xYl&format=png&color=000000"
+              alt="empowerment"
+            />
+            <h1 class="text-2xl font-bold">Women Empowerment</h1>
+            <p class="dark:text-gray-400">
+              Creating vocational training and skill development programs for
+              women’s independence.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -377,7 +393,12 @@
             data-aos="zoom-in-up"
             data-aos-delay="50"
           >
-            Welcome to our charity
+            Welcome to our
+            <span
+              class="bg-gradient-to-r from-green-600 via-green-500 to-green-300 text-transparent bg-clip-text font-bold"
+            >
+              charity
+            </span>
           </h1>
 
           <div
@@ -400,14 +421,14 @@
             dolorem pariatur quia!
           </p>
 
-          <a
-            href=""
-            data-aos="zoom-in-right"
-            data-aos-delay="250"
-            class="bg-transparent border-2 rounded-xl border-green-700 dark:bg-green-700 text-black dark:text-white px-4 py-2 max-w-[150px]"
-          >
-            Read More
-          </a>
+          <div class="pt-10" data-aos="zoom-in-right" data-aos-delay="200">
+            <a
+              href=""
+              class="bg-transparent border-2 rounded-xl border-green-700 dark:bg-green-700 hover:bg-green-700 text-black dark:text-white px-4 py-2 transform hover:scale-95 transition duration-200 ease-out"
+            >
+              Read More
+            </a>
+          </div>
         </div>
 
         <div class="bg-black rounded-4xl" data-aos="fade-up-left">
@@ -698,10 +719,16 @@
       <div class="space-y-3 mb-8 p-4">
         <h1
           class="text-3xl md:text-4xl lg:text-6xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text text-center font-bold"
+          data-aos="fade-up-right"
+          data-aos-delay="70"
         >
           Meet Our Donours
         </h1>
-        <p class="text-slate-500 text-center max-w-3xl mx-auto">
+        <p
+          class="text-slate-500 text-center max-w-3xl mx-auto"
+          data-aos="fade-up-left"
+          data-aos-delay="150"
+        >
           We believe true impact is only possible when compassionate people come
           together. Our donors are the heart of our mission—each contribution
           helps us provide hope, dignity, and opportunities to those in need.
@@ -795,7 +822,7 @@
         </div>
       </div>
 
-      <div class="dark:text-white text-center mt-4 py-6 p-4">
+      <div class="dark:text-white text-center mt-4 py-6 p-4 mx-auto max-w-4xl">
         <h1>
           We extend our deepest gratitude to everyone who has supported us
           through donations, big or small. Your generosity not only funds our
@@ -866,7 +893,7 @@
     <!-- footer -->
 
     <footer
-      class="px-6 md:px-4 lg:px-8 xl:px-16 pt-2 w-full text-gray-500 dark:bg-gray-950"
+      class="px-6 md:px-4 lg:px-8 xl:px-16 pt-2 w-full text-gray-500 dark:bg-gray-950 overflow-hidden overflow-x-hidden"
     >
       <div
         class="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6"
