@@ -98,10 +98,14 @@
             class="hover:text-violet-600 transition-colors"
             >Home</a
           >
-          <a href="./About.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../About/About.html"
+            class="hover:text-violet-600 transition-colors"
             >About Us</a
           >
-          <a href="../Service/Service.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../Service/Service.html"
+            class="hover:text-violet-600 transition-colors"
             >Services</a
           >
           <a href="../404.html" class="hover:text-violet-600 transition-colors"
@@ -170,7 +174,7 @@
           </li>
           <li>
             <a
-              href="./About.html"
+              href="../About/About.html"
               class="nav-link block hover:text-violet-600 transition-colors"
               >About Us</a
             >
@@ -280,422 +284,242 @@
 
         <a
           class="hover:text-violet-700 transition-all duration-300 ease-in font-bold"
-          href="./About.html"
-          >About</a
+          href="./Service.html"
+          >Services</a
         >
       </div>
     </section>
 
-    <!-- Home Section - About -->
+    <!-- Scroll text  -->
+
+    <section class="mx-auto overflow-hidden overflow-x-hidden">
+      <div
+        class="overflow-hidden whitespace-nowrap px-16 m-4 mx-auto w-full max-w-7xl"
+      >
+        <div
+          class="inline-block animate-marquee hover:[animation-play-state:paused] will-change-transform"
+        >
+          <span class="mx-2"
+            >“Providing free education and learning support for underprivileged
+            children.”</span
+          >
+          <span class="mx-2"
+            >“Delivering healthcare and medical aid to communities in
+            need.”</span
+          >
+          <span class="mx-2"
+            >“Feeding the hungry through food distribution and nutrition
+            programs.”</span
+          >
+          <!-- duplicate content again for seamless loop -->
+          <span class="mx-2"
+            >“Protecting vulnerable children with care, shelter, and
+            education.”</span
+          >
+          <span class="mx-2"
+            >“Promoting sustainability with tree plantation and eco-awareness
+            drives.”</span
+          >
+          <span class="mx-2"
+            >“Spreading hope, kindness, and opportunities for a brighter
+            tomorrow.”</span
+          >
+        </div>
+      </div>
+      <style>
+        @keyframes marquee {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-marquee {
+          animation: marquee 25s linear infinite;
+        }
+      </style>
+    </section>
+
+    <!-- Home Section - Service -->
 
     <main
       class="relative m-4 dark:text-white p-4 md:p-10 rounded-2xl overflow-hidden overflow-x-hidden"
     >
-      <div class="space-y-4 text-center">
+      <div class="space-y-4">
         <h1
-          class="text-2xl md:text-3xl lg:text-5xl leading-tight bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 text-transparent bg-clip-text font-bold"
+          class="text-2xl md:text-3xl lg:text-5xl leading-tight bg-gradient-to-r from-violet-500 via-violet-300 to-indigo-200 text-transparent bg-clip-text font-bold"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          About Us
+          Services
         </h1>
-        <p class="dark:text-gray-400" data-aos="fade-up" data-aos-delay="200">
-          At NGO, we believe that every small act of kindness can create a wave
-          of change. Founded with the vision to bring hope, dignity, and
-          opportunity to those in need, we are committed to building a brighter
-          future for vulnerable communities.
+        <p
+          class="dark:text-gray-400 text-justify"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          We are committed to creating positive change through compassion and
+          action. Our services focus on education, health, empowerment, and
+          relief efforts to uplift communities and bring hope to those in need.
         </p>
-      </div>
-
-      <div class="text-center pt-10" data-aos="fade-up" data-aos-delay="300">
-        <h1 class="text-sm text-gray-600 font-semibold uppercase">
-          <span class="text-violet-500">"</span>We love to help all the children
-          that have problems in the world. After 15 years we have many goals
-          achieved. <span class="text-violet-500">"</span>
-        </h1>
       </div>
     </main>
 
-    <!-- Vission & Mission  -->
-    <section
-      class="dark:text-white mt-4 my-4 overflow-hidden overflow-x-hidden"
-    >
-      <div class="grid md:grid-cols-2 gap-8 my-6 place-items-center p-4 md:p-6">
-        <div data-aos="fade-right" data-aos-delay="250">
-          <div
-            class="p-4 md:p-8 rounded-2xl shadow-lg space-y-4 bg-gray-100 hover:bg-violet-300 dark:bg-white/5 border-2 border-black/5 transition duration-300 ease-in"
-          >
-            <!-- <img
-              src="https://img.icons8.com/?size=100&id=20884&format=png&color=000000"
-              alt="logo"
-            /> -->
-            <h1 class="text-xl md:text-3xl font-bold leading-tight">
-              Our Mission
-            </h1>
-            <p class="dark:text-gray-400">
-              To empower individuals and families by providing access to
-              education, healthcare, food, and sustainable livelihood
-              opportunities, ensuring that no one is left behind.
-            </p>
-          </div>
-        </div>
-        <div data-aos="fade-left" data-aos-delay="300">
-          <div
-            class="p-4 md:p-8 rounded-2xl shadow-lg space-y-4 bg-gray-100 hover:bg-violet-300 dark:bg-white/5 border-2 border-black/5 transition duration-300 ease-in"
-          >
-            <!-- <img
-              src="https://img.icons8.com/?size=100&id=vmqv135kp5Ty&format=png&color=000000"
-              alt="logo"
-            /> -->
-            <h1 class="text-xl md:text-3xl font-bold leading-tight">
-              Our Vision
-            </h1>
-            <p class="dark:text-gray-400">
-              A world where compassion unites us, where every person has the
-              chance to live with dignity, and where kindness builds stronger
-              communities.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- sub-image -->
 
-    <!-- Sub-home  -->
-
-    <section
-      class="pt-10 m-4 flex justify-center items-start overflow-hidden overflow-x-hidden"
-    >
+    <section class="mx-auto overflow-hidden overflow-x-hidden">
       <div
-        class="p-4 w-full md:flex items-center gap-8 space-y-6 md:space-y-0 rounded-2xl shadow-2xl dark:border-2 dark:border-white/5"
+        class="m-4 px-4 md:px-10 grid md:grid-cols-3 place-items-center gap-6"
       >
-        <div class="rounded-2xl" data-aos="fade-up-right" data-aos-delay="0">
-          <img
-            class="w-full object-center object-contain rounded-2xl"
-            src="https://i.postimg.cc/RF9K7Pcd/image.png"
-            alt="image"
-          />
-        </div>
-
-        <div class="space-y-6">
-          <h1
-            class="text-3xl md:text-4xl lg:text-6xl font-semibold"
-            data-aos="fade-up"
-            data-aos-delay="50"
-          >
-            Make A diffrence and fun
-          </h1>
-          <p class="text-xl" data-aos="fade-up" data-aos-delay="100">
-            Join A charity group and spark joy
-          </p>
-          <p class="text-sm" data-aos="fade-up" data-aos-delay="150">
-            The journey of NGO began when a small group of people came together
-            with a shared dream — to fight poverty, hunger, and inequality by
-            working at the grassroots level. What started as a local initiative
-            soon grew into a larger mission, reaching families, children, and
-            communities in need across regions.
-          </p>
-
-          <div
-            class="text-sm font-medium pt-4"
-            data-aos="fade-up-left"
-            data-aos-delay="200"
-          >
-            <a
-              class="px-6 py-3 bg-violet-400 rounded-3xl text-white hover:bg-violet-800 transition-all duration-300 ease-in"
-              href="../404.html"
-              >Join Now</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Impact  -->
-
-    <section id="impact" class="py-16 px-4 overflow-hidden overflow-x-hidden">
-      <div class="text-center pb-10">
-        <h1
-          data-aos="fade-right"
-          data-aos-delay="250"
-          class="text-3xl md:text-4xl lg:text-6xl bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 text-transparent bg-clip-text font-bold"
-        >
-          Our Impact
-        </h1>
-      </div>
-      <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
-        <!-- Donors Card -->
-        <div
-          class="bg-white shadow-lg rounded-2xl p-8 dark:bg-white/5"
-          data-aos="flip-up"
+        <img
+          data-aos="fade-up-right"
           data-aos-delay="100"
-        >
-          <h3 class="text-xl font-semibold text-gray-700 mb-2">Donors</h3>
-          <span
-            class="counter text-4xl font-bold text-orange-500"
-            data-target="1500"
-            >0</span
-          ><span class="text-4xl font-bold text-orange-500">+</span>
-        </div>
-
-        <!-- Meals Card -->
-        <div
-          class="bg-white shadow-lg rounded-2xl p-8 dark:bg-white/5"
-          data-aos="flip-up"
+          class="object-cover rounded-2xl h-[200px]"
+          src="https://i.postimg.cc/P5fB4vGk/1-1.jpg"
+          alt="image"
+        />
+        <img
+          data-aos="fade-up"
           data-aos-delay="200"
-        >
-          <h3 class="text-xl font-semibold text-gray-700 mb-2">Meals Served</h3>
-          <span
-            class="counter text-4xl font-bold text-orange-500"
-            data-target="25000"
-            >0</span
-          ><span class="text-4xl font-bold text-orange-500">+</span>
-        </div>
-
-        <!-- Children Card -->
-        <div
-          class="bg-white shadow-lg rounded-2xl p-8 dark:bg-white/5"
-          data-aos="flip-up"
+          class="object-cover rounded-2xl h-[200px]"
+          src="https://i.postimg.cc/m2cwG7vw/portrait-female-pediatrician-work-1.jpg"
+          alt="image"
+        />
+        <img
+          data-aos="fade-up-left"
           data-aos-delay="300"
-        >
-          <h3 class="text-xl font-semibold text-gray-700 mb-2">
-            Children Helped
-          </h3>
-          <span
-            class="counter text-4xl font-bold text-orange-500"
-            data-target="1200"
-            >0</span
-          ><span class="text-4xl font-bold text-orange-500">+</span>
-        </div>
+          class="object-cover rounded-2xl h-[200px]"
+          src="https://i.postimg.cc/pL8qK2rt/633547f947b91b001d247adc-2.jpg"
+          alt="image"
+        />
       </div>
     </section>
 
-    <!-- Counter JS -->
-    <script>
-      function animateCounters() {
-        const counters = document.querySelectorAll(".counter");
-
-        counters.forEach((counter) => {
-          let target = +counter.getAttribute("data-target");
-          let count = 0;
-          let increment = target / 200; // adjust speed
-
-          function updateCounter() {
-            count += increment;
-            if (count < target) {
-              counter.innerText = Math.ceil(count);
-              requestAnimationFrame(updateCounter);
-            } else {
-              counter.innerText = target;
-            }
-          }
-
-          updateCounter();
-        });
-      }
-
-      // Trigger when section is visible
-      const section = document.querySelector("#impact");
-      const observer = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              animateCounters();
-              observer.unobserve(section); // run once
-            }
-          });
-        },
-        { threshold: 0.6 }
-      );
-
-      observer.observe(section);
-    </script>
-
-    <!-- Why We Exist  -->
+    <!-- Our Services -->
 
     <section
-      class="dark:text-white mt-6 my-7 overflow-hidden overflow-x-hidden"
+      class="text-black dark:bg-gray-950 dark:text-black pt-6 overflow-hidden overflow-x-hidden"
     >
-      <div class="text-center space-y-4 pb-6 p-2">
+      <div class="text-black dark:text-white text-center space-y-8 p-2">
         <h1
-          class="text-3xl md:text-5xl font-bold"
-          data-aos="zoom-in-up"
-          data-aos-delay="0"
-        >
-          Why We Exist
-        </h1>
-        <p
-          class="dark:text-gray-400 text-sm"
-          data-aos="zoom-in-up"
+          class="text-2xl sm:text-3xl md:text-5xl font-bold"
+          data-aos="zoom-in-right"
           data-aos-delay="50"
         >
-          Millions of people face daily struggles for basic needs. With your
-          support, we are bridging the gap by turning compassion into action.
-          Together, we can transform lives and create lasting impact.
+          We
+          <span
+            class="bg-gradient-to-r from-violet-600 via-violet-500 to-violet-300 text-transparent bg-clip-text font-bold"
+            >serve </span
+          >for peoples
+        </h1>
+        <p
+          class="text-[12px] md:text-[16px]"
+          data-aos="zoom-in-left"
+          data-aos-delay="100"
+        >
+          Sedac odio aliquet, fringilla odio eget, tincidunt nunc duis aliquet
+          pulvinar ante.
         </p>
       </div>
 
       <div
-        class="grid md:grid-cols-2 gap-20 items-center m-auto w-full"
-        data-aos="fade-up-right"
-        data-aos-delay="100"
+        class="grid md:grid-cols-2 lg:grid-cols-3 py-9 px-6 mx-auto place-items-center w-full gap-6"
       >
-        <div class="w-full h-full p-4 flex justify-center items-center">
-          <img
-            class="rounded-2xl"
-            src="https://i.postimg.cc/prVxHcR4/image.png"
-            alt=""
-          />
+        <div data-aos="zoom-in-right" data-aos-delay="50">
+          <div
+            class="space-y-4 text-black bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl transform hover:scale-95 transition duration-200 ease-out"
+          >
+            <img
+              class="object-cover w-full rounded-2xl h-[300px]"
+              src="https://i.postimg.cc/jqg3zx6D/view-ready-eat-delicious-meal-go.jpg"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Pure Food & Water</h1>
+            <p class="text-[13px] text-center dark:text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
+            </p>
+          </div>
         </div>
-        <div class="space-y-10 px-4 md:px-0 flex flex-col justify-center">
+        <div data-aos="fade-up" data-aos-delay="100">
           <div
-            class="flex items-center justify-center gap-6 max-w-md"
-            data-aos="fade-up-left"
-            data-aos-delay="100"
+            class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
           >
-            <div class="p-6 aspect-square bg-violet-100 rounded-full">
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 28 28"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14 18.667V24.5m4.668-8.167V24.5m4.664-12.833V24.5m2.333-21L15.578 13.587a.584.584 0 0 1-.826 0l-3.84-3.84a.583.583 0 0 0-.825 0L2.332 17.5M4.668 21v3.5m4.664-8.167V24.5"
-                  stroke="#7F22FE"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <div class="space-y-2">
-              <h3
-                class="font-semibold text-slate-700 md:text-2xl dark:text-white"
-              >
-                Education
-              </h3>
-              <p class="text-sm text-slate-600">
-                Supporting underprivileged children with quality learning
-                opportunities.
-              </p>
-            </div>
+            <img
+              class="object-cover w-full rounded-2xl h-[300px]"
+              src="https://i.postimg.cc/rwtbZbGC/man-working-as-paediatrician.jpg"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Medicine</h1>
+            <p class="text-[13px] text-center dark:text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
+            </p>
           </div>
+        </div>
+        <div data-aos="zoom-in-left" data-aos-delay="150">
           <div
-            class="flex items-center justify-center gap-6 max-w-md"
-            data-aos="fade-up-left"
-            data-aos-delay="200"
+            class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
           >
-            <div class="p-6 aspect-square bg-red-100 rounded-full">
-              <svg
-                class="text-red-600"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-heart-pulse-icon lucide-heart-pulse"
-              >
-                <path
-                  d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
-                />
-                <path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" />
-              </svg>
-            </div>
-            <div class="space-y-2">
-              <h3
-                class="text-base font-semibold text-slate-700 md:text-2xl dark:text-white"
-              >
-                Healthcare
-              </h3>
-              <p class="text-sm text-slate-600">
-                Offering medical aid, health camps, and awareness programs.
-              </p>
-            </div>
+            <img
+              class="object-cover w-full rounded-2xl h-[300px]"
+              src="https://i.postimg.cc/PrMNp3vy/woman-teaching-classroom.jpg"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Education</h1>
+            <p class="text-[13px] text-center dark:text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
+            </p>
           </div>
-
+        </div>
+        <div data-aos="fade-up-right" data-aos-delay="200">
           <div
-            class="flex items-center justify-center gap-6 max-w-md"
-            data-aos="fade-up-left"
-            data-aos-delay="300"
+            class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
           >
-            <div class="p-6 aspect-square bg-orange-100 rounded-full">
-              <svg
-                class="text-orange-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-hand-fist-icon lucide-hand-fist"
-              >
-                <path
-                  d="M12.035 17.012a3 3 0 0 0-3-3l-.311-.002a.72.72 0 0 1-.505-1.229l1.195-1.195A2 2 0 0 1 10.828 11H12a2 2 0 0 0 0-4H9.243a3 3 0 0 0-2.122.879l-2.707 2.707A4.83 4.83 0 0 0 3 14a8 8 0 0 0 8 8h2a8 8 0 0 0 8-8V7a2 2 0 1 0-4 0v2a2 2 0 1 0 4 0"
-                />
-                <path d="M13.888 9.662A2 2 0 0 0 17 8V5A2 2 0 1 0 13 5" />
-                <path d="M9 5A2 2 0 1 0 5 5V10" />
-                <path d="M9 7V4A2 2 0 1 1 13 4V7.268" />
-              </svg>
-            </div>
-            <div class="space-y-2">
-              <h3
-                class="text-base font-semibold text-slate-700 md:text-2xl dark:text-white"
-              >
-                Livelihood Support
-              </h3>
-              <p class="text-sm text-slate-600">
-                Helping communities become self-reliant through skill
-                development and resources.
-              </p>
-            </div>
+            <img
+              class="object-cover w-full rounded-2xl h-[300px]"
+              src="https://i.postimg.cc/fRwCmr2R/moment-captured-migration-crisis-with-people.jpg"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Child Protection</h1>
+            <p class="text-[13px] text-center dark:text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
+            </p>
           </div>
-
+        </div>
+        <div data-aos="fade-up" data-aos-delay="250">
           <div
-            class="flex items-center justify-center gap-6 max-w-md px-0"
-            data-aos="fade-up-left"
-            data-aos-delay="400"
+            class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
           >
-            <div class="p-6 aspect-square bg-violet-100 rounded-full">
-              <svg
-                class="text-violet-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-cookie-icon lucide-cookie"
-              >
-                <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5" />
-                <path d="M8.5 8.5v.01" />
-                <path d="M16 15.5v.01" />
-                <path d="M12 12v.01" />
-                <path d="M11 17v.01" />
-                <path d="M7 14v.01" />
-              </svg>
-            </div>
-            <div class="space-y-2">
-              <h3
-                class="text-base font-semibold text-slate-700 md:text-2xl dark:text-white"
-              >
-                Hunger Relief
-              </h3>
-              <p class="text-sm text-slate-600">
-                Distributing nutritious meals to families in crisis and relif
-                hungry.
-              </p>
-            </div>
+            <img
+              class="object-cover w-full rounded-2xl h-[300px]"
+              src="https://i.postimg.cc/BnBqwXBC/kid-holding-wooden-miniature-toy-house.jpg"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Shelter</h1>
+            <p class="text-[13px] text-center dark:text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
+            </p>
+          </div>
+        </div>
+        <div data-aos="fade-up-left" data-aos-delay="300">
+          <div
+            class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
+          >
+            <img
+              class="object-cover w-full rounded-2xl h-[300px]"
+              src="https://i.postimg.cc/k5ZXWLcr/hands-holding-seedlings.jpg"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Environment Care</h1>
+            <p class="text-[13px] text-center dark:text-gray-400">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+              odio vitae, mollitia dolor quidem ipsum, aut excepturi voluptates.
+            </p>
           </div>
         </div>
       </div>
@@ -790,8 +614,8 @@
             <h2 class="font-semibold mb-5 text-gray-800">Company</h2>
             <ul class="text-sm space-y-2">
               <li><a href="../Home/Home.html">Home</a></li>
-              <li><a href="./About.html">About us</a></li>
-              <li><a href="./404.html">Services</a></li>
+              <li><a href="../About/About.html">About us</a></li>
+              <li><a href="./Service.html">Services</a></li>
               <li><a href="./404.html">Blogs</a></li>
               <li><a href="./404.html">Contact us</a></li>
             </ul>
