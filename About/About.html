@@ -124,7 +124,8 @@
             class="flex items-center gap-2 px-6 py-3 border-2 border-violet-500 rounded-3xl text-black dark:text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
             href="../404.html"
           >
-            <i class="fa-solid fa-gift text-xl text-violet-600"></i> Donate Now</a
+            <i class="fa-solid fa-gift text-xl text-violet-600"></i> Donate
+            Now</a
           >
           <a
             class="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-[#A992F2] to-[rgb(118,3,200)] rounded-3xl text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
@@ -263,7 +264,9 @@
               stroke-opacity=".8"
               stroke-width="1.5"
               stroke-linecap="round"
-            /></svg>Home
+            />
+          </svg>
+          Home
         </a>
         <svg
           width="12"
@@ -371,13 +374,11 @@
     <!-- Make A diffrence and fun  -->
 
     <section
-      class="pt-10 m-4 flex justify-center items-start overflow-hidden overflow-x-hidden"
+      class="md:pt-10 my-4 mx-4 md:mx-10 flex justify-center items-start overflow-hidden overflow-x-hidden"
     >
       <div
         class="p-2 py-4 w-full md:flex items-center gap-8 space-y-6 md:space-y-0 rounded-2xl shadow-2xl dark:border-2 dark:border-white/5"
       >
-        
-
         <!-- Contents  -->
         <div class="space-y-6">
           <h1
@@ -415,9 +416,18 @@
           </div>
         </div>
 
-        <div class="rounded-2xl" data-aos="fade-up-right" data-aos-delay="0">
+        <!-- image -->
+        <div
+          class="rounded-2xl relative"
+          data-aos="fade-up-right"
+          data-aos-delay="0"
+        >
+          <!-- overlay  -->
+          <div
+            class="absolute rounded-2xl bg-black top-0 w-full h-full opacity-30"
+          ></div>
           <img
-            class="w-full object-center object-contain rounded-2xl"
+            class="w-full h-full object-center object-contain rounded-2xl"
             src="https://i.postimg.cc/RF9K7Pcd/image.png"
             alt="image"
           />
@@ -427,7 +437,7 @@
 
     <!-- Our Impact  -->
 
-    <section id="impact" class="py-16 px-4 overflow-hidden overflow-x-hidden">
+    <section id="impact" class="py-6 md:py-16 px-4 overflow-hidden overflow-x-hidden">
       <div class="text-center pb-10">
         <h1
           data-aos="fade-right"
@@ -554,7 +564,7 @@
         data-aos="fade-up-right"
         data-aos-delay="100"
       >
-        <div class="w-full h-full p-4 flex  ">
+        <div class="w-full h-full p-4 flex">
           <img
             class="rounded-2xl object-cover"
             src="https://i.postimg.cc/HkF38W7Q/cheerful-volunteers-posing-together-with-donation-boxes.jpg"
@@ -563,11 +573,11 @@
         </div>
         <div class="space-y-10 px-4 md:px-0 flex flex-col justify-center">
           <div
-            class="flex items-center justify-start gap-6 "
+            class="flex items-center justify-start gap-6"
             data-aos="fade-up-left"
             data-aos-delay="100"
           >
-            <div class="p-6  bg-violet-100 rounded-full">
+            <div class="p-6 bg-violet-100 rounded-full">
               <svg
                 width="28"
                 height="28"
@@ -597,7 +607,7 @@
             </div>
           </div>
           <div
-            class="flex items-center justify-start gap-6 "
+            class="flex items-center justify-start gap-6"
             data-aos="fade-up-left"
             data-aos-delay="200"
           >
@@ -638,7 +648,7 @@
             data-aos="fade-up-left"
             data-aos-delay="300"
           >
-            <div class="p-6  bg-orange-100 rounded-full">
+            <div class="p-6 bg-orange-100 rounded-full">
               <svg
                 class="text-orange-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -678,7 +688,7 @@
             data-aos="fade-up-left"
             data-aos-delay="400"
           >
-            <div class="p-6  bg-violet-100 rounded-full">
+            <div class="p-6 bg-violet-100 rounded-full">
               <svg
                 class="text-violet-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -720,7 +730,7 @@
 
     <section class="overflow-hidden overflow-x-hidden">
       <div
-        class="flex flex-col items-center max-w-5xl lg:w-full rounded-2xl px-4 py-4 md:py-8 mx-2 lg:mx-auto my-2 text-black dark:bg-gray-900 dark:text-white"
+        class="flex flex-col items-center max-w-5xl lg:w-full rounded-2xl px-4 py-4 md:py-8 mx-2 lg:mx-auto my-2 text-black dark:text-white"
       >
         <div
           class="flex flex-col justify-center items-center text-center sapce-y-3"
@@ -746,7 +756,7 @@
             placeholder="Enter your email"
           />
           <button
-            class="flex items-center justify-center gap-2 group text-white bg-black px-4 md:px-7 py-2.5 rounded active:scale-95 transition-all"
+            class="flex items-center justify-center gap-2 group text-white bg-violet-600 px-4 md:px-7 py-2.5 rounded active:scale-95 transition-all"
           >
             Subscribe
             <svg
@@ -768,7 +778,11 @@
             </svg>
           </button>
         </div>
-        <p class="text-gray-500 mt-6 text-xs text-center">
+        <p
+          class="text-gray-500 mt-6 text-xs text-center"
+          data-aos="fade-right"
+          data-aos-delay="300"
+        >
           By subscribing, you agree to our Privacy Policy and consent to receive
           updates.
         </p>
