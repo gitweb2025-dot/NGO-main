@@ -294,7 +294,7 @@
 
     <!-- Scroll Section  -->
     <main class="overflow-hidden overflow-x-hidden">
-      <div class="text-center mt-10 space-y-3">
+      <div class="text-center mt-10 space-y-3 px-3">
         <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold">Our Programs</h1>
         <p class="text-xs md:text-md lg:text-lg font-light">
           We believe in creating sustainable change through dedicated programs
@@ -324,7 +324,7 @@
         <div class="w-full max-w-7xl overflow-hidden relative rounded-2xl">
           <!-- OverLay  -->
           <div
-            class="w-full h-[400px] bg-black absolute top-0 z-10 opacity-70 rounded-2xl"
+            class="w-full h-[400px] bg-black absolute top-0 z-10 opacity-70 rounded-2xl px-2"
           >
             <h1
               class="text-xs md:text-sm text-center transform translate-y-72 md:translate-y-80 text-white max-w-3xl mx-auto"
@@ -440,34 +440,54 @@
 
     <section class="overflow-hidden overflow-x-hidden mt-10">
       <div>
-        <div>
+        <div class="px-3">
           <h1
             class="text-2xl md:text-4xl lg:text-6xl font-bold text-center mx-auto"
           >
             Latest Program
           </h1>
-          <p class="text-sm text-slate-500 text-center mt-2 max-w-lg mx-auto">
+          <p class="text-sm text-slate-500 text-center mt-4 max-w-2xl mx-auto">
             Stay ahead of the curve with fresh content on code, design,
             startups, and everything in between.
           </p>
 
+          <p class="text-xs md:text-md font-light max-w-6xl text-center mx-auto mt-3">
+            At Ngo, we believe in creating lasting impact through meaningful
+            initiatives. Our programs are designed to uplift communities,
+            protect the environment, and provide opportunities for a brighter
+            future. From education to healthcare, and from women’s empowerment
+            to environmental care, each program reflects our mission of serving
+            humanity with compassion and action. Together, we aim to build
+            stronger, healthier, and more sustainable communities for
+            generations to come.
+          </p>
+
+          <!-- cards  -->
           <div
-            class="grid md:grid-cols-3 place-items-center gap-8 pt-12 max-w-6xl mx-auto px-3 md:px-5"
+            class="grid md:grid-cols-3 lg:grid-cols-4 justify-center items-center gap-8 pt-12 max-w-[1350px] mx-auto px-3 md:px-5"
           >
             <div
-              class="md:max-w-72 w-full hover:-translate-y-0.5 transition duration-300 bg-gray-200 p-4 rounded-2xl space-y-3"
+              data-aos="zoom-in-right"
+              data-aos-delay="50"
+              class="md:max-w-72 w-full shadow-2xl dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl space-y-3"
             >
               <img
-                class="rounded-2xl"
+                class="rounded-2xl w-full h-[250px] object-cover"
                 src="https://i.postimg.cc/43NQ2Hvz/image.png"
                 alt=""
               />
-              <h3 class="text-base text-slate-900 font-medium mt-3">
-                Color Psychology in UI: How to Choose the Right Palette
+              <h3
+                class="text-base text-slate-900 dark:text-white/50 font-medium mt-3"
+              >
+                Protecting nature through sustainable practices for a greener
+                tomorrow.
               </h3>
-              <p class="text-xs text-indigo-600 font-medium mt-1">
-                Environmental Care
-              </p>
+              <div class="flex justify-between">
+                <p class="text-xs text-indigo-600 font-medium">
+                  Environmental Care
+                </p>
+                <p class="text-xs text-emerald-600 font-bold">Goal - $120k</p>
+              </div>
               <!-- Funded  -->
               <div class="flex flex-col justify-center space-y-2">
                 <p class="text-xs font-bold">Funded</p>
@@ -490,10 +510,10 @@
               </div>
 
               <!-- buttons -->
-              <div class="flex justify-between gap-2 pt-2">
+              <div class="flex justify-between gap-2">
                 <a
                   class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 bg-violet-700 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="./404.html"
+                  href="../404.html"
                 >
                   <i class="fa-solid fa-gift text-xs text-white"></i>
                   Donate Now
@@ -501,22 +521,27 @@
 
                 <a
                   class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 rounded-3xl text-violet-700 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="./404.html"
+                  href="../404.html"
                 >
                   Learn more
                 </a>
               </div>
             </div>
             <div
-              class="md:max-w-72 w-full bg-gray-200 p-4 rounded-2xl space-y-3"
+              data-aos="zoom-in-right"
+              data-aos-delay="100"
+              class="md:max-w-72 w-full shadow-2xl dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl space-y-3"
             >
               <img
-                class="rounded-xl"
+                class="rounded-2xl w-full h-[250px] object-cover"
                 src="https://i.postimg.cc/j5y6L6RY/image.png"
                 alt=""
               />
-              <h3 class="text-base text-slate-900 font-medium mt-3">
-                Color Psychology in UI: How to Choose the Right Palette
+              <h3
+                class="text-base text-slate-900 dark:text-white/50 font-medium mt-3"
+              >
+                Providing essential medical support and awareness to build
+                healthier communities.
               </h3>
               <div class="flex justify-between">
                 <p class="text-xs text-indigo-600 font-medium">Health Care</p>
@@ -531,7 +556,7 @@
                   class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden mb-4"
                 >
                   <div
-                    class="progress-bar bg-violet-600 h-4 rounded-full transition-all duration-1000 ease-out"
+                    class="progress-bar bg-violet-700 h-4 rounded-full transition-all duration-1000 ease-out"
                     data-progress="70"
                     style="width: 0%"
                   ></div>
@@ -544,10 +569,10 @@
               </div>
 
               <!-- buttons -->
-              <div class="flex justify-between gap-2 pt-2">
+              <div class="flex justify-between gap-2">
                 <a
                   class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 bg-violet-700 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="./404.html"
+                  href="../404.html"
                 >
                   <i class="fa-solid fa-gift text-xs text-white"></i>
                   Donate Now
@@ -555,50 +580,60 @@
 
                 <a
                   class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 rounded-3xl text-violet-700 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="./404.html"
+                  href="../404.html"
                 >
                   Learn more
                 </a>
               </div>
             </div>
             <div
-              class="md:max-w-72 w-full hover:-translate-y-0.5 transition duration-300 bg-gray-200 p-4 rounded-2xl space-y-3"
+              data-aos="zoom-in-left"
+              data-aos-delay="150"
+              class="md:max-w-72 w-full shadow-2xl dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl space-y-3"
             >
               <img
-                class="rounded-xl"
-                src="https://i.postimg.cc/28g5Xs4T/image.png"
+                class="rounded-2xl w-full h-[250px] object-cover"
+                src="https://i.postimg.cc/fRS9X85S/image.png"
                 alt=""
               />
-              <h3 class="text-base text-slate-900 font-medium mt-3">
-                Color Psychology in UI: How to Choose the Right Palette
+              <h3
+                class="text-base text-slate-900 dark:text-white/50 font-medium mt-3"
+              >
+                Supporting local communities with livelihood training and crisis
+                relief initiatives.
               </h3>
-              <p class="text-xs text-indigo-600 font-medium mt-1">Education</p>
+              <div class="flex justify-between">
+                <p class="text-xs text-indigo-600 font-medium">
+                  Community Development
+                </p>
+                <p class="text-xs text-emerald-600 font-bold">Goal - $120k</p>
+              </div>
               <!-- Funded  -->
               <div class="flex flex-col justify-center space-y-2">
                 <p class="text-xs font-bold">Funded</p>
                 <!-- Progress Bar -->
 
                 <div
-                  class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden"
+                  class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden mb-4"
                 >
                   <div
-                    class="progress-bar bg-violet-500 h-4 rounded-full transition-all duration-1000 ease-out"
-                    data-progress="95"
+                    class="progress-bar bg-violet-700 h-4 rounded-full transition-all duration-1000 ease-out"
+                    data-progress="59"
                     style="width: 0%"
                   ></div>
                   <span
                     class="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white"
                   >
-                    95%
+                    59%
                   </span>
                 </div>
               </div>
 
               <!-- buttons -->
-              <div class="flex justify-between gap-2 pt-2">
+              <div class="flex justify-between gap-2">
                 <a
                   class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 bg-violet-700 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="./404.html"
+                  href="../404.html"
                 >
                   <i class="fa-solid fa-gift text-xs text-white"></i>
                   Donate Now
@@ -606,7 +641,188 @@
 
                 <a
                   class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 rounded-3xl text-violet-700 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="./404.html"
+                  href="../404.html"
+                >
+                  Learn more
+                </a>
+              </div>
+            </div>
+            <div
+              data-aos="zoom-in-left"
+              data-aos-delay="200"
+              class="md:max-w-72 w-full shadow-2xl dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl space-y-3"
+            >
+              <img
+                class="rounded-2xl w-full h-[250px] object-cover"
+                src="https://i.postimg.cc/sDrjKwVZ/image.png"
+                alt=""
+              />
+              <h3
+                class="text-base text-slate-900 dark:text-white/50 font-medium mt-3"
+              >
+                Providing shelter, safety, and holistic care for orphaned and
+                vulnerable children.
+              </h3>
+              <div class="flex justify-between">
+                <p class="text-xs text-indigo-600 font-medium">Child Welfare</p>
+                <p class="text-xs text-emerald-600 font-bold">Goal - $120k</p>
+              </div>
+              <!-- Funded  -->
+              <div class="flex flex-col justify-center space-y-2">
+                <p class="text-xs font-bold">Funded</p>
+                <!-- Progress Bar -->
+
+                <div
+                  class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden mb-4"
+                >
+                  <div
+                    class="progress-bar bg-violet-700 h-4 rounded-full transition-all duration-1000 ease-out"
+                    data-progress="86"
+                    style="width: 0%"
+                  ></div>
+                  <span
+                    class="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white"
+                  >
+                    86%
+                  </span>
+                </div>
+              </div>
+
+              <!-- buttons -->
+              <div class="flex justify-between gap-2">
+                <a
+                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 bg-violet-700 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                  href="../404.html"
+                >
+                  <i class="fa-solid fa-gift text-xs text-white"></i>
+                  Donate Now
+                </a>
+
+                <a
+                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 rounded-3xl text-violet-700 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                  href="../404.html"
+                >
+                  Learn more
+                </a>
+              </div>
+            </div>
+            <div
+              data-aos="zoom-in-right"
+              data-aos-delay="250"
+              class="md:max-w-72 w-full shadow-2xl dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl space-y-3"
+            >
+              <img
+                class="rounded-2xl w-full h-[250px] object-cover"
+                src="https://i.postimg.cc/gJtzgW2z/image.png"
+                alt=""
+              />
+              <h3
+                class="text-base text-slate-900 dark:text-white/50 font-medium mt-3"
+              >
+                Serving daily meals, food distribution camps to support for
+                families in need.
+              </h3>
+              <div class="flex justify-between">
+                <p class="text-xs text-indigo-600 font-medium">
+                  Food & Nutrition
+                </p>
+                <p class="text-xs text-emerald-600 font-bold">Goal - $120k</p>
+              </div>
+              <!-- Funded  -->
+              <div class="flex flex-col justify-center space-y-2">
+                <p class="text-xs font-bold">Funded</p>
+                <!-- Progress Bar -->
+
+                <div
+                  class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden mb-4"
+                >
+                  <div
+                    class="progress-bar bg-violet-700 h-4 rounded-full transition-all duration-1000 ease-out"
+                    data-progress="65"
+                    style="width: 0%"
+                  ></div>
+                  <span
+                    class="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white"
+                  >
+                    65%
+                  </span>
+                </div>
+              </div>
+
+              <!-- buttons -->
+              <div class="flex justify-between gap-2">
+                <a
+                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 bg-violet-700 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                  href="../404.html"
+                >
+                  <i class="fa-solid fa-gift text-xs text-white"></i>
+                  Donate Now
+                </a>
+
+                <a
+                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 rounded-3xl text-violet-700 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                  href="../404.html"
+                >
+                  Learn more
+                </a>
+              </div>
+            </div>
+            <div
+              data-aos="zoom-in-right"
+              data-aos-delay="300"
+              class="md:max-w-72 w-full shadow-2xl dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl space-y-3"
+            >
+              <img
+                class="rounded-2xl w-full h-[250px] object-cover"
+                src="https://i.postimg.cc/28g5Xs4T/image.png"
+                alt=""
+              />
+              <h3
+                class="text-base text-slate-900 dark:text-white/50 font-medium mt-3"
+              >
+                Equipping women with vocational skills and resources to lead
+                independent lives.
+              </h3>
+              <div class="flex justify-between">
+                <p class="text-xs text-indigo-600 font-medium">
+                  Women Empowerment
+                </p>
+                <p class="text-xs text-emerald-600 font-bold">Goal - $120k</p>
+              </div>
+              <!-- Funded  -->
+              <div class="flex flex-col justify-center space-y-2">
+                <p class="text-xs font-bold">Funded</p>
+                <!-- Progress Bar -->
+
+                <div
+                  class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden mb-4"
+                >
+                  <div
+                    class="progress-bar bg-violet-700 h-4 rounded-full transition-all duration-1000 ease-out"
+                    data-progress="80"
+                    style="width: 0%"
+                  ></div>
+                  <span
+                    class="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white"
+                  >
+                    80%
+                  </span>
+                </div>
+              </div>
+
+              <!-- buttons -->
+              <div class="flex justify-between gap-2">
+                <a
+                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 bg-violet-700 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                  href="../404.html"
+                >
+                  <i class="fa-solid fa-gift text-xs text-white"></i>
+                  Donate Now
+                </a>
+
+                <a
+                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 rounded-3xl text-violet-700 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                  href="../404.html"
                 >
                   Learn more
                 </a>
