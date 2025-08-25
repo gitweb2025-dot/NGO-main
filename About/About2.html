@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NGO</title>
+
+    <!-- Aos Cdn Link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Font Awesome Cdn Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../output.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+        /* font-family: "Noto Serif Georgian", serif; */
+        overflow-x: hidden;
+      }
+
+      /* Hamburger animation */
+      .hamburger span {
+        display: block;
+        width: 1.5rem;
+        height: 0.125rem;
+        margin: 0.4rem auto;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: currentColor;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+
+      /* Mobile menu slide + fade */
+      .mobile-menu {
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .mobile-menu.open {
+        max-height: 500px;
+        /* enough for nav links */
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body
+    class="antialiased bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100"
+  >
+    <!-- Topbar -->
+
+    <div
+      class="sticky top-0 bg-green-200 dark:bg-gray-800 w-full flex items-center justify-between overflow-hidden overflow-x-hidden z-1000"
+    >
+      <div class="md:flex items-center space-x-4 hidden">
+        <a href="../404.html" class="text-[12px]">
+          <i class="fa-solid fa-location-dot"></i>Lorem ipsum dolor sit amet
+          consectetur
+        </a>
+        <a href="../404.html" class="text-[12px]">
+          <i class="fa-solid fa-phone"></i>+91-1234567890
+        </a>
+      </div>
+
+      <ul class="flex text-sm">
+        <li
+          class="m-0 p-2 hover:text-pink-500 transform hover:scale-125 transition-all duration-300 ease-in"
+        >
+          <a href="../404.html"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li
+          class="p-2 hover:text-green-500 transform hover:scale-125 transition-all duration-300 ease-in"
+        >
+          <a href="../404.html"><i class="fa-solid fa-envelope"></i></a>
+        </li>
+        <li
+          class="p-2 hover:text-green-400 transform hover:scale-125 transition-all duration-300 ease-in"
+        >
+          <a href="../404.html"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li
+          class="p-2 hover:text-red-700 transform hover:scale-125 transition-all duration-300 ease-in"
+        >
+          <a href="../404.html"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+      </ul>
+    </div>
+    <!-- Navbar  -->
+    <header
+      class="border-b border-slate-200 dark:border-slate-800 sticky top-8 bg-white/90 dark:bg-slate-950/90 backdrop-blur transition-colors duration-500 overflow-x-hidden z-1000"
+    >
+      <div class="container mx-auto flex items-center justify-between px-4">
+        <!-- Logo -->
+        <!-- <a href="#" class="text-xl font-bold tracking-tight">Brand</a> -->
+        <a class="" href="../index.html"
+          ><img
+            class="w-32 h-20 object-cover"
+            src="https://i.postimg.cc/6p3NbWTf/image-removebg-preview.png"
+            alt="logo"
+        /></a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="../index.html" class="hover:text-green-600 transition-colors"
+            >Home</a
+          >
+          <a href="./About2.html" class="hover:text-green-600 transition-colors"
+            >About Us</a
+          >
+          <a href="../404.html" class="hover:text-green-600 transition-colors"
+            >Services</a
+          >
+          <a href="../404.html" class="hover:text-green-600 transition-colors"
+            >Causes</a
+          >
+          <a href="../404.html" class="hover:text-green-600 transition-colors"
+            >News</a
+          >
+        </nav>
+
+        <div class="hidden md:flex text-sm font-medium">
+          <a
+            class="px-6 py-3 bg-green-300 rounded-3xl text-black transform hover:scale-95 transition duration-200 ease-out"
+            href="../404.html"
+            >Donate Now</a
+          >
+        </div>
+
+        <!-- Hamburger -->
+        <button
+          id="hamburger"
+          class="hamburger md:hidden focus:outline-none"
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav
+        id="mobileMenu"
+        class="mobile-menu md:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-md"
+      >
+        <ul class="flex flex-col space-y-4 p-4 text-sm font-medium">
+          <li>
+            <a
+              href="../index.html"
+              class="nav-link block hover:text-green-600 transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="./About2.html"
+              class="nav-link block hover:text-green-600 transition-colors"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="../404.html"
+              class="nav-link block hover:text-green-600 transition-colors"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="../404.html"
+              class="nav-link block hover:text-green-600 transition-colors"
+              >Causes</a
+            >
+          </li>
+          <li>
+            <a
+              href="../404.html"
+              class="nav-link block hover:text-green-600 transition-colors"
+              >News</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- BreadCrumb -->
+    <section class="overflow-hidden overflow-x-hidden">
+      <div
+        class="flex flex-wrap items-center space-x-2 text-sm text-gray-500 font-medium bg-white py-2 px-4 rounded-lg"
+      >
+        <a href="../index.html">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16 7.609c.352 0 .69.122.96.343l.111.1 6.25 6.25v.001a1.5 1.5 0 0 1 .445 1.071v7.5a.89.89 0 0 1-.891.891H9.125a.89.89 0 0 1-.89-.89v-7.5l.006-.149a1.5 1.5 0 0 1 .337-.813l.1-.11 6.25-6.25c.285-.285.67-.444 1.072-.444Zm5.984 7.876L16 9.5l-5.984 5.985v6.499h11.968z"
+              fill="#475569"
+              stroke="#475569"
+              stroke-width=".094"
+            />
+          </svg>
+        </a>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m14.413 10.663-6.25 6.25a.939.939 0 1 1-1.328-1.328L12.42 10 6.836 4.413a.939.939 0 1 1 1.328-1.328l6.25 6.25a.94.94 0 0 1-.001 1.328"
+            fill="#CBD5E1"
+          />
+        </svg>
+        <a href="../Home/Home.html">Home</a>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m14.413 10.663-6.25 6.25a.939.939 0 1 1-1.328-1.328L12.42 10 6.836 4.413a.939.939 0 1 1 1.328-1.328l6.25 6.25a.94.94 0 0 1-.001 1.328"
+            fill="#CBD5E1"
+          />
+        </svg>
+        <a href="./About2.html" class="text-emerald-500">About</a>
+      </div>
+    </section>
+
+    <!-- Home-Section  -->
+    <main></main>
+
+    <!-- connect us  -->
+
+    <section class="overflow-hidden overflow-x-hidden">
+      <div
+        class="flex flex-col items-center max-w-5xl lg:w-full rounded-2xl px-4 py-8 mx-2 lg:mx-auto my-2 text-black dark:bg-gray-900 dark:text-white"
+      >
+        <div
+          class="flex flex-col justify-center items-center text-center sapce-y-3"
+          data-aos="fade-right"
+          data-aos-delay="100"
+        >
+          <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold">
+            Stay <span class="text-green-500">connect</span> with Us
+          </h1>
+          <p class="text-sm md:text-base text-gray-500/90 mt-2 max-w-xl">
+            Join our team and be the first to donours new updates, exclusive
+            offers, and inspiration.
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          <input
+            type="text"
+            class="bg-white/10 px-4 py-2.5 border dark:border-white/20 rounded outline-none max-w-66 w-full"
+            placeholder="Enter your email"
+          />
+          <button
+            class="flex items-center justify-center gap-2 group text-white bg-black px-4 md:px-7 py-2.5 rounded active:scale-95 transition-all"
+          >
+            Subscribe
+            <svg
+              class="w-4 h-4 text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 12H5m14 0-4 4m4-4-4-4"
+              />
+            </svg>
+          </button>
+        </div>
+        <p class="text-gray-500 mt-6 text-xs text-center">
+          By subscribing, you agree to our Privacy Policy and consent to receive
+          updates.
+        </p>
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer
+      class="px-6 md:px-4 lg:px-8 xl:px-16 pt-2 w-full text-gray-500 dark:bg-gray-950 overflow-hidden overflow-x-hidden"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
+        <div class="md:max-w-96 flex flex-col items-start h-full">
+          <img
+            class="h-20 object-cover"
+            src="https://i.postimg.cc/6p3NbWTf/image-removebg-preview.png"
+            alt="logo"
+          />
+          <p class="mt-2 text-sm">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+        </div>
+
+        <div class="flex-1 flex items-start md:justify-end gap-20">
+          <div>
+            <h2 class="font-semibold mb-5 text-gray-800">Company</h2>
+            <ul class="text-sm space-y-2">
+              <li><a href="../Home/Home.html">Home</a></li>
+              <li><a href="./About2.html">About us</a></li>
+              <li><a href="../404.html">Services</a></li>
+              <li><a href="../404.html">Blogs</a></li>
+              <li><a href="../404.html">Contact us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="font-semibold mb-5 text-gray-800">Get in touch</h2>
+            <div class="text-sm space-y-2">
+              <p>+1-212-456-7890</p>
+              <p>contact@example.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="pt-4 text-center text-xs md:text-sm pb-5">
+        Copyright 2025 © <a href="#">Stackly</a>. All Right Reserved.
+      </p>
+    </footer>
+
+    <!-- data-aos  -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      AOS.init({
+        duration: 900,
+        // delay: 200, // default delay for all elements
+        once: false,
+        mirror: true,
+      });
+    </script>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const links = mobileMenu.querySelectorAll(".nav-link");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("open");
+      });
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("open");
+        });
+      });
+    </script>
+  </body>
+</html>
