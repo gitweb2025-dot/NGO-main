@@ -109,12 +109,12 @@
             class="hover:text-violet-600 transition-colors"
             >Services</a
           >
-          <a
-            href="./Blog.html"
-            class="hover:text-violet-600 transition-colors"
+          <a href="./Blog.html" class="hover:text-violet-600 transition-colors"
             >Blogs</a
           >
-          <a href="../Contact/Contact.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../Contact/Contact.html"
+            class="hover:text-violet-600 transition-colors"
             >Contact</a
           >
           <a href="../404.html" class="hover:text-violet-600 transition-colors"
@@ -314,7 +314,11 @@
         </p>
       </div>
 
-      <div class="flex justify-center items-center mt-10 mx-4 md:mx-6">
+      <div
+        class="flex justify-center items-center mt-3 md:mt-10 mx-4 md:mx-6"
+        data-aos="fade-up-left"
+        data-aos-delay="200"
+      >
         <!-- <button
           id="prev"
           class="md:p-2 p-1 bg-black/30 md:mr-6 mr-2 rounded-full hover:bg-black/50"
@@ -337,7 +341,7 @@
         <div class="w-full max-w-[1500px] overflow-hidden relative rounded-2xl">
           <!-- OverLay  -->
           <div
-            class="w-full h-[400px] bg-black absolute inset-0 flex items-end justify-center text-xs z-10 opacity-70 rounded-2xl px-2 py-4"
+            class="w-full h-[400px] bg-gradient-to-r from-black via-black to-gray-900 absolute inset-0 flex flex-col space-y-6 items-center justify-end text-xs z-10 opacity-70 rounded-2xl px-2 py-4"
           >
             <h1
               class="text-xs md:text-xl text-center text-white max-w-4xl mx-auto"
@@ -549,7 +553,7 @@
 
           <!-- Search option  -->
           <div
-            class="hidden md:flex space-x-2 bg-white dark:bg-white/5 p-1 rounded-full text-sm max-w-7xl mx-auto px-16  mt-8"
+            class="hidden md:flex space-x-2 bg-white dark:bg-white/5 p-1 rounded-full text-sm max-w-7xl mx-auto px-16 mt-8"
           >
             <div class="flex items-center">
               <input
@@ -592,13 +596,11 @@
               >
             </div>
             <div class="flex items-center justify-end w-full">
-              <span class="py-2 px-6 rounded-full border-2 border-violet-500 flex items-center gap-2">
+              <span
+                class="py-2 px-6 rounded-full border-2 border-violet-500 flex items-center gap-2"
+              >
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input
-                  type="text"
-                  placeholder="search"
-                  class="outline-none"
-                />
+                <input type="text" placeholder="search" class="outline-none" />
               </span>
             </div>
           </div>
@@ -1043,10 +1045,10 @@
     <!-- footer -->
 
     <footer
-      class="px-4 lg:px-8 xl:px-16 pt-2  text-gray-500 dark:bg-gray-950 overflow-hidden overflow-x-hidden"
+      class="px-4 lg:px-8 xl:px-16 pt-2 text-gray-500 dark:bg-gray-950 overflow-hidden overflow-x-hidden"
     >
       <div
-        class="flex flex-col md:flex-row justify-between  gap-10 pb-6"
+        class="flex flex-col md:flex-row justify-between gap-10 pb-6"
         data-aos="fade-up"
         data-aos-delay="150"
       >
@@ -1087,7 +1089,7 @@
 
         <!-- Google Map -->
         <div
-          class="rounded-2xl bg-black/50  max-w-[7xl] overflow-hidden shadow-lg mb-3"
+          class="rounded-2xl bg-black/50 max-w-[7xl] overflow-hidden shadow-lg mb-3"
         >
           <iframe
             class="opacity-50"
