@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NGO</title>
+
+    <!-- Aos Cdn Link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Font Awesome Cdn Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../output.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+        /* font-family: "Noto Serif Georgian", serif; */
+        overflow-x: hidden;
+      }
+
+      /* Hamburger animation */
+      .hamburger span {
+        display: block;
+        width: 1.5rem;
+        height: 0.125rem;
+        margin: 0.4rem auto;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: currentColor;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+
+      /* Mobile menu slide + fade */
+      .mobile-menu {
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .mobile-menu.open {
+        max-height: 500px;
+        /* enough for nav links */
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body
+    class="antialiased bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100"
+  >
+    <!-- Topbar -->
+
+    <div
+      class="sticky top-0 px-4 bg-green-200 dark:bg-gray-800 w-full flex items-center justify-between overflow-hidden overflow-x-hidden z-1000"
+    >
+      <div class="md:flex items-center space-x-4 hidden">
+        <a href="../404.html" class="text-[12px]">
+          <i class="fa-solid fa-location-dot"></i>Lorem ipsum dolor sit amet
+          consectetur
+        </a>
+        <a href="../404.html" class="text-[12px]">
+          <i class="fa-solid fa-phone"></i>+91-1234567890
+        </a>
+      </div>
+
+      <ul class="flex text-sm">
+        <li
+          class="m-0 p-2 hover:text-pink-500 transform hover:scale-125 transition-all duration-300 ease-in"
+        >
+          <a href="../404.html"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li
+          class="p-2 hover:text-green-500 transform hover:scale-125 transition-all duration-300 ease-in"
+        >
+          <a href="../404.html"><i class="fa-solid fa-envelope"></i></a>
+        </li>
+        <li
+          class="p-2 hover:text-green-400 transform hover:scale-125 transition-all duration-300 ease-in"
+        >
+          <a href="../404.html"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li
+          class="p-2 hover:text-red-700 transform hover:scale-125 transition-all duration-300 ease-in"
+        >
+          <a href="../404.html"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Navbar  -->
+    <header
+      class="sticky top-9 z-500 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur"
+    >
+      <div class="container mx-auto flex items-center justify-between px-4">
+        <!-- Logo -->
+        <!-- <a href="#" class="text-xl font-bold tracking-tight">Brand</a> -->
+        <a class="" href="../index.html"
+          ><img
+            class="w-32 h-20 object-cover"
+            src="https://i.postimg.cc/6p3NbWTf/image-removebg-preview.png"
+            alt="logo"
+        /></a>
+
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden md:flex space-x-2 md:space-x-3 lg:space-x-5 text-sm font-medium"
+        >
+          <a
+            href="../Home/Home.html"
+            class="hover:text-green-600 transition-colors"
+            >Home</a
+          >
+          <a href="./About2.html" class="hover:text-green-600 transition-colors"
+            >About Us</a
+          >
+          <a href="../404.html" class="hover:text-green-600 transition-colors"
+            >Services</a
+          >
+          <a href="../404.html" class="hover:text-green-600 transition-colors"
+            >Blogs</a
+          >
+          <a href="../404.html" class="hover:text-green-600 transition-colors"
+            >Contact</a
+          >
+          <a href="../404.html" class="hover:text-green-600 transition-colors"
+            >Dashboard</a
+          >
+        </nav>
+
+        <div class="hidden lg:flex text-sm gap-4 font-medium">
+          <a
+            class="flex items-center gap-2 px-6 py-3 border-2 border-green-500 rounded-3xl text-black dark:text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
+            href="../404.html"
+          >
+            <i class="fa-solid fa-gift text-xl text-green-600"></i> Donate Now
+          </a>
+          <a
+            class="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-[#92f29c] to-[hsl(124,100%,26%)] rounded-3xl text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
+            href="../login.html"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+            </svg>
+            Login</a
+          >
+        </div>
+
+        <!-- Hamburger -->
+        <button
+          id="hamburger"
+          class="hamburger lg:hidden focus:outline-none"
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav
+        id="mobileMenu"
+        class="mobile-menu lg:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-md"
+      >
+        <ul class="flex flex-col space-y-4 p-4 text-sm font-medium">
+          <li>
+            <a
+              href="../Home/Home.html"
+              class="nav-link block hover:text-green-600 transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="./About2.html"
+              class="nav-link block hover:text-green-600 transition-colors"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="../404.html"
+              class="nav-link block hover:text-green-600 transition-colors"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="../404.html"
+              class="nav-link block hover:text-green-600 transition-colors"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a
+              href="../404.html"
+              class="nav-link block hover:text-green-600 transition-colors"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="../404.html"
+              class="nav-link block hover:text-green-600 transition-colors"
+              >Dashboard</a
+            >
+          </li>
+          <li>
+            <a
+              href="../404.html"
+              class="nav-link text-green-500 block hover:text-green-600 transition-colors"
+              ><i class="fa-solid fa-gift"></i> Donate Now</a
+            >
+          </li>
+          <li>
+            <a
+              href="../login.html"
+              class="flex items-center gap-2 nav-link hover:text-green-600 transition-colors"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+              Login</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- BreadCrumb -->
+    <section class="overflow-hidden overflow-x-hidden">
+      <div
+        class="flex flex-wrap items-center space-x-2 text-sm text-gray-500 font-medium py-2 px-4 rounded-lg"
+      >
+        <a href="../index.html">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16 7.609c.352 0 .69.122.96.343l.111.1 6.25 6.25v.001a1.5 1.5 0 0 1 .445 1.071v7.5a.89.89 0 0 1-.891.891H9.125a.89.89 0 0 1-.89-.89v-7.5l.006-.149a1.5 1.5 0 0 1 .337-.813l.1-.11 6.25-6.25c.285-.285.67-.444 1.072-.444Zm5.984 7.876L16 9.5l-5.984 5.985v6.499h11.968z"
+              fill="#475569"
+              stroke="#475569"
+              stroke-width=".094"
+            />
+          </svg>
+        </a>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m14.413 10.663-6.25 6.25a.939.939 0 1 1-1.328-1.328L12.42 10 6.836 4.413a.939.939 0 1 1 1.328-1.328l6.25 6.25a.94.94 0 0 1-.001 1.328"
+            fill="#CBD5E1"
+          />
+        </svg>
+        <a href="../Home/Home.html">Home</a>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m14.413 10.663-6.25 6.25a.939.939 0 1 1-1.328-1.328L12.42 10 6.836 4.413a.939.939 0 1 1 1.328-1.328l6.25 6.25a.94.94 0 0 1-.001 1.328"
+            fill="#CBD5E1"
+          />
+        </svg>
+        <a href="./Service2.html" class="text-emerald-500">Services</a>
+      </div>
+    </section>
+
+    <!-- Home-Section  -->
+    <main class="overflow-hidden overflow-x-hidden pb-3 md:pb-8">
+      <div class="grid lg:grid-cols-2 items-center m-4 gap-3 md:gap-6 ">
+        <!-- image -->
+        <div
+          data-aos="fade-right"
+          data-aos-delay="100"
+          class="flex items-center justify-center h-full relative "
+        >
+          <img
+            class="rounded-full w-[300px] h-[300px] md:w-[500px] md:h-[500px] object-cover object-top border-2 border-black/10 shadow-[0px_4px_25px_14px_rgba(0,_0,_0,_0.1)]"
+            src="https://i.postimg.cc/6q38wcjs/image.png"
+            alt="image"
+          />
+          <div class="absolute inset-0 flex justify-end items-end">
+            <img
+              class="border-8 border-white rounded-full w-[180px] h-[180px] md:w-[300px] md:h-[300px] object-cover object-center"
+              src="https://i.postimg.cc/8zf0KVbW/image.png"
+              alt="image"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col w-full space-y-8">
+          <p
+            data-aos="fade-up-left"
+            data-aos-delay="50"
+            class="w-fit text-xl md:text-4xl font-semibold text-gray-500 uppercase"
+          >
+            Why we choose us
+          </p>
+          <h1
+            data-aos="fade-up-left"
+            data-aos-delay="100"
+            class="text-xl md:text-4xl lg:text-6xl font-semibold"
+          >
+            Why we stand out together
+          </h1>
+          <p data-aos="fade-up-left" data-aos-delay="150" class="text-sm">
+            Our dedication, transparency, and community-driven approach set us
+            apart. partnering with us,programs that create meaningful change.
+          </p>
+
+          <!-- 4 ticks -->
+          <div class="pt-4 md:pt-6 gap-8">
+            <ul class="grid md:grid-cols-2 gap-4 space-y-4">
+              <li
+                class="flex items-center gap-3"
+                data-aos="fade-up-left"
+                data-aos-delay="50"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="24"
+                  viewBox="0 0 28 24"
+                  fill="none"
+                >
+                  <path
+                    d="M11.03 23.8257C16.6544 23.8257 21.2139 19.2662 21.2139 13.6419C21.2139 8.01747 16.6544 3.45801 11.03 3.45801C5.40565 3.45801 0.846191 8.01747 0.846191 13.6419C0.846191 19.2662 5.40565 23.8257 11.03 23.8257Z"
+                    fill="#228B22"
+                  ></path>
+                  <path
+                    d="M11.1452 21.5131L11.016 21.293C9.04293 17.9312 3.79974 10.7971 3.74678 10.7255L3.67114 10.6227L5.45747 8.85732L11.112 12.8057C14.6723 8.18578 17.9937 5.01259 20.1603 3.15957C22.5304 1.13255 24.0731 0.199376 24.0887 0.190434L24.1238 0.169434H27.1539L26.8644 0.427203C19.4205 7.05755 11.352 21.1497 11.2716 21.2913L11.1452 21.5131Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                Healthcare Support
+              </li>
+              <li
+                class="flex items-center gap-3"
+                data-aos="fade-up-left"
+                data-aos-delay="100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="24"
+                  viewBox="0 0 28 24"
+                  fill="none"
+                >
+                  <path
+                    d="M11.03 23.8257C16.6544 23.8257 21.2139 19.2662 21.2139 13.6419C21.2139 8.01747 16.6544 3.45801 11.03 3.45801C5.40565 3.45801 0.846191 8.01747 0.846191 13.6419C0.846191 19.2662 5.40565 23.8257 11.03 23.8257Z"
+                    fill="#228B22"
+                  ></path>
+                  <path
+                    d="M11.1452 21.5131L11.016 21.293C9.04293 17.9312 3.79974 10.7971 3.74678 10.7255L3.67114 10.6227L5.45747 8.85732L11.112 12.8057C14.6723 8.18578 17.9937 5.01259 20.1603 3.15957C22.5304 1.13255 24.0731 0.199376 24.0887 0.190434L24.1238 0.169434H27.1539L26.8644 0.427203C19.4205 7.05755 11.352 21.1497 11.2716 21.2913L11.1452 21.5131Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                Empowering Communities
+              </li>
+              <li
+                class="flex items-center gap-3"
+                data-aos="fade-up-left"
+                data-aos-delay="150"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="24"
+                  viewBox="0 0 28 24"
+                  fill="none"
+                >
+                  <path
+                    d="M11.03 23.8257C16.6544 23.8257 21.2139 19.2662 21.2139 13.6419C21.2139 8.01747 16.6544 3.45801 11.03 3.45801C5.40565 3.45801 0.846191 8.01747 0.846191 13.6419C0.846191 19.2662 5.40565 23.8257 11.03 23.8257Z"
+                    fill="#228B22"
+                  ></path>
+                  <path
+                    d="M11.1452 21.5131L11.016 21.293C9.04293 17.9312 3.79974 10.7971 3.74678 10.7255L3.67114 10.6227L5.45747 8.85732L11.112 12.8057C14.6723 8.18578 17.9937 5.01259 20.1603 3.15957C22.5304 1.13255 24.0731 0.199376 24.0887 0.190434L24.1238 0.169434H27.1539L26.8644 0.427203C19.4205 7.05755 11.352 21.1497 11.2716 21.2913L11.1452 21.5131Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                Disaster Relief
+              </li>
+              <li
+                class="flex items-center gap-3"
+                data-aos="fade-up-left"
+                data-aos-delay="200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="24"
+                  viewBox="0 0 28 24"
+                  fill="none"
+                >
+                  <path
+                    d="M11.03 23.8257C16.6544 23.8257 21.2139 19.2662 21.2139 13.6419C21.2139 8.01747 16.6544 3.45801 11.03 3.45801C5.40565 3.45801 0.846191 8.01747 0.846191 13.6419C0.846191 19.2662 5.40565 23.8257 11.03 23.8257Z"
+                    fill="#228B22"
+                  ></path>
+                  <path
+                    d="M11.1452 21.5131L11.016 21.293C9.04293 17.9312 3.79974 10.7971 3.74678 10.7255L3.67114 10.6227L5.45747 8.85732L11.112 12.8057C14.6723 8.18578 17.9937 5.01259 20.1603 3.15957C22.5304 1.13255 24.0731 0.199376 24.0887 0.190434L24.1238 0.169434H27.1539L26.8644 0.427203C19.4205 7.05755 11.352 21.1497 11.2716 21.2913L11.1452 21.5131Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                Providing Essentials
+              </li>
+            </ul>
+          </div>
+
+          <!-- 3 cards  -->
+          <div id="impact">
+            <div
+              class="max-w-6xl mx-auto grid md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-8 text-center"
+            >
+              <!-- Children Saved -->
+              <div
+                class="bg-white shadow-lg rounded-2xl p-8 dark:bg-white/5"
+                data-aos="flip-left"
+                data-aos-delay="100"
+              >
+                <h3 class="text-lg font-semibold text-gray-700 mb-2 uppercase">
+                  Children Saved
+                </h3>
+                <span
+                  class="counter text-3xl font-bold text-green-500"
+                  data-target="2250"
+                  >0</span
+                ><span class="text-3xl font-bold text-green-500">+</span>
+              </div>
+
+              <!-- hunger Relief -->
+              <div
+                class="bg-white shadow-lg rounded-2xl p-8 dark:bg-white/5"
+                data-aos="flip-up"
+                data-aos-delay="300"
+              >
+                <h3 class="text-lg font-semibold text-gray-700 mb-2 uppercase">
+                  hunger Relief
+                </h3>
+                <span
+                  class="counter text-3xl font-bold text-green-500"
+                  data-target="99"
+                  >0</span
+                ><span class="text-3xl font-bold text-green-500">%</span>
+              </div>
+
+              <!-- volunteers -->
+              <div
+                class="bg-white shadow-lg rounded-2xl p-8 dark:bg-white/5"
+                data-aos="flip-right"
+                data-aos-delay="500"
+              >
+                <h3 class="text-lg font-semibold text-gray-700 mb-2 uppercase">
+                  volunteers
+                </h3>
+                <span
+                  class="counter text-3xl font-bold text-green-500"
+                  data-target="1200"
+                  >0</span
+                ><span class="text-3xl font-bold text-green-500">K+</span>
+              </div>
+            </div>
+          </div>
+          <!-- Counter JS -->
+          <script>
+            function animateCounters() {
+              const counters = document.querySelectorAll(".counter");
+
+              counters.forEach((counter) => {
+                let target = +counter.getAttribute("data-target");
+                let count = 0;
+                let increment = target / 200; // adjust speed
+
+                function updateCounter() {
+                  count += increment;
+                  if (count < target) {
+                    counter.innerText = Math.ceil(count);
+                    requestAnimationFrame(updateCounter);
+                  } else {
+                    counter.innerText = target;
+                  }
+                }
+
+                updateCounter();
+              });
+            }
+
+            // Trigger when section is visible
+            const section = document.querySelector("#impact");
+            const observer = new IntersectionObserver(
+              (entries, observer) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(section); // run once
+                  }
+                });
+              },
+              { threshold: 0.6 }
+            );
+
+            observer.observe(section);
+          </script>
+        </div>
+      </div>
+    </main>
+
+    <!-- connect us  -->
+
+    <section class="overflow-hidden overflow-x-hidden">
+      <div
+        class="flex flex-col items-center max-w-5xl lg:w-full rounded-2xl px-4 py-8 mx-2 lg:mx-auto my-2 text-black dark:bg-gray-900 dark:text-white"
+      >
+        <div
+          class="flex flex-col justify-center items-center text-center sapce-y-3"
+          data-aos="fade-right"
+          data-aos-delay="100"
+        >
+          <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold">
+            Stay <span class="text-green-500">connect</span> with Us
+          </h1>
+          <p class="text-sm md:text-base text-gray-500/90 mt-2 max-w-xl">
+            Join our team and be the first to donours new updates, exclusive
+            offers, and inspiration.
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          <input
+            type="text"
+            class="bg-white/10 px-4 py-2.5 border dark:border-white/20 rounded outline-none max-w-66 w-full"
+            placeholder="Enter your email"
+          />
+          <a
+            href="../404.html"
+            class="flex items-center justify-center gap-2 group text-white bg-black px-4 md:px-7 py-2.5 rounded active:scale-95 transition-all"
+          >
+            Subscribe
+            <svg
+              class="w-4 h-4 text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 12H5m14 0-4 4m4-4-4-4"
+              />
+            </svg>
+          </a>
+        </div>
+        <p
+          data-aos="fade-right"
+          data-aos-delay="250"
+          class="text-gray-500 mt-6 text-xs text-center"
+        >
+          By subscribing, you agree to our Privacy Policy and consent to receive
+          updates.
+        </p>
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer
+      class="px-4 lg:px-8 xl:px-16 pt-2 w-full text-gray-500 dark:bg-gray-950 overflow-hidden overflow-x-hidden"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between w-full gap-10 pb-6"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
+        <div class="md:max-w-96 flex flex-col items-start md:p-4 space-y-2">
+          <img
+            class="w-36 h-fit"
+            src="https://i.postimg.cc/jjrFgVH0/image-removebg-preview-2.png"
+            alt="logo"
+          />
+          <p class="mt-2 text-sm">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+        </div>
+
+        <div
+          class="flex-1 flex items-start justify-center md:justify-end gap-20 p-4"
+        >
+          <div>
+            <h2 class="font-semibold mb-5 text-gray-800">Company</h2>
+            <ul class="text-sm space-y-2">
+              <li><a href="../Home/Home.html">Home</a></li>
+              <li><a href="./About2.html">About us</a></li>
+              <li><a href="./404.html">Services</a></li>
+              <li><a href="./404.html">Blogs</a></li>
+              <li><a href="./404.html">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <h2 class="font-semibold mb-5 text-gray-800">Get in touch</h2>
+            <div class="text-sm space-y-2">
+              <p>+1-212-456-7890</p>
+              <p>contact@example.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Map -->
+        <div
+          class="rounded-2xl bg-black/50 w-full overflow-hidden shadow-lg mb-3"
+        >
+          <iframe
+            class="opacity-50"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1616097152896!2d78.1739798!3d11.682956599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e0!3m2!1sen!2sin!4v1755667813665!5m2!1sen!2sin"
+            width="100%"
+            height="250"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <p
+        class="pt-4 text-center text-xs md:text-sm pb-5 border-t border-gray-500/30"
+      >
+        Copyright 2025 © <a href="#">Stackly</a>. All Right Reserved.
+      </p>
+    </footer>
+
+    <!-- data-aos  -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      AOS.init({
+        duration: 900,
+        // delay: 200, // default delay for all elements
+        once: false,
+        mirror: true,
+      });
+    </script>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const links = mobileMenu.querySelectorAll(".nav-link");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("open");
+      });
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("open");
+        });
+      });
+    </script>
+  </body>
+</html>
