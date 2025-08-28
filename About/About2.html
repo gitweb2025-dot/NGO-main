@@ -118,7 +118,7 @@
 
     <!-- Navbar  -->
     <header
-      class="sticky top-0 z-500 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur"
+      class="sticky top-9 z-500 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur"
     >
       <div class="container mx-auto flex items-center justify-between px-4">
         <!-- Logo -->
@@ -139,19 +139,13 @@
             class="hover:text-green-600 transition-colors"
             >Home</a
           >
-          <a
-            href="./About2.html"
-            class="hover:text-green-600 transition-colors"
+          <a href="./About2.html" class="hover:text-green-600 transition-colors"
             >About Us</a
           >
-          <a
-            href="../404.html"
-            class="hover:text-green-600 transition-colors"
+          <a href="../404.html" class="hover:text-green-600 transition-colors"
             >Services</a
           >
-          <a
-            href="../404.html"
-            class="hover:text-green-600 transition-colors"
+          <a href="../404.html" class="hover:text-green-600 transition-colors"
             >Blogs</a
           >
           <a href="../404.html" class="hover:text-green-600 transition-colors"
@@ -285,7 +279,7 @@
     <!-- BreadCrumb -->
     <section class="overflow-hidden overflow-x-hidden">
       <div
-        class="flex flex-wrap items-center space-x-2 text-sm text-gray-500 font-medium bg-white py-2 px-4 rounded-lg"
+        class="flex flex-wrap items-center space-x-2 text-sm text-gray-500 font-medium py-2 px-4 rounded-lg"
       >
         <a href="../index.html">
           <svg
@@ -333,36 +327,497 @@
     </section>
 
     <!-- Home-Section  -->
-    <main class="overflow-hidden overflow-x-hidden">
-      <div class="space-y-6 md:space-y-0 md:flex m-4 ">
-
-        <div class="flex items-center justify-center md:w-4/6">
-          <img class="rounded-2xl w-[400px] h-[400px] object-cover" src="https://i.postimg.cc/mgLbK9cT/image.png" alt="image">
+    <main class="overflow-hidden overflow-x-hidden pb-3 md:pb-8">
+      <div
+        class="space-y-6 md:space-y-0 md:flex items-center m-4 gap-3 md:gap-6"
+      >
+        <div
+          data-aos="fade-right"
+          data-aos-delay="100"
+          data-aos-easing="linear"
+          class="flex items-center justify-center md:w-4/6 h-full"
+        >
+          <img
+            class="rounded-2xl w-[500px] h-[500px] object-cover object-center border-2 border-black/10 shadow-[0px_4px_10px_7px_rgba(0,_0,_0,_0.1)]"
+            src="https://i.postimg.cc/6QC11RDr/image.png"
+            alt="image"
+          />
         </div>
-
 
         <div class="flex flex-col w-full space-y-4">
           <p
+            data-aos="fade-up-left"
+            data-aos-delay="50"
             class="w-fit text-[8px] md:text-xs font-semibold px-3 py-1 border-2 rounded-full text-gray-500"
           >
             About Us <span><i class="fa-solid fa-hand-holding-heart"></i></span>
           </p>
-          <h1 class="text-xl md:text-4xl lg:text-6xl font-semibold">
+          <h1
+            data-aos="fade-up-left"
+            data-aos-delay="100"
+            class="text-xl md:text-4xl lg:text-6xl font-semibold"
+          >
             United in compassion, changing lives
           </h1>
-          <p class="text-sm">
-            We are a registered non-profit empowering communities with
-            education, health access, and climate resilience programs across
-            three continents.
+          <p data-aos="fade-up-left" data-aos-delay="150" class="text-sm">
+            Driven by compassion and a shared vision, we work hand-in-hand with
+            communities to create meaningful change.
           </p>
 
-          <div class="grid grid-cols-2">
-            <div></div>
-            <div></div>
+          <div
+            class="grid md:grid-cols-2 place-content-center pt-4 md:pt-6 gap-6"
+          >
+            <div
+              data-aos="zoom-in-right"
+              data-aos-delay="150"
+              class="flex flex-col gap-6 px-2 py-4 md:p-4 shadow-[0px_4px_10px_7px_rgba(0,_0,_0,_0.1)] bg-white/5 rounded-2xl"
+            >
+              <div class="space-y-3">
+                <h1 class="text-4xl">
+                  <i class="fa-solid fa-hand-holding-medical"></i>
+                </h1>
+                <h1 class="font-semibold text-sm md:text-lg">
+                  Healthcare Support
+                </h1>
+                <p>
+                  Providing essential healthcare services and resources to
+                  communities.
+                </p>
+              </div>
+
+              <div class="w-fit h-fit">
+                <a
+                  class="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 border-2 bg-green-500 border-green-500 rounded-3xl text-black dark:text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
+                  href="../404.html"
+                >
+                  <i class="fa-solid fa-gift text-xs md:text-xl"></i>
+                  Donate Now</a
+                >
+              </div>
+            </div>
+            <div
+              data-aos="zoom-in-left"
+              data-aos-delay="200"
+              class="flex flex-col justify-center space-y-2 px-2 py-4 md:p-4 shadow-[0px_4px_10px_7px_rgba(0,_0,_0,_0.1)] bg-white/5 rounded-2xl"
+            >
+              <img
+                class="w-[100px] h-[100px] rounded-full object-cover"
+                src="https://i.postimg.cc/yNvKYCbk/image.png"
+                alt="profile"
+              />
+              <h1 class="text-lg font-semibold text-green-500">75,999</h1>
+              <h1 class="text-sm md:text-xl font-semibold">Helped Fund</h1>
+              <p>Supporting growth through community- funding.</p>
+            </div>
           </div>
         </div>
       </div>
     </main>
+
+    <!-- How We Make a Difference -->
+    <section class="overflow-hidden overflow-x-hidden">
+      <div class="grid lg:grid-cols-2 m-4 gap-8 max-w-[1500px] mx-auto">
+        <div class="space-y-4 mx-3">
+          <h1
+            data-aos="fade-right"
+            data-aos-delay="50"
+            class="text-xs font-bold px-6 py-1 border border-black dark:border-white/40 w-fit rounded-4xl"
+          >
+            "How We Make a Difference"
+          </h1>
+          <h2
+            data-aos="fade-left"
+            data-aos-delay="100"
+            class="text-lg md:text-2xl lg:text-4xl font-bold"
+          >
+            Our Approach
+          </h2>
+          <p
+            data-aos="fade-up-right"
+            data-aos-delay="150"
+            class="text-lg md:text-2xl font-medium"
+          >
+            We believe that real change begins with compassion, grows with
+            community, and lasts with empowerment. Our approach combines
+            immediate relief with long-term solutions to create sustainable
+            impact.
+          </p>
+
+          <p
+            data-aos="fade-up-left"
+            data-aos-delay="200"
+            class="text-sm text-black dark:text-gray-500"
+          >
+            Our approach focuses on creating sustainable change by addressing
+            root causes, empowering communities, and delivering compassionate
+            solutions.
+          </p>
+
+          <div class="w-fit" data-aos="fade-up-right" data-aos-delay="250">
+            <a
+              class="flex items-center font-medium gap-2 px-4 md:px-6 py-1.5 md:py-3 bg-green-500 border-2 border-green-500 rounded-3xl text-black dark:text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
+              href="../404.html"
+            >
+              Contact Now</a
+            >
+          </div>
+        </div>
+
+        <div class="mx-3" data-aos="fade-up-left" data-aos-delay="300">
+          <img
+            class="rounded-3xl h-[500px] w-full object-cover object-[70%_30%]"
+            src="https://i.postimg.cc/mgLbK9cT/image.png"
+            alt="image"
+          />
+        </div>
+      </div>
+      <!-- cards -->
+      <div
+        data-aos="fade-up-right"
+        data-aos-delay="300"
+        class="grid sm:grid-cols-2 lg:grid-cols-3 space-y-4 lg:space-y-0 gap-6 mt-5 bg-white dark:bg-gray-950 p-3 md:p-6 lg:p-8 rounded-4xl lg:w-4/6 transform lg:-translate-y-28 lg:translate-x-32 text-white"
+      >
+        <div
+          data-aos="fade-up-right"
+          data-aos-delay="50"
+          data-aos-easing="linear"
+          class="bg-green-600 dark:bg-white/5 px-6 py-8 rounded-2xl space-y-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="51"
+            viewBox="0 0 50 51"
+            fill="none"
+          >
+            <path
+              d="M48.6028 16.5143C47.5285 15.9239 45.8921 16.0427 44.8381 17.6996C44.835 17.7046 44.8319 17.7096 44.8288 17.7147L40.9104 24.1274C40.4384 23.8554 39.8971 23.7348 39.3466 23.784C38.6562 23.8458 38.0351 24.1697 37.5978 24.6961C37.3181 25.0328 36.3941 26.187 35.4159 27.4091C34.4868 28.5696 33.5262 29.7698 33.258 30.0926C32.3281 31.2118 31.142 32.0724 29.8862 32.9836C28.1046 34.2764 26.1561 35.6903 24.9999 37.9965C23.8437 35.6903 21.8953 34.2764 20.1136 32.9836C18.8579 32.0723 17.6718 31.2117 16.7418 30.0926C16.4738 29.77 15.514 28.5708 14.5857 27.4111C13.6067 26.1882 12.682 25.0329 12.4021 24.6961C11.9647 24.1697 11.3436 23.8458 10.6533 23.784C10.1024 23.7348 9.56145 23.8556 9.08948 24.1274L5.17113 17.7147C5.1681 17.7096 5.16498 17.7046 5.16175 17.6996C4.10785 16.0429 2.47143 15.9236 1.39711 16.5143C0.124459 17.214 -0.350541 18.7754 0.292427 20.1463C0.293892 20.1494 0.295357 20.1524 0.296822 20.1556C0.571333 20.7251 1.2391 22.3185 2.01244 24.1636C3.09477 26.7458 4.44164 29.9596 5.58304 32.4702C7.06995 35.741 7.73685 36.6601 10.3403 39.0264L13.8525 42.2189V42.5171H13.2813C12.7419 42.5171 12.3047 42.9543 12.3047 43.4936V49.353C12.3047 49.8923 12.7419 50.3295 13.2813 50.3295H36.7187C37.258 50.3295 37.6953 49.8923 37.6953 49.353V43.4936C37.6953 42.9543 37.258 42.5171 36.7187 42.5171H36.1475V42.2189L39.6598 39.0264C42.2631 36.6601 42.93 35.741 44.417 32.4702C45.5584 29.9597 46.9052 26.7461 47.9875 24.164C48.7609 22.3187 49.4289 20.7251 49.7033 20.1556C49.7047 20.1524 49.7062 20.1494 49.7077 20.1463C50.3507 18.7754 49.8757 17.214 48.6028 16.5143ZM15.486 41.0642L11.654 37.5811C9.25559 35.4011 8.73401 34.6819 7.36116 31.6619C6.23177 29.1777 4.89115 25.9789 3.81381 23.4086C2.99994 21.4666 2.35658 19.9316 2.05883 19.3129C1.78598 18.7263 2.10561 18.3538 2.33813 18.226C2.72797 18.0117 3.16557 18.2043 3.5098 18.7414L7.86526 25.8696C7.78528 26.3924 7.85101 27.0417 8.16839 27.8439C9.07981 30.1473 10.2097 32.4481 11.2683 34.1563C11.5524 34.6148 12.1542 34.756 12.6128 34.4719C13.0712 34.1879 13.2126 33.5859 12.9285 33.1274C11.9283 31.5134 10.8553 29.3257 9.9846 27.1253C9.61243 26.1848 9.8596 25.9769 9.95266 25.8987C10.1029 25.7726 10.2897 25.7129 10.4795 25.7295C10.6481 25.7445 10.7975 25.821 10.9001 25.9445C11.1687 26.2677 12.1308 27.4695 13.0612 28.6319C14.0379 29.8521 14.9605 31.0047 15.2399 31.3409C16.3265 32.6488 17.6688 33.6227 18.9668 34.5646C21.4826 36.3901 23.6566 37.9677 24.0236 41.6315V42.5172H15.8057V41.787C15.8057 41.5117 15.6896 41.2494 15.486 41.0642ZM14.2579 44.4702H24.0235V48.3764H14.2579V44.4702ZM35.7422 48.3764H25.9767V44.4702H35.7422V48.3764ZM47.9413 19.3128C47.6436 19.9316 47.0002 21.4668 46.1861 23.409C45.1089 25.9791 43.7682 29.1778 42.639 31.6618C41.266 34.6819 40.7445 35.4011 38.3461 37.581L34.5141 41.0641C34.3105 41.2493 34.1945 41.5116 34.1945 41.7868V42.5171H25.9768V41.6308C26.3438 37.9674 28.5179 36.3898 31.0335 34.5644C32.3315 33.6225 33.6738 32.6486 34.7604 31.3408C35.04 31.0043 35.9633 29.8509 36.9409 28.6296C37.8706 27.4682 38.8318 26.2673 39.1002 25.9443C39.2028 25.8208 39.3522 25.7444 39.5208 25.7294C39.7101 25.7123 39.8974 25.7725 40.0477 25.8987C40.1407 25.9769 40.3879 26.1847 40.0158 27.1252C39.1451 29.3257 38.072 31.5135 37.0718 33.1274C36.7878 33.5858 36.9291 34.1878 37.3875 34.4719C37.846 34.7558 38.4478 34.6145 38.732 34.1562C39.7905 32.4481 40.9203 30.1474 41.8319 27.8438C42.1493 27.0416 42.2149 26.3923 42.1349 25.8696L46.4907 18.7411C46.8348 18.2044 47.2723 18.0117 47.6622 18.226C47.8946 18.3536 48.2142 18.7262 47.9413 19.3128Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M25.0001 18.3665C26.8689 18.3665 28.3894 16.8461 28.3894 14.9772C28.3894 13.1084 26.869 11.5879 25.0001 11.5879C23.1312 11.5879 21.6108 13.1083 21.6108 14.9772C21.6108 16.8462 23.1312 18.3665 25.0001 18.3665ZM25.0001 13.541C25.792 13.541 26.4363 14.1852 26.4363 14.9772C26.4363 15.7691 25.792 16.4134 25.0001 16.4134C24.2082 16.4134 23.564 15.7691 23.564 14.9772C23.564 14.1852 24.2082 13.541 25.0001 13.541Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M11.3282 15.9541H11.9963C12.4734 22.3675 17.61 27.5041 24.0234 27.9812V28.6494C24.0234 29.1887 24.4606 29.6259 25 29.6259C25.5394 29.6259 25.9766 29.1887 25.9766 28.6494V27.9812C32.39 27.5041 37.5266 22.3675 38.0037 15.9541H38.6718C39.2111 15.9541 39.6484 15.5169 39.6484 14.9775C39.6484 14.4382 39.2111 14.001 38.6718 14.001H38.0037C37.5266 7.58749 32.39 2.45087 25.9766 1.97382V1.30566C25.9766 0.766308 25.5393 0.329102 25 0.329102C24.4606 0.329102 24.0234 0.766308 24.0234 1.30566V1.97373C17.61 2.45087 12.4735 7.58739 11.9963 14.001H11.3282C10.7889 14.001 10.3517 14.4382 10.3517 14.9775C10.3517 15.5169 10.7889 15.9541 11.3282 15.9541ZM13.9559 15.9541H16.8432C17.2895 19.7047 20.2729 22.6881 24.0235 23.1343V26.0216C18.6876 25.5538 14.4237 21.2899 13.9559 15.9541ZM25.0001 8.7159C28.4527 8.7159 31.2616 11.5248 31.2616 14.9774C31.2616 18.4299 28.4527 21.2389 25.0001 21.2389C21.5475 21.2389 18.7385 18.43 18.7385 14.9775C18.7385 11.5249 21.5475 8.7159 25.0001 8.7159ZM25.9767 26.0216V23.1343C29.7272 22.688 32.7106 19.7047 33.1569 15.9541H36.0443C35.5764 21.2899 31.3125 25.5538 25.9767 26.0216ZM36.0443 14.001H33.1569C32.7106 10.2503 29.7272 7.26688 25.9767 6.82059V3.93329C31.3125 4.40116 35.5764 8.66502 36.0443 14.001ZM24.0235 3.93329V6.82059C20.2729 7.26688 17.2895 10.2503 16.8432 14.001H13.9559C14.4237 8.66502 18.6876 4.40116 24.0235 3.93329Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          <h1 class="text-xl font-bold">Our Mission</h1>
+          <p>We strive to create positive change, empower.</p>
+        </div>
+        <div
+          data-aos="fade-up-right"
+          data-aos-delay="150"
+          data-aos-easing="linear"
+          class="bg-gradient-to-r from-green-500 to-green-600 dark:bg-gradient-to-b dark:from-white/5 dark:to-white/5 px-6 py-8 rounded-2xl space-y-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="51"
+            viewBox="0 0 50 51"
+            fill="none"
+          >
+            <path
+              d="M25 35.3438C21.1594 35.3438 17.6743 33.6475 14.9215 30.4381C12.8955 28.0762 11.9743 25.7152 11.9361 25.6158L11.7336 25.0898L11.936 24.5639C11.9743 24.4645 12.8954 22.1035 14.9214 19.7416C17.6743 16.5322 21.1594 14.8359 25 14.8359C28.8405 14.8359 32.3256 16.5322 35.0784 19.7416C37.1044 22.1035 38.0256 24.4645 38.0638 24.5639L38.2662 25.0898L38.0638 25.6158C38.0255 25.7152 37.1044 28.0762 35.0784 30.4381C32.3256 33.6475 28.8405 35.3438 25 35.3438ZM14.9054 25.0899C15.2572 25.8247 16.0094 27.223 17.2019 28.5964C19.4014 31.1297 22.025 32.4141 25 32.4141C27.9749 32.4141 30.5985 31.1297 32.7981 28.5964C33.9902 27.2233 34.7421 25.8259 35.0945 25.0898C34.7422 24.3538 33.9902 22.9563 32.7981 21.5833C30.5985 19.05 27.9749 17.7656 25 17.7656C22.025 17.7656 19.4014 19.05 17.2018 21.5833C16.0097 22.9563 15.2577 24.3539 14.9054 25.0899Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M23.5352 0.0898438H26.4648V8.87891H23.5352V0.0898438Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M41.2109 23.625H50V26.5547H41.2109V23.625Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M23.5352 41.3008H26.4648V50.0898H23.5352V41.3008Z"
+              fill="#FFFFFF"
+            ></path>
+            <path d="M0 23.625H8.78906V26.5547H0V23.625Z" fill="#FFFFFF"></path>
+            <path
+              d="M25 29.4844C22.5769 29.4844 20.6055 27.513 20.6055 25.0898C20.6055 22.6667 22.5769 20.6953 25 20.6953C27.4231 20.6953 29.3945 22.6667 29.3945 25.0898C29.3945 27.513 27.4231 29.4844 25 29.4844ZM25 23.625C24.1923 23.625 23.5352 24.2821 23.5352 25.0898C23.5352 25.8976 24.1923 26.5547 25 26.5547C25.8077 26.5547 26.4648 25.8976 26.4648 25.0898C26.4648 24.2821 25.8077 23.625 25 23.625Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M43.3559 19.6463C42.4563 16.6078 40.7891 13.81 38.5345 11.5554C36.2799 9.30078 33.4822 7.63359 30.4436 6.73398L31.2752 3.9248C34.7807 4.9626 38.0074 6.88486 40.6062 9.48369C43.205 12.0825 45.1273 15.3091 46.1651 18.8146L43.3559 19.6463Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M31.2752 46.2547L30.4436 43.4455C33.4821 42.5459 36.2799 40.8787 38.5344 38.6241C40.789 36.3695 42.4562 33.5718 43.3558 30.5332L46.165 31.3648C45.1272 34.8703 43.2049 38.0969 40.6061 40.6958C38.0072 43.2947 34.7806 45.217 31.2752 46.2547Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M18.7248 46.2548C15.2193 45.217 11.9928 43.2947 9.39395 40.6959C6.79512 38.0971 4.87285 34.8705 3.83496 31.365L6.64414 30.5332C7.54375 33.5718 9.21094 36.3696 11.4655 38.6242C13.7201 40.8788 16.5179 42.546 19.5564 43.4456L18.7248 46.2548Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M6.64414 19.6463L3.83496 18.8146C4.87275 15.3092 6.79502 12.0826 9.39385 9.48379C11.9928 6.88486 15.2193 4.9626 18.7248 3.9248L19.5564 6.73398C16.518 7.63359 13.7201 9.30078 11.4655 11.5554C9.21094 13.81 7.54375 16.6078 6.64414 19.6463Z"
+              fill="#FFFFFF"
+            ></path>
+          </svg>
+          <h1 class="text-xl font-bold">Our Vision</h1>
+          <p>We strive to create positive change, empower.</p>
+        </div>
+        <div
+          class="bg-gradient-to-r from-green-500 to-green-600 dark:bg-gradient-to-b dark:from-white/5 dark:to-white/5 px-6 py-8 rounded-2xl space-y-2"
+          data-aos="fade-up-right"
+          data-aos-delay="250"
+          data-aos-easing="linear"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="48"
+            viewBox="0 0 50 48"
+            fill="none"
+          >
+            <path
+              d="M44.3607 24.3444L38.921 15.9441C38.4994 15.2931 37.7846 14.9043 37.0089 14.9043H13.0082C12.2337 14.9043 11.5195 15.2921 11.0978 15.9415L5.64111 24.3429C5.0835 25.2013 5.16963 26.3347 5.85059 27.0989L23.298 46.6868C23.7299 47.1716 24.3498 47.4497 24.999 47.4497C24.9989 47.4497 24.9991 47.4497 24.999 47.4497C25.6481 47.4497 26.2684 47.1717 26.7002 46.6869L44.1496 27.0978C44.8296 26.3345 44.9164 25.2022 44.3607 24.3444ZM35.9069 16.8573L31.3321 23.9315L26.7546 16.8573H35.9069ZM29.5373 24.753H20.4607L24.999 17.7395L29.5373 24.753ZM23.2435 16.8575L18.6785 23.9123L14.1151 16.8575H23.2435ZM12.3094 17.6617L16.8963 24.753H7.70361L12.3094 17.6617ZM8.11611 26.7062H17.9447L23.1416 43.5748L8.11611 26.7062ZM24.999 42.9701L19.9884 26.7062H30.0097L24.999 42.9701ZM26.8563 43.5754L32.0534 26.7062H41.8829L26.8563 43.5754ZM33.127 24.753L37.7097 17.6666L42.2984 24.753H33.127Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M2.96221 24.7529H0.976562C0.437305 24.7529 0 25.1901 0 25.7295C0 26.2688 0.437305 26.7061 0.976562 26.7061H2.96221C3.50146 26.7061 3.93877 26.2688 3.93877 25.7295C3.93877 25.1901 3.50146 24.7529 2.96221 24.7529Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M49.0235 24.7529H47.0378C46.4986 24.7529 46.0613 25.1901 46.0613 25.7295C46.0613 26.2688 46.4986 26.7061 47.0378 26.7061H49.0235C49.5627 26.7061 50 26.2688 50 25.7295C50 25.1901 49.5627 24.7529 49.0235 24.7529Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M42.6901 8.0575C42.3086 7.67615 41.6905 7.67615 41.3089 8.0575L38.0651 11.3013C37.6837 11.6827 37.6837 12.301 38.0651 12.6824C38.2559 12.8731 38.5058 12.9684 38.7557 12.9684C39.0057 12.9684 39.2555 12.873 39.4462 12.6824L42.6901 9.43855C43.0714 9.0572 43.0714 8.43894 42.6901 8.0575Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M11.9772 11.2839L8.73345 8.03992C8.3522 7.65857 7.73403 7.65857 7.35229 8.03992C6.97095 8.42126 6.97095 9.03962 7.35229 9.42097L10.5961 12.6648C10.7869 12.8555 11.0368 12.9509 11.2867 12.9509C11.5366 12.9509 11.7865 12.8554 11.9772 12.6648C12.3585 12.2836 12.3585 11.6651 11.9772 11.2839Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M25.0248 0.729492C24.4855 0.729492 24.0482 1.1667 24.0482 1.70605V8.07012C24.0482 8.60947 24.4854 9.04668 25.0248 9.04668C25.564 9.04668 26.0013 8.60947 26.0013 8.07012V1.70605C26.0013 1.1668 25.564 0.729492 25.0248 0.729492Z"
+              fill="#FFFFFF"
+            ></path>
+            <path
+              d="M25.7147 10.6836C25.5332 10.502 25.2813 10.3975 25.0244 10.3975C24.7676 10.3975 24.5156 10.502 24.334 10.6836C24.1523 10.8652 24.0479 11.1172 24.0479 11.374C24.0479 11.6318 24.1522 11.8828 24.334 12.0645C24.5156 12.2471 24.7676 12.3506 25.0244 12.3506C25.2813 12.3506 25.5332 12.2471 25.7147 12.0645C25.8974 11.8828 26.001 11.6309 26.001 11.374C26.001 11.1172 25.8974 10.8653 25.7147 10.6836Z"
+              fill="#FFFFFF"
+            ></path>
+          </svg>
+          <h1 class="text-xl font-bold">Our Value</h1>
+          <p>We strive to create positive change, empower.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE HELP -->
+    <section class="overflow-hidden overflow-x-hidden pb-8">
+      <div class="grid lg:grid-cols-2 mx-4">
+        <div class="dark:text-white text-black space-y-8 px-4 lg:px-16 py-8">
+          <h1
+            class="text-xl md:text-2xl"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
+            HOW WE HELP
+          </h1>
+          <p
+            class="text-xl md:text-3xl lg:text-5xl font-bold"
+            data-aos="fade-up-right"
+            data-aos-delay="100"
+          >
+            We are committed to transforming lives by providing care, support,
+            and opportunities where they are needed most.
+          </p>
+          <p
+            class="text-xs md:text-sm font-bold"
+            data-aos="fade-up-right"
+            data-aos-delay="150"
+          >
+            We work tirelessly to uplift communities by providing resources,
+            support, and sustainable solutions, fostering hope and creating
+            brighter futures.
+          </p>
+          <ul class="space-y-4">
+            <li
+              class="flex items-center gap-3"
+              data-aos="fade-up-right"
+              data-aos-delay="50"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="24"
+                viewBox="0 0 28 24"
+                fill="none"
+              >
+                <path
+                  d="M11.03 23.8257C16.6544 23.8257 21.2139 19.2662 21.2139 13.6419C21.2139 8.01747 16.6544 3.45801 11.03 3.45801C5.40565 3.45801 0.846191 8.01747 0.846191 13.6419C0.846191 19.2662 5.40565 23.8257 11.03 23.8257Z"
+                  fill="#228B22"
+                ></path>
+                <path
+                  d="M11.1452 21.5131L11.016 21.293C9.04293 17.9312 3.79974 10.7971 3.74678 10.7255L3.67114 10.6227L5.45747 8.85732L11.112 12.8057C14.6723 8.18578 17.9937 5.01259 20.1603 3.15957C22.5304 1.13255 24.0731 0.199376 24.0887 0.190434L24.1238 0.169434H27.1539L26.8644 0.427203C19.4205 7.05755 11.352 21.1497 11.2716 21.2913L11.1452 21.5131Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              Healthcare Support
+            </li>
+            <li
+              class="flex items-center gap-3"
+              data-aos="fade-up-right"
+              data-aos-delay="100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="24"
+                viewBox="0 0 28 24"
+                fill="none"
+              >
+                <path
+                  d="M11.03 23.8257C16.6544 23.8257 21.2139 19.2662 21.2139 13.6419C21.2139 8.01747 16.6544 3.45801 11.03 3.45801C5.40565 3.45801 0.846191 8.01747 0.846191 13.6419C0.846191 19.2662 5.40565 23.8257 11.03 23.8257Z"
+                  fill="#228B22"
+                ></path>
+                <path
+                  d="M11.1452 21.5131L11.016 21.293C9.04293 17.9312 3.79974 10.7971 3.74678 10.7255L3.67114 10.6227L5.45747 8.85732L11.112 12.8057C14.6723 8.18578 17.9937 5.01259 20.1603 3.15957C22.5304 1.13255 24.0731 0.199376 24.0887 0.190434L24.1238 0.169434H27.1539L26.8644 0.427203C19.4205 7.05755 11.352 21.1497 11.2716 21.2913L11.1452 21.5131Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              Empowering Communities
+            </li>
+            <li
+              class="flex items-center gap-3"
+              data-aos="fade-up-right"
+              data-aos-delay="150"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="24"
+                viewBox="0 0 28 24"
+                fill="none"
+              >
+                <path
+                  d="M11.03 23.8257C16.6544 23.8257 21.2139 19.2662 21.2139 13.6419C21.2139 8.01747 16.6544 3.45801 11.03 3.45801C5.40565 3.45801 0.846191 8.01747 0.846191 13.6419C0.846191 19.2662 5.40565 23.8257 11.03 23.8257Z"
+                  fill="#228B22"
+                ></path>
+                <path
+                  d="M11.1452 21.5131L11.016 21.293C9.04293 17.9312 3.79974 10.7971 3.74678 10.7255L3.67114 10.6227L5.45747 8.85732L11.112 12.8057C14.6723 8.18578 17.9937 5.01259 20.1603 3.15957C22.5304 1.13255 24.0731 0.199376 24.0887 0.190434L24.1238 0.169434H27.1539L26.8644 0.427203C19.4205 7.05755 11.352 21.1497 11.2716 21.2913L11.1452 21.5131Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              Disaster Relief
+            </li>
+            <li
+              class="flex items-center gap-3"
+              data-aos="fade-up-right"
+              data-aos-delay="200"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="24"
+                viewBox="0 0 28 24"
+                fill="none"
+              >
+                <path
+                  d="M11.03 23.8257C16.6544 23.8257 21.2139 19.2662 21.2139 13.6419C21.2139 8.01747 16.6544 3.45801 11.03 3.45801C5.40565 3.45801 0.846191 8.01747 0.846191 13.6419C0.846191 19.2662 5.40565 23.8257 11.03 23.8257Z"
+                  fill="#228B22"
+                ></path>
+                <path
+                  d="M11.1452 21.5131L11.016 21.293C9.04293 17.9312 3.79974 10.7971 3.74678 10.7255L3.67114 10.6227L5.45747 8.85732L11.112 12.8057C14.6723 8.18578 17.9937 5.01259 20.1603 3.15957C22.5304 1.13255 24.0731 0.199376 24.0887 0.190434L24.1238 0.169434H27.1539L26.8644 0.427203C19.4205 7.05755 11.352 21.1497 11.2716 21.2913L11.1452 21.5131Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              Providing Essentials
+            </li>
+          </ul>
+
+          <div
+            data-aos="fade-up-right"
+            data-aos-delay="300"
+            class="w-fit h-fit"
+          >
+            <a
+              class="flex items-center font-medium gap-2 px-4 md:px-6 py-2 md:py-3 border-2 bg-green-500 border-green-500 rounded-3xl text-black dark:text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
+              href="../404.html"
+            >
+              Contact Now</a
+            >
+          </div>
+        </div>
+
+        <!-- right cards -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div data-aos="zoom-in-right" data-aos-delay="50">
+            <div
+              class="space-y-4 text-black bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl transform hover:scale-95 transition duration-200 ease-out"
+            >
+              <img
+                class="bg-green-200 rounded-full py-4 px-4"
+                src="https://img.icons8.com/?size=100&id=Bf2UvtrwZszK&format=png&color=000000"
+                alt="logo"
+              />
+              <h1 class="text-2xl font-bold">Pure Food & Water</h1>
+              <p class="text-[13px] text-center dark:text-gray-400">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Impedit odio vitae, mollitia dolor quidem ipsum, aut excepturi
+                voluptates.
+              </p>
+            </div>
+          </div>
+          <div data-aos="zoom-in-left" data-aos-delay="100">
+            <div
+              class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
+            >
+              <img
+                class="bg-green-200 rounded-full py-4 px-4"
+                src="https://img.icons8.com/?size=100&id=9731&format=png&color=000000"
+                alt="logo"
+              />
+              <h1 class="text-2xl font-bold">Medicine</h1>
+              <p class="text-[13px] text-center dark:text-gray-400">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Impedit odio vitae, mollitia dolor quidem ipsum, aut excepturi
+                voluptates.
+              </p>
+            </div>
+          </div>
+          <div data-aos="zoom-in-right" data-aos-delay="150">
+            <div
+              class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
+            >
+              <img
+                class="bg-green-200 rounded-full py-4 px-4"
+                src="https://img.icons8.com/?size=100&id=9437&format=png&color=000000"
+                alt="logo"
+              />
+              <h1 class="text-2xl font-bold">Education</h1>
+              <p class="text-[13px] text-center dark:text-gray-400">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Impedit odio vitae, mollitia dolor quidem ipsum, aut excepturi
+                voluptates.
+              </p>
+            </div>
+          </div>
+          <div data-aos="fade-up-left" data-aos-delay="200">
+            <div
+              class="space-y-4 bg-gray-50 dark:bg-white/5 dark:text-white max-w-md p-6 flex flex-col justify-center items-center rounded-4xl shadow-2xl dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 hover:bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 transform hover:scale-95 transition duration-200 ease-out"
+            >
+              <img
+                class="bg-green-200 rounded-full py-4 px-4"
+                src="https://img.icons8.com/?size=100&id=9437&format=png&color=000000"
+                alt="logo"
+              />
+              <h1 class="text-2xl font-bold text-center">Women Empowerment</h1>
+              <p class="text-[13px] text-center dark:text-gray-400">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Impedit odio vitae, mollitia dolor quidem ipsum, aut excepturi
+                voluptates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- connect us  -->
 
@@ -393,7 +848,7 @@
             class="bg-white/10 px-4 py-2.5 border dark:border-white/20 rounded outline-none max-w-66 w-full"
             placeholder="Enter your email"
           />
-          <button
+          <a href="../404.html"
             class="flex items-center justify-center gap-2 group text-white bg-black px-4 md:px-7 py-2.5 rounded active:scale-95 transition-all"
           >
             Subscribe
@@ -414,7 +869,7 @@
                 d="M19 12H5m14 0-4 4m4-4-4-4"
               />
             </svg>
-          </button>
+          </a>
         </div>
         <p class="text-gray-500 mt-6 text-xs text-center">
           By subscribing, you agree to our Privacy Policy and consent to receive
