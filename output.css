@@ -310,14 +310,23 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
+  .top-7 {
+    top: calc(var(--spacing) * 7);
+  }
   .top-9 {
     top: calc(var(--spacing) * 9);
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
+  .right-7 {
+    right: calc(var(--spacing) * 7);
+  }
   .right-10 {
     right: calc(var(--spacing) * 10);
+  }
+  .right-14 {
+    right: calc(var(--spacing) * 14);
   }
   .right-15 {
     right: calc(var(--spacing) * 15);
@@ -327,6 +336,18 @@
   }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
+  }
+  .bottom-1 {
+    bottom: calc(var(--spacing) * 1);
+  }
+  .bottom-4 {
+    bottom: calc(var(--spacing) * 4);
+  }
+  .bottom-14 {
+    bottom: calc(var(--spacing) * 14);
+  }
+  .bottom-15 {
+    bottom: calc(var(--spacing) * 15);
   }
   .-left-2 {
     left: calc(var(--spacing) * -2);
@@ -516,6 +537,9 @@
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -585,8 +609,14 @@
   .h-\[700px\] {
     height: 700px;
   }
+  .h-\[750px\] {
+    height: 750px;
+  }
   .h-\[800px\] {
     height: 800px;
+  }
+  .h-\[7500px\] {
+    height: 7500px;
   }
   .h-fit {
     height: fit-content;
@@ -621,6 +651,9 @@
   .w-6 {
     width: calc(var(--spacing) * 6);
   }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
+  }
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
@@ -641,6 +674,9 @@
   }
   .w-72 {
     width: calc(var(--spacing) * 72);
+  }
+  .w-664 {
+    width: calc(var(--spacing) * 664);
   }
   .w-\[100px\] {
     width: 100px;
@@ -1055,6 +1091,30 @@
   }
   .border-white {
     border-color: var(--color-white);
+  }
+  .border-white\/40 {
+    border-color: color-mix(in srgb, #fff 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-white) 40%, transparent);
+    }
+  }
+  .border-white\/50 {
+    border-color: color-mix(in srgb, #fff 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-white) 50%, transparent);
+    }
+  }
+  .border-white\/60 {
+    border-color: color-mix(in srgb, #fff 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-white) 60%, transparent);
+    }
+  }
+  .border-white\/75 {
+    border-color: color-mix(in srgb, #fff 75%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-white) 75%, transparent);
+    }
   }
   .bg-black {
     background-color: var(--color-black);
@@ -1859,6 +1919,9 @@
   .text-emerald-600 {
     color: var(--color-emerald-600);
   }
+  .text-gray-200 {
+    color: var(--color-gray-200);
+  }
   .text-gray-300 {
     color: var(--color-gray-300);
   }
@@ -1972,6 +2035,9 @@
   .opacity-5 {
     opacity: 5%;
   }
+  .opacity-8 {
+    opacity: 8%;
+  }
   .opacity-10 {
     opacity: 10%;
   }
@@ -1993,8 +2059,14 @@
   .opacity-50 {
     opacity: 50%;
   }
+  .opacity-65 {
+    opacity: 65%;
+  }
   .opacity-70 {
     opacity: 70%;
+  }
+  .opacity-80 {
+    opacity: 80%;
   }
   .opacity-85 {
     opacity: 85%;
@@ -2442,6 +2514,11 @@
       padding-block: calc(var(--spacing) * 8);
     }
   }
+  .sm\:block {
+    @media (width >= 40rem) {
+      display: block;
+    }
+  }
   .sm\:grid-cols-1 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -2462,6 +2539,16 @@
     @media (width >= 40rem) {
       font-size: var(--text-4xl);
       line-height: var(--tw-leading, var(--text-4xl--line-height));
+    }
+  }
+  .md\:right-14 {
+    @media (width >= 48rem) {
+      right: calc(var(--spacing) * 14);
+    }
+  }
+  .md\:bottom-14 {
+    @media (width >= 48rem) {
+      bottom: calc(var(--spacing) * 14);
     }
   }
   .md\:mx-5 {
@@ -2908,6 +2995,11 @@
   .lg\:flex-col {
     @media (width >= 64rem) {
       flex-direction: column;
+    }
+  }
+  .lg\:justify-center {
+    @media (width >= 64rem) {
+      justify-content: center;
     }
   }
   .lg\:space-y-0 {
