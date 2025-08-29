@@ -3,563 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Swiper Cards Effect Custom</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./output.css" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
-  <body>
-    <div class="flex items-center">
-      <button
-        id="prev"
-        class="md:p-2 p-1 bg-black/30 md:mr-6 mr-2 rounded-full hover:bg-black/50"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 text-white"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M15 19l-7-7 7-7"
-          />
-        </svg>
-      </button>
-      <div class="w-full max-w-3xl overflow-hidden relative">
-        <div
-          class="flex transition-transform duration-500 ease-in-out"
-          id="slider"
-        >
-          <img
-            src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide1.png"
-            class="w-full flex-shrink-0"
-            alt="Slide 1"
-          />
-          <img
-            src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide2.png"
-            class="w-full flex-shrink-0"
-            alt="Slide 2"
-          />
-          <img
-            src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide3.png"
-            class="w-full flex-shrink-0"
-            alt="Slide 3"
-          />
-          <img
-            src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide4.png"
-            class="w-full flex-shrink-0"
-            alt="Slide 4"
-          />
-          <img
-            src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide5.png"
-            class="w-full flex-shrink-0"
-            alt="Slide 5"
-          />
+  <body class="flex items-center justify-center h-screen bg-gray-100">
+    <section>
+      <!-- Swiper -->
+      <div class="swiper w-72 h-96">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide flex items-center justify-center text-2xl font-bold text-white rounded-2xl bg-blue-500 border-2 border-white"
+          >
+            <img
+              class="object-cover h-full w-full object-center"
+              src="https://i.postimg.cc/sDN28gXT/image.png"
+              alt="slide-image"
+            />
+          </div>
+          <div
+            class="swiper-slide flex items-center justify-center text-2xl font-bold text-white rounded-2xl bg-green-500 border-2 border-white"
+          >
+            <img
+              class="object-cover h-full w-full object-center"
+              src="https://i.postimg.cc/mgLbK9cT/image.png"
+              alt="slide-image"
+            />
+          </div>
+          <div
+            class="swiper-slide flex items-center justify-center text-2xl font-bold text-white rounded-2xl bg-yellow-500 border-2 border-white"
+          >
+            <img
+              class="object-cover h-full w-full object-center"
+              src="https://i.postimg.cc/vZKGPq0k/image.png"
+              alt="slide-image"
+            />
+          </div>
+          <div
+            class="swiper-slide flex items-center justify-center text-2xl font-bold text-white rounded-2xl bg-pink-500 border-2 border-white"
+          >
+            <img
+              class="object-cover h-full w-full object-center"
+              src="https://i.postimg.cc/vTjdPDz9/image.png"
+              alt="slide-image"
+            />
+          </div>
         </div>
       </div>
+    </section>
 
-      <button
-        id="next"
-        class="p-1 md:p-2 bg-black/30 md:ml-6 ml-2 rounded-full hover:bg-black/50"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 text-white"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
-      </button>
-    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- Init Swiper -->
     <script>
-      const slider = document.getElementById("slider");
-      const nextButton = document.getElementById("next");
-      const prevButton = document.getElementById("prev");
-      let currentSlide = 0;
-      const totalSlides = slider.children.length;
-
-      function goToSlide(index) {
-        const slideWidth = slider.children[0].clientWidth;
-        slider.style.transform = `translateX(-${index * slideWidth}px)`;
-      }
-
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        goToSlide(currentSlide);
-      }
-
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        goToSlide(currentSlide);
-      }
-
-      let slideInterval = setInterval(nextSlide, 3000);
-
-      function resetAutoSlide() {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, 3000);
-      }
-
-      nextButton.addEventListener("click", () => {
-        nextSlide();
-        resetAutoSlide();
+      const swiper = new Swiper(".swiper", {
+        effect: "cards",
+        grabCursor: true,
+        speed: 800,
+        stop: true,
+        cardsEffect: {
+          perSlideOffset: 8, // default 8 → bigger spacing between stacked cards
+          perSlideRotate: 2, // default 2 → bigger tilt angle
+          rotate: true, // enable/disable card rotation
+          slideShadows: true, // enable/disable shadow effect
+          perspective: true,
+          crossFade: true,
+          limitProgress: 50,
+        },
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
       });
 
-      prevButton.addEventListener("click", () => {
-        prevSlide();
-        resetAutoSlide();
-      });
-
-      window.addEventListener("resize", () => goToSlide(currentSlide));
-
-      goToSlide(currentSlide);
+      const id = document.getElementById;
     </script>
-
-
-<section class="py-10">
-  <h2 class="text-xl font-bold mb-4">Our Progress</h2>
-
-  <!-- Progress Bar 1 -->
-  <div
-    class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden mb-4"
-  >
-    <div
-      class="progress-bar bg-violet-700 h-4 rounded-full transition-all duration-1000 ease-out"
-      data-progress="85"
-      style="width: 0%"
-    ></div>
-    <span
-      class="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white"
-    >
-      85%
-    </span>
-  </div>
-
-  <!-- Progress Bar 2 -->
-  <div
-    class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden mb-4"
-  >
-    <div
-      class="progress-bar bg-green-600 h-4 rounded-full transition-all duration-1000 ease-out"
-      data-progress="70"
-      style="width: 0%"
-    ></div>
-    <span
-      class="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white"
-    >
-      70%
-    </span>
-  </div>
-
-  <!-- Progress Bar 3 -->
-  <div
-    class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden"
-  >
-    <div
-      class="progress-bar bg-orange-500 h-4 rounded-full transition-all duration-1000 ease-out"
-      data-progress="95"
-      style="width: 0%"
-    ></div>
-    <span
-      class="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white"
-    >
-      95%
-    </span>
-  </div>
-</section>
-
-<script>
-  const progressBars = document.querySelectorAll(".progress-bar");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const bar = entry.target;
-          const targetWidth = bar.getAttribute("data-progress") + "%";
-          bar.style.width = targetWidth;
-          observer.unobserve(bar); // animate only once
-        }
-      });
-    },
-    { threshold: 0.5 } // trigger when 50% is visible
-  );
-
-  progressBars.forEach((bar) => {
-    observer.observe(bar);
-  });
-</script>
-
-            <div
-              data-aos="fade-up-left"
-              data-aos-delay="100"
-              class=" shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)] border border-gray-300 dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl lg:flex"
-            >
-              <div>
-                <img
-                  class="rounded-2xl w-full lg:w-[400px] h-[250px] object-cover"
-                  src="https://i.postimg.cc/43NQ2Hvz/image.png"
-                  alt="image"
-                />
-              </div>
-              <div class="flex flex-col justify-center space-y-2 md:px-4 py-2">
-                <h1 class="text-xl md:text-2xl font-semibold">
-                  Immunization Access
-                </h1>
-                <h3
-                  class="md:text-md text-slate-900 dark:text-white/50 font-medium"
-                >
-                  Providing essential medical support and awareness to build
-                  healthier communities and environment.
-                </h3>
-                <div class="flex justify-between space-y-1 mt-1">
-                  <p class="text-xs text-indigo-600 font-medium">
-                    Caring Health
-                  </p>
-                  <p class="text-xs text-emerald-600 font-bold">Goal - $150k</p>
-                </div>
-                <!-- Funded  -->
-                <div class="flex justify-between space-y-2">
-                  <p class="text-xs font-bold">Funded</p>
-                  <p class="text-xs text-red-600 font-bold">Receieved - $40k</p>
-                </div>
-
-                <!-- buttons -->
-                <div class="flex justify-between gap-2">
-                  <a
-                    class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 rounded-3xl text-violet-500 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                    href="../404.html"
-                  >
-                    Learn more <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-
-                  <a
-                    class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                    href="../404.html"
-                  >
-                    <i class="fa-solid fa-gift text-xs text-white"></i>
-                    Donate Now
-                  </a>
-                </div>
-              </div>
-            </div>
-
-
-            <div
-              data-aos="zoom-in-right"
-              data-aos-delay="100"
-              class="w-full shadow-2xl dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl space-y-3 lg:flex"
-            >
-              <img
-                class="rounded-2xl w-full lg:w-[300px] h-[250px] object-cover"
-                src="https://i.postimg.cc/j5y6L6RY/image.png"
-                alt=""
-              />
-              <div class="flex flex-col justify-center space-y-2 px-4">
-                <h3
-                  class="text-base text-slate-900 dark:text-white/50 font-medium mt-3 text-wrap"
-                >
-                  Providing essential medical support and awareness to build
-                  healthier communities.
-                </h3>
-                <div class="flex justify-between">
-                  <p class="text-xs text-indigo-600 font-medium">Health Care</p>
-                  <p class="text-xs text-emerald-600 font-bold">Goal - $120k</p>
-                </div>
-                <!-- Funded  -->
-                <div class="flex flex-col justify-center space-y-2">
-                  <p class="text-xs font-bold">Funded</p>
-                  <!-- Progress Bar -->
-
-                  <div
-                    class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden mb-4"
-                  >
-                    <div
-                      class="progress-bar bg-violet-700 h-4 rounded-full transition-all duration-1000 ease-out"
-                      data-progress="70"
-                      style="width: 0%"
-                    ></div>
-                    <span
-                      class="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white"
-                    >
-                      70%
-                    </span>
-                  </div>
-                </div>
-
-                <!-- buttons -->
-                <div class="flex justify-between gap-2 flex-wrap">
-                  <a
-                    class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 bg-violet-700 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                    href="../404.html"
-                  >
-                    <i class="fa-solid fa-gift text-xs text-white"></i>
-                    Donate Now
-                  </a>
-
-                  <a
-                    class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 rounded-3xl text-violet-700 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                    href="../404.html"
-                  >
-                    Learn more
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              data-aos="zoom-in-left"
-              data-aos-delay="150"
-              class="md:max-w-72 w-full shadow-2xl dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl space-y-3"
-            >
-              <img
-                class="rounded-2xl w-full h-[250px] object-cover"
-                src="https://i.postimg.cc/fRS9X85S/image.png"
-                alt=""
-              />
-              <h3
-                class="text-base text-slate-900 dark:text-white/50 font-medium mt-3"
-              >
-                Supporting local communities with livelihood training and crisis
-                relief initiatives.
-              </h3>
-              <div class="flex justify-between">
-                <p class="text-xs text-indigo-600 font-medium">
-                  Community Development
-                </p>
-                <p class="text-xs text-emerald-600 font-bold">Goal - $120k</p>
-              </div>
-              <!-- Funded  -->
-              <div class="flex flex-col justify-center space-y-2">
-                <p class="text-xs font-bold">Funded</p>
-                <!-- Progress Bar -->
-
-                <div
-                  class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden mb-4"
-                >
-                  <div
-                    class="progress-bar bg-violet-700 h-4 rounded-full transition-all duration-1000 ease-out"
-                    data-progress="59"
-                    style="width: 0%"
-                  ></div>
-                  <span
-                    class="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white"
-                  >
-                    59%
-                  </span>
-                </div>
-              </div>
-
-              <!-- buttons -->
-              <div class="flex justify-between gap-2">
-                <a
-                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 bg-violet-700 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="../404.html"
-                >
-                  <i class="fa-solid fa-gift text-xs text-white"></i>
-                  Donate Now
-                </a>
-
-                <a
-                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 rounded-3xl text-violet-700 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="../404.html"
-                >
-                  Learn more
-                </a>
-              </div>
-            </div>
-            <div
-              data-aos="zoom-in-left"
-              data-aos-delay="200"
-              class="md:max-w-72 w-full shadow-2xl dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl space-y-3"
-            >
-              <img
-                class="rounded-2xl w-full h-[250px] object-cover"
-                src="https://i.postimg.cc/sDrjKwVZ/image.png"
-                alt=""
-              />
-              <h3
-                class="text-base text-slate-900 dark:text-white/50 font-medium mt-3"
-              >
-                Providing shelter, safety, and holistic care for orphaned and
-                vulnerable children.
-              </h3>
-              <div class="flex justify-between">
-                <p class="text-xs text-indigo-600 font-medium">Child Welfare</p>
-                <p class="text-xs text-emerald-600 font-bold">Goal - $120k</p>
-              </div>
-              <!-- Funded  -->
-              <div class="flex flex-col justify-center space-y-2">
-                <p class="text-xs font-bold">Funded</p>
-                <!-- Progress Bar -->
-
-                <div
-                  class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden mb-4"
-                >
-                  <div
-                    class="progress-bar bg-violet-700 h-4 rounded-full transition-all duration-1000 ease-out"
-                    data-progress="86"
-                    style="width: 0%"
-                  ></div>
-                  <span
-                    class="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white"
-                  >
-                    86%
-                  </span>
-                </div>
-              </div>
-
-              <!-- buttons -->
-              <div class="flex justify-between gap-2">
-                <a
-                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 bg-violet-700 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="../404.html"
-                >
-                  <i class="fa-solid fa-gift text-xs text-white"></i>
-                  Donate Now
-                </a>
-
-                <a
-                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 rounded-3xl text-violet-700 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="../404.html"
-                >
-                  Learn more
-                </a>
-              </div>
-            </div>
-            <div
-              data-aos="zoom-in-right"
-              data-aos-delay="250"
-              class="md:max-w-72 w-full shadow-2xl dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl space-y-3"
-            >
-              <img
-                class="rounded-2xl w-full h-[250px] object-cover"
-                src="https://i.postimg.cc/gJtzgW2z/image.png"
-                alt=""
-              />
-              <h3
-                class="text-base text-slate-900 dark:text-white/50 font-medium mt-3"
-              >
-                Serving daily meals, food distribution camps to support for
-                families in need.
-              </h3>
-              <div class="flex justify-between">
-                <p class="text-xs text-indigo-600 font-medium">
-                  Food & Nutrition
-                </p>
-                <p class="text-xs text-emerald-600 font-bold">Goal - $120k</p>
-              </div>
-              <!-- Funded  -->
-              <div class="flex flex-col justify-center space-y-2">
-                <p class="text-xs font-bold">Funded</p>
-                <!-- Progress Bar -->
-
-                <div
-                  class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden mb-4"
-                >
-                  <div
-                    class="progress-bar bg-violet-700 h-4 rounded-full transition-all duration-1000 ease-out"
-                    data-progress="65"
-                    style="width: 0%"
-                  ></div>
-                  <span
-                    class="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white"
-                  >
-                    65%
-                  </span>
-                </div>
-              </div>
-
-              <!-- buttons -->
-              <div class="flex justify-between gap-2">
-                <a
-                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 bg-violet-700 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="../404.html"
-                >
-                  <i class="fa-solid fa-gift text-xs text-white"></i>
-                  Donate Now
-                </a>
-
-                <a
-                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 rounded-3xl text-violet-700 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="../404.html"
-                >
-                  Learn more
-                </a>
-              </div>
-            </div>
-            <div
-              data-aos="zoom-in-right"
-              data-aos-delay="300"
-              class="md:max-w-72 w-full shadow-2xl dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl space-y-3"
-            >
-              <img
-                class="rounded-2xl w-full h-[250px] object-cover"
-                src="https://i.postimg.cc/28g5Xs4T/image.png"
-                alt=""
-              />
-              <h3
-                class="text-base text-slate-900 dark:text-white/50 font-medium mt-3"
-              >
-                Equipping women with vocational skills and resources to lead
-                independent lives.
-              </h3>
-              <div class="flex justify-between">
-                <p class="text-xs text-indigo-600 font-medium">
-                  Women Empowerment
-                </p>
-                <p class="text-xs text-emerald-600 font-bold">Goal - $120k</p>
-              </div>
-              <!-- Funded  -->
-              <div class="flex flex-col justify-center space-y-2">
-                <p class="text-xs font-bold">Funded</p>
-                <!-- Progress Bar -->
-
-                <div
-                  class="relative flex items-center max-w-80 w-full bg-gray-500/20 h-4 rounded-full overflow-hidden mb-4"
-                >
-                  <div
-                    class="progress-bar bg-violet-700 h-4 rounded-full transition-all duration-1000 ease-out"
-                    data-progress="80"
-                    style="width: 0%"
-                  ></div>
-                  <span
-                    class="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white"
-                  >
-                    80%
-                  </span>
-                </div>
-              </div>
-
-              <!-- buttons -->
-              <div class="flex justify-between gap-2">
-                <a
-                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 bg-violet-700 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="../404.html"
-                >
-                  <i class="fa-solid fa-gift text-xs text-white"></i>
-                  Donate Now
-                </a>
-
-                <a
-                  class="flex items-center gap-2 px-3 py-2 border-2 border-violet-700 rounded-3xl text-violet-700 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
-                  href="../404.html"
-                >
-                  Learn more
-                </a>
-              </div>
-            </div>
-
-            font-['Satisfy']
-
-            "Satisfy", cursive;
   </body>
 </html>
