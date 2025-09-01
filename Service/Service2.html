@@ -336,17 +336,10 @@
           class="flex items-center justify-center h-full relative"
         >
           <img
-            class="rounded w-[300px] h-[300px] md:w-[600px] md:h-[600px] object-contain object-top"
+            class="rounded-2xl h-[300px] md:w-[600px] md:h-[600px] object-contain object-top"
             src="https://i.postimg.cc/gJ8Vn8Zt/image-9.png"
             alt="image"
           />
-          <!-- <div class="absolute inset-0 flex justify-end items-end">
-            <img
-              class="border-8 border-white rounded-full w-[180px] h-[180px] md:w-[300px] md:h-[300px] object-cover object-center"
-              src="https://i.postimg.cc/8zf0KVbW/image.png"
-              alt="image"
-            />
-          </div> -->
         </div>
 
         <div class="flex flex-col w-full space-y-8">
@@ -362,7 +355,12 @@
             data-aos-delay="100"
             class="text-xl md:text-4xl lg:text-6xl font-semibold"
           >
-            Why we stand out together
+            Why we
+            <span
+              class="bg-gradient-to-r from-green-900 via-green-600 to-green-500 text-transparent bg-clip-text"
+              >stand out</span
+            >
+            together
           </h1>
           <p data-aos="fade-up-left" data-aos-delay="150" class="text-sm">
             Our dedication, transparency, and community-driven approach set us
@@ -567,21 +565,43 @@
 
     <!-- Our Feature Section -->
     <section class="overflow-hidden overflow-x-hidden pb-3 md:pb-8">
-      <div class="space-y-3 text-center">
-        <h4 class="uppercase text-sm md:text-xl font-bold">Our Feature</h4>
-        <h1 class="text-xl md:text-2xl lg:text-5xl font-bold">
-          Highlights our impactful work
+      <div class="space-y-5 text-center max-w-[1500px] mx-auto px-4">
+        <h4
+          data-aos="zoom-in-up"
+          data-aos-delay="50"
+          class="uppercase text-sm md:text-xl font-bold"
+        >
+          Our Feature
+        </h4>
+        <h1
+          data-aos="zoom-in-up"
+          data-aos-delay="100"
+          class="text-xl md:text-2xl lg:text-5xl font-bold"
+        >
+          Highlights our
+          <span
+            class="bg-gradient-to-r from-green-900 via-green-600 to-green-500 text-transparent bg-clip-text"
+          >
+            impactful work</span
+          >
         </h1>
-        <p>
+        <p
+          class="text-xs md:text-sm text-gray-400"
+          data-aos="zoom-in-up"
+          data-aos-delay="150"
+        >
           Discover the positive change we’ve created through our programs,
           partnerships, and dedicated efforts. From healthcare and education to
           environmental sustainability.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-3 gap-8 mt-8">
+      <div class="grid lg:grid-cols-3 gap-8 mt-8 px-3 max-w-[1500px] mx-auto">
+        <!-- card 1 -->
         <div
-          class="flex flex-col md:flex-row lg:flex-col items-center justify-center gap-6 p-4"
+          data-aos="fade-up-right"
+          data-aos-delay="150"
+          class="flex flex-col md:flex-row lg:flex-col items-center justify-center gap-6 bg-gray-200 dark:bg-white/10 rounded-2xl shadow-lg"
         >
           <div class="">
             <img
@@ -590,17 +610,20 @@
               alt="feature-image"
             />
           </div>
-          <div class="space-y-2 flex flex-col gap-6">
+          <!-- content  -->
+          <div class="space-y-2 flex flex-col gap-6 px-2 pb-4">
             <div class="flex items-center justify-between">
-              <div class="space-y-3">
-                <h1 class="text-xl md:text-2xl lg:text-4xl font-semibold text-green-600">
+              <div class="space-y-2">
+                <h1
+                  class="text-xl md:text-2xl lg:text-4xl font-semibold text-green-600"
+                >
                   96%
                 </h1>
                 <h3 class="text-lg md:text-xl lg:text-2xl font-bold uppercase">
                   Healthcare Support
                 </h3>
               </div>
-              <div class="p-3 rounded-full bg-green-400">
+              <div class="text-red-400">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="54"
@@ -618,7 +641,6 @@
                   />
                   <path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" />
                 </svg>
-
               </div>
             </div>
             <p class="text-sm md:text-[16px]">
@@ -627,10 +649,22 @@
             </p>
           </div>
         </div>
+
+        <!-- card 2 -->
         <div
-          class="flex flex-col-reverse md:flex-row lg:flex-col items-center justify-center gap-6 p-4"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          class="flex flex-col-reverse md:flex-row lg:flex-col items-center justify-center gap-6 bg-gray-200 dark:bg-white/10 rounded-2xl shadow-lg"
         >
-          <div class="space-y-2 flex flex-col gap-6">
+          <div class="">
+            <img
+              class="w-[600px] h-[300px] object-cover rounded-2xl"
+              src="https://i.postimg.cc/J7qqZw01/image.png"
+              alt="feature-image"
+            />
+          </div>
+
+          <div class="space-y-2 flex flex-col gap-6 px-2 pb-4">
             <div class="flex items-center justify-between">
               <div class="space-y-3">
                 <h1 class="text-xl md:text-2xl lg:text-4xl font-semibold">
@@ -640,11 +674,11 @@
                   Education Support
                 </h3>
               </div>
-              <div>
+              <div class="text-orange-400">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="54"
-                  height="54"
+                  width="58"
+                  height="58"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -666,17 +700,13 @@
               communities.
             </p>
           </div>
-
-          <div class="">
-            <img
-              class="w-[600px] h-[300px] object-cover rounded-2xl"
-              src="https://i.postimg.cc/J7qqZw01/image.png"
-              alt="feature-image"
-            />
-          </div>
         </div>
+
+        <!-- card 3 -->
         <div
-          class="flex flex-col md:flex-row lg:flex-col items-center justify-center gap-6 p-4"
+          data-aos="fade-up-left"
+          data-aos-delay="250"
+          class="flex flex-col md:flex-row lg:flex-col items-center justify-center gap-6 bg-gray-200 dark:bg-white/10 rounded-2xl shadow-lg"
         >
           <div class="">
             <img
@@ -685,7 +715,7 @@
               alt="feature-image"
             />
           </div>
-          <div class="space-y-2 flex flex-col gap-6">
+          <div class="space-y-2 flex flex-col gap-6 px-2 pb-4">
             <div class="flex items-center justify-between">
               <div class="space-y-3">
                 <h1 class="text-xl md:text-2xl lg:text-4xl font-semibold">
@@ -695,7 +725,7 @@
                   Food Support
                 </h3>
               </div>
-              <div>
+              <div class="text-orange-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="54"
@@ -723,6 +753,304 @@
               Providing essential healthcare services and resources to
               communities.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What people say about us -->
+    <section class="overflow-hidden overflow-x-hidden pb-3 md:pb-8 md:mt-6">
+      <!-- main -->
+      <div
+        class="grid xl:grid-cols-2 items-center justify-center gap-3 max-w-[1600px] mx-auto px-4"
+      >
+        <!-- left image -->
+        <div
+          data-aos="fade-up-right"
+          data-aos-delay="50"
+          class="flex justify-center items-center relative"
+        >
+          <img
+            class="w-full h-[700px] object-cover rounded-2xl"
+            src="https://i.postimg.cc/SRFkpw1s/portrait-young-people-with-fresh-produce-boxes-1.jpg"
+            alt="background-image"
+          />
+
+          <!-- overlay -->
+          <div
+            class="w-full h-[700px] rounded-2xl bg-gradient-to-r from-black to-transparent text-white absolute inset-0 opacity-90"
+          ></div>
+        </div>
+
+        <!-- right content -->
+
+        <div
+          class="px-2 md:px-6 pt-12 xl:pt-0 flex flex-col justify-center items-center"
+        >
+          <h1
+            data-aos="fade-up-left"
+            data-aos-delay="100"
+            class="text-xl md:text-3xl lg:text-5xl font-semibold text-center md:text-left"
+          >
+            What People Say
+            <span
+              class="bg-gradient-to-r from-green-900 via-green-600 to-green-500 text-transparent bg-clip-text"
+              >About Us</span
+            >
+          </h1>
+          <div class="grid grid-rows-2 gap-6 md:gap-12 mt-6">
+            <div
+              data-aos="zoom-in-left"
+              data-aos-delay="100"
+              class="space-y-4 bg-gray-100 dark:bg-white/10 shadow-2xl p-4 rounded-2xl border-l-6 border-l-green-600"
+            >
+              <div class="md:flex items-center justify-between space-y-2">
+                <div
+                  class="flex flex-col md:flex-row gap-8 items-center justify-center md:justify-start space-y-0.5 md:space-y-0 w-full mx-auto"
+                >
+                  <img
+                    class="h-24 w-24 object-cover rounded-full border-2 border-gray-400/80"
+                    src="https://i.postimg.cc/sxgdys93/image.png"
+                    alt="profile"
+                  />
+                  <div
+                    class="space-y-0.5 flex flex-col items-center md:items-start"
+                  >
+                    <h1 class="text-sm md:text-lg font-bold">Deva</h1>
+                    <p class="text-xs md:text-sm">Leading Director</p>
+                  </div>
+                </div>
+
+                <div>
+                  <ul class="flex items-center justify-center gap-2">
+                    <li class="text-yellow-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-star-icon lucide-star"
+                      >
+                        <path
+                          d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                        />
+                      </svg>
+                    </li>
+                    <li class="text-yellow-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-star-icon lucide-star"
+                      >
+                        <path
+                          d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                        />
+                      </svg>
+                    </li>
+                    <li class="text-yellow-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-star-icon lucide-star"
+                      >
+                        <path
+                          d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                        />
+                      </svg>
+                    </li>
+                    <li class="text-yellow-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-star-icon lucide-star"
+                      >
+                        <path
+                          d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                        />
+                      </svg>
+                    </li>
+                    <li class="text-yellow-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-star-icon lucide-star"
+                      >
+                        <path
+                          d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                        />
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="border-t-2 border-t-gray-300 pt-6">
+                <p class="text-sm md:text-[16px] text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus sint fuga assumenda, necessitatibus illo nihil qui
+                  dolores corrupti nisi obcaecati facilis, illum laborum
+                  inventore! Qui a optio eveniet non vero!
+                </p>
+              </div>
+            </div>
+            <div
+              data-aos="zoom-in-left"
+              data-aos-delay="200"
+              class="space-y-4 bg-gray-100 dark:bg-white/10 shadow-2xl p-4 rounded-2xl border-l-6 border-l-green-600"
+            >
+              <div class="md:flex items-center justify-between space-y-2">
+                <div
+                  class="flex flex-col md:flex-row gap-8 items-center justify-center md:justify-start space-y-0.5 md:space-y-0 w-full mx-auto"
+                >
+                  <img
+                    class="h-24 w-24 object-cover rounded-full border-2 border-gray-400/80"
+                    src="https://i.postimg.cc/YCHCQwbx/image.png"
+                    alt="profile"
+                  />
+                  <div
+                    class="space-y-0.5 flex flex-col items-center md:items-start"
+                  >
+                    <h1 class="text-sm md:text-lg font-bold">Hema</h1>
+                    <p class="text-xs md:text-sm">Marketing Director</p>
+                  </div>
+                </div>
+
+                <div>
+                  <ul class="flex items-center justify-center gap-2">
+                    <li class="text-yellow-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-star-icon lucide-star"
+                      >
+                        <path
+                          d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                        />
+                      </svg>
+                    </li>
+                    <li class="text-yellow-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-star-icon lucide-star"
+                      >
+                        <path
+                          d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                        />
+                      </svg>
+                    </li>
+                    <li class="text-yellow-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-star-icon lucide-star"
+                      >
+                        <path
+                          d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                        />
+                      </svg>
+                    </li>
+                    <li class="text-yellow-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-star-icon lucide-star"
+                      >
+                        <path
+                          d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                        />
+                      </svg>
+                    </li>
+                    <li class="text-yellow-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-star-icon lucide-star"
+                      >
+                        <path
+                          d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                        />
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="border-t-2 border-t-gray-300 pt-6">
+                <p class="text-sm md:text-[16px] text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus sint fuga assumenda, necessitatibus illo nihil qui
+                  dolores corrupti nisi obcaecati facilis, illum laborum
+                  inventore! Qui a optio eveniet non vero!
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
