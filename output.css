@@ -1413,6 +1413,10 @@
     --tw-gradient-from: var(--color-gray-500);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .from-green-300 {
+    --tw-gradient-from: var(--color-green-300);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .from-green-500 {
     --tw-gradient-from: var(--color-green-500);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -1548,6 +1552,10 @@
     }
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .to-emerald-500 {
+    --tw-gradient-to: var(--color-emerald-500);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .to-gray-300 {
     --tw-gradient-to: var(--color-gray-300);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -1621,6 +1629,9 @@
   .object-cover {
     object-fit: cover;
   }
+  .object-\[\%_35\%\] {
+    object-position: % 35%;
+  }
   .object-\[0\%_90\%\] {
     object-position: 0% 90%;
   }
@@ -1651,17 +1662,44 @@
   .object-\[20\] {
     object-position: 20;
   }
+  .object-\[50\%_30\%\] {
+    object-position: 50% 30%;
+  }
+  .object-\[50\%_50\%\] {
+    object-position: 50% 50%;
+  }
+  .object-\[55\%_30\%\] {
+    object-position: 55% 30%;
+  }
+  .object-\[55\%_45\%\] {
+    object-position: 55% 45%;
+  }
   .object-\[60\%_30\%\] {
     object-position: 60% 30%;
   }
   .object-\[60\%_40\%\] {
     object-position: 60% 40%;
   }
+  .object-\[60\%_50\%\] {
+    object-position: 60% 50%;
+  }
+  .object-\[65\%_35\%\] {
+    object-position: 65% 35%;
+  }
+  .object-\[65\%_40\%\] {
+    object-position: 65% 40%;
+  }
   .object-\[70\%_20\%\] {
     object-position: 70% 20%;
   }
   .object-\[70\%_30\%\] {
     object-position: 70% 30%;
+  }
+  .object-\[70\%_35\%\] {
+    object-position: 70% 35%;
+  }
+  .object-\[70\%_40\%\] {
+    object-position: 70% 40%;
   }
   .object-\[70\%_320\%\] {
     object-position: 70% 320%;
@@ -2024,6 +2062,9 @@
   .text-red-400 {
     color: var(--color-red-400);
   }
+  .text-red-500 {
+    color: var(--color-red-500);
+  }
   .text-red-600 {
     color: var(--color-red-600);
   }
@@ -2086,6 +2127,9 @@
   .opacity-0 {
     opacity: 0%;
   }
+  .opacity-7 {
+    opacity: 7%;
+  }
   .opacity-10 {
     opacity: 10%;
   }
@@ -2103,6 +2147,9 @@
   }
   .opacity-60 {
     opacity: 60%;
+  }
+  .opacity-65 {
+    opacity: 65%;
   }
   .opacity-70 {
     opacity: 70%;
@@ -2802,6 +2849,11 @@
   .md\:items-start {
     @media (width >= 48rem) {
       align-items: flex-start;
+    }
+  }
+  .md\:justify-between {
+    @media (width >= 48rem) {
+      justify-content: space-between;
     }
   }
   .md\:justify-center {
