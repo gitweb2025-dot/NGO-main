@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="../output.css" />
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,600;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
       body {
         font-family: "Poppins", sans-serif;
@@ -139,7 +139,9 @@
             class="hover:text-violet-600 transition-colors"
             >Home</a
           >
-          <a href="./About2.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="./About2.html"
+            class="hover:text-violet-600 transition-colors"
             >About Us</a
           >
           <a
@@ -330,9 +332,9 @@
 
     <!-- Blog main section -->
     <main class="overflow-hidden overflow-x-hidden">
-      <div class="text-center space-y-3 pb-8 px-3">
+      <div class="text-center space-y-3 pb-4 px-3">
         <h1
-          class="w-fit mx-auto text-2xl md:text-4xl lg:text-5xl bg-gradient-to-r from-violet-900 via-violet-600 to-violet-500 text-transparent bg-clip-text font-bold pb-2"
+          class="w-fit mx-auto text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-violet-900 via-violet-600 to-violet-500 text-transparent bg-clip-text font-bold pb-2"
         >
           Blogs
         </h1>
@@ -340,24 +342,83 @@
           Stories of hope, impact, and inspiration from the heart of our
           mission.
         </p>
-        <p class="text-gray-500 text-sm">
+        <p class="text-gray-500 text-xs md:text-sm">
           Read inspiring stories, program highlights, and real-life impacts
           created through our mission. Stay updated with our latest initiatives
           that bring hope and transformation to communities.
         </p>
       </div>
+
+      <!-- main card -->
       <div
-        class="grid xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-center items-center gap-8 max-w-[1500px] mx-auto px-3 pb-6"
+        class="max-w-[1500px] p-4 dark:bg-white/10 rounded-lg space-y-3 pb-6 px-3 md:px-10 mx-auto"
+      >
+        <div class="relative">
+          <img
+            class="rounded-2xl h-[400px] w-full object-cover object-[60%_40%]"
+            src="https://i.postimg.cc/2yhkjKwH/image.png"
+            alt="image-1"
+          />
+          <div class="flex items-end justify-center pb-10 rounded-2xl h-[400px] w-full bg-black absolute inset-0 opacity-75">
+            <h1 class="text-white text-center">Together, we are stronger. Our team’s dedication is the backbone of every program and every success story.</h1>
+          </div>
+        </div>
+        <h1 class="text-xl md:text-3xl font-bold">Meet Our Dedicated Team</h1>
+        <p class="text-gray-500 dark:text-gray-300 text-sm md:text-lg">
+          Behind every act of kindness is a passionate team working together to
+          create change. Our team is driven by compassion, vision, and a
+          commitment to serve communities in need.
+        </p>
+        <div class="pt-1.5 pb-1.5 flex items-center justify-between text-sm">
+          <div class="flex items-center gap-6">
+            <h1 class="text-lg font-bold">Tags :</h1>
+            <a
+              class="px-6 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white hover:bg-violet-600 hover:border-violet-600 transition-all duration-300 ease-in"
+              href="../404.html"
+              >Community</a
+            >
+            <a
+              class="px-6 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white hover:bg-violet-600 hover:border-violet-600 transition-all duration-300 ease-in"
+              href="../404.html"
+              >Education</a
+            >
+            <a
+              class="px-6 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white hover:bg-violet-600 hover:border-violet-600 transition-all duration-300 ease-in"
+              href="../404.html"
+              >Empowerment</a
+            >
+          </div>
+
+          <div class="flex items-center gap-6">
+            <a
+              class="flex items-center gap-2 px-6 py-2 border-2 border-violet-500 rounded-3xl text-black dark:text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
+              href="../404.html"
+            >
+              <i class="fa-solid fa-gift text-xl text-violet-600"></i> Donate
+              Now
+            </a>
+            <a
+              class="px-6 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white hover:bg-violet-600 hover:border-violet-600 transition-all duration-300 ease-in"
+              href="../404.html"
+              >Join Now</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="grid xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-center items-center mt-10 gap-8 md:gap-16 max-w-[1500px] mx-auto px-3 pb-6"
       >
         <!-- card 1 -->
         <div
           class="p-4 bg-white dark:bg-white/10 rounded-lg shadow-[0px_4px_10px_3px_rgba(0,_0,_0,_0.1)] space-y-3 max-w-md"
         >
           <p
-            class="text-violet-600 dark:text-gray-400 text-xl font-bold uppercase"
+            class="text-violet-600 dark:text-gray-400 text-sm md:text-xl font-bold uppercase"
           >
             5th Jun , 2024
           </p>
+          <h1 class="text-xl font-bold">Child Protection</h1>
           <p class="text-gray-500 dark:text-gray-300 text-sm">
             Child Protection Awareness Rally and protect from child labour.
           </p>
@@ -366,7 +427,7 @@
             src="https://i.postimg.cc/NMgKNZqq/post-img-4-1024x576.jpg"
             alt="image-1"
           />
-          <div class="pt-3 pb-3 flex items-center justify-between text-sm">
+          <div class="pt-1.5 pb-1.5 flex items-center justify-between text-sm">
             <a
               class="px-6 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white hover:bg-violet-600 hover:border-violet-600 transition-all duration-300 ease-in"
               href="../404.html"
@@ -385,10 +446,11 @@
           class="p-4 bg-white dark:bg-white/10 rounded-lg shadow-[0px_4px_10px_3px_rgba(0,_0,_0,_0.1)] space-y-3 max-w-md"
         >
           <p
-            class="text-violet-600 dark:text-gray-400 text-xl font-bold uppercase"
+            class="text-violet-600 dark:text-gray-400 text-sm md:text-xl font-bold uppercase"
           >
             20th Nov , 2024
           </p>
+          <h1 class="text-xl font-bold">Newborn Care Awareness</h1>
           <p class="text-gray-500 dark:text-gray-300 text-sm">
             Educated mothers on safe delivery practices, breastfeeding, and
             infant care.
@@ -398,7 +460,7 @@
             src="https://i.postimg.cc/tJZRnJ5C/post-img-1-1024x576.jpg"
             alt="image-1"
           />
-          <div class="pt-3 pb-3 flex items-center justify-between text-sm">
+          <div class="pt-1.5 pb-1.5 flex items-center justify-between text-sm">
             <a
               class="px-6 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white hover:bg-violet-600 hover:border-violet-600 transition-all duration-300 ease-in"
               href="../404.html"
@@ -417,10 +479,11 @@
           class="p-4 bg-white dark:bg-white/10 rounded-lg shadow-[0px_4px_10px_3px_rgba(0,_0,_0,_0.1)] space-y-3 max-w-md"
         >
           <p
-            class="text-violet-600 dark:text-gray-400 text-xl font-bold uppercase"
+            class="text-violet-600 dark:text-gray-400 text-sm md:text-xl font-bold uppercase"
           >
             15th Nov , 2024
           </p>
+          <h1 class="text-xl font-bold">Environment Care</h1>
           <p class="text-gray-500 dark:text-gray-300 text-sm">
             Planted over 2,000 trees to promote sustainability and awareness.
           </p>
@@ -429,7 +492,7 @@
             src="https://i.postimg.cc/HxkdfgSm/volunteers-little-kid-planting-tree-covering-hole-ground-2.jpg"
             alt="image-1"
           />
-          <div class="pt-3 pb-3 flex items-center justify-between text-sm">
+          <div class="pt-1.5 pb-1.5 flex items-center justify-between text-sm">
             <a
               class="px-6 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white hover:bg-violet-600 hover:border-violet-600 transition-all duration-300 ease-in"
               href="../404.html"
@@ -448,10 +511,11 @@
           class="p-4 bg-white dark:bg-white/10 rounded-lg shadow-[0px_4px_10px_3px_rgba(0,_0,_0,_0.1)] space-y-3 max-w-md"
         >
           <p
-            class="text-violet-600 dark:text-gray-400 text-xl font-bold uppercase"
+            class="text-violet-600 dark:text-gray-400 text-sm md:text-xl font-bold uppercase"
           >
             8th Jan , 2025
           </p>
+          <h1 class="text-xl font-bold">Hunger Relief</h1>
           <p class="text-gray-500 dark:text-gray-300 text-sm">
             Served nutritious meals to 2,500 people as part of our hunger-free
             mission.
@@ -461,7 +525,7 @@
             src="https://i.postimg.cc/3JMF1JSP/image.png"
             alt="image-1"
           />
-          <div class="pt-3 pb-3 flex items-center justify-between text-sm">
+          <div class="pt-1.5 pb-1.5 flex items-center justify-between text-sm">
             <a
               class="px-6 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white hover:bg-violet-600 hover:border-violet-600 transition-all duration-300 ease-in"
               href="../404.html"
@@ -480,10 +544,11 @@
           class="p-4 bg-white dark:bg-white/10 rounded-lg shadow-[0px_4px_10px_3px_rgba(0,_0,_0,_0.1)] space-y-3 max-w-md"
         >
           <p
-            class="text-violet-600 dark:text-gray-400 text-xl font-bold uppercase"
+            class="text-violet-600 dark:text-gray-400 text-sm md:text-xl font-bold uppercase"
           >
             5th Feb , 2025
           </p>
+          <h1 class="text-xl font-bold">Medical Care</h1>
           <p class="text-gray-500 dark:text-gray-300 text-sm">
             Provided medical check-ups and free medicines to 300 families in
             need.
@@ -493,7 +558,7 @@
             src="https://i.postimg.cc/RFwfWw7G/image.png"
             alt="image-1"
           />
-          <div class="pt-3 pb-3 flex items-center justify-between text-sm">
+          <div class="pt-1.5 pb-1.5 flex items-center justify-between text-sm">
             <a
               class="px-6 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white hover:bg-violet-600 hover:border-violet-600 transition-all duration-300 ease-in"
               href="../404.html"
@@ -512,10 +577,11 @@
           class="p-4 bg-white dark:bg-white/10 rounded-lg shadow-[0px_4px_10px_3px_rgba(0,_0,_0,_0.1)] space-y-3 max-w-md"
         >
           <p
-            class="text-violet-600 dark:text-gray-400 text-xl font-bold uppercase"
+            class="text-violet-600 dark:text-gray-400 text-sm md:text-xl font-bold uppercase"
           >
             12th Apr , 2024
           </p>
+          <h1 class="text-xl font-bold">Dedicated Volunteers</h1>
           <p class="text-gray-500 dark:text-gray-300 text-sm">
             Honored our dedicated volunteers who continue to be the backbone of
             our mission.
@@ -525,7 +591,7 @@
             src="https://i.postimg.cc/7YtCYBvw/image.png"
             alt="image-1"
           />
-          <div class="pt-3 pb-3 flex items-center justify-between text-sm">
+          <div class="pt-1.5 pb-1.5 flex items-center justify-between text-sm">
             <a
               class="px-6 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white hover:bg-violet-600 hover:border-violet-600 transition-all duration-300 ease-in"
               href="../404.html"
@@ -544,10 +610,11 @@
           class="p-4 bg-white dark:bg-white/10 rounded-lg shadow-[0px_4px_10px_3px_rgba(0,_0,_0,_0.1)] space-y-3 max-w-md"
         >
           <p
-            class="text-violet-600 dark:text-gray-400 text-xl font-bold uppercase"
+            class="text-violet-600 dark:text-gray-400 text-sm md:text-xl font-bold uppercase"
           >
             25th Sep , 2024
           </p>
+          <h1 class="text-xl font-bold">Shelter Relief</h1>
           <p class="text-gray-500 dark:text-gray-300 text-sm">
             Safe Shelter for Homeless Mothers & Kids to promote safety.
           </p>
@@ -556,7 +623,7 @@
             src="https://i.postimg.cc/W4zP8PXJ/image.png"
             alt="image-1"
           />
-          <div class="pt-3 pb-3 flex items-center justify-between text-sm">
+          <div class="pt-1.5 pb-1.5 flex items-center justify-between text-sm">
             <a
               class="px-6 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white hover:bg-violet-600 hover:border-violet-600 transition-all duration-300 ease-in"
               href="../404.html"
@@ -575,10 +642,11 @@
           class="p-4 bg-white dark:bg-white/10 rounded-lg shadow-[0px_4px_10px_3px_rgba(0,_0,_0,_0.1)] space-y-3 max-w-md"
         >
           <p
-            class="text-violet-600 dark:text-gray-400 text-xl font-bold uppercase"
+            class="text-violet-600 dark:text-gray-400 text-sm md:text-xl font-bold uppercase"
           >
             10th Oct , 2024
           </p>
+          <h1 class="text-xl font-bold">Children Awareness</h1>
           <p class="text-gray-500 dark:text-gray-300 text-sm">
             Helped 250 children receive awareness sessions for mothers.
           </p>
@@ -630,35 +698,41 @@
           </svg>
         </a>
 
-        <div class="flex items-center gap-0.5 md:gap-6 text-sm font-medium">
-          <a href="./Blog2.html"
+        <div class="flex items-center gap-2 md:gap-6 text-sm font-medium">
+          <a
+            href="./Blog2.html"
             class="h-10 w-10 flex items-center justify-center aspect-square text-violet-500 border border-violet-400 rounded-full"
           >
             1
           </a>
-          <a href="../404.html"
+          <a
+            href="../404.html"
             class="h-10 w-10 flex items-center justify-center aspect-square border border-white/5 hover:text-violet-500 hover:border-violet-400 rounded-full transition duration-300 ease-in-out"
           >
             2
           </a>
-          <a href="../404.html"
+          <a
+            href="../404.html"
             class="h-10 w-10 flex items-center justify-center aspect-square border border-white/5 hover:text-violet-500 hover:border-violet-400 rounded-full transition duration-300 ease-in-out"
           >
             3
           </a>
-          <a href="../404.html"
+          <a
+            href="../404.html"
             class="h-10 w-10 flex items-center justify-center aspect-square border border-white/5 hover:text-violet-500 hover:border-violet-400 rounded-full transition duration-300 ease-in-out"
           >
             4
           </a>
-          <a href="../404.html"
+          <a
+            href="../404.html"
             class="h-10 w-10 flex items-center justify-center aspect-square border border-white/5 hover:text-violet-500 hover:border-violet-400 rounded-full transition duration-300 ease-in-out"
           >
             5
           </a>
         </div>
 
-        <a href="../404.html"
+        <a
+          href="../404.html"
           type="button"
           aria-label="next"
           class="rounded-full bg-gray-400 dark:bg-slate-200/50 text-white transform hover:scale-95 transition duration-300 ease-out"
