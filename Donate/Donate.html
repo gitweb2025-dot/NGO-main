@@ -85,22 +85,49 @@
         <!-- Logo -->
         <!-- <a href="#" class="text-xl font-bold tracking-tight">Brand</a> -->
         <a class="" href="../index.html"
-          ><img
-            class="h-16 object-cover"
-            src="../Assets/Logo.png"
-            alt="logo"
+          ><img class="h-16 object-cover" src="../Assets/Logo.png" alt="logo"
         /></a>
 
         <!-- Desktop Nav -->
         <nav
           class="hidden md:flex space-x-2 md:space-x-3 lg:space-x-5 text-sm font-medium"
         >
+          <!-- Home with Dropdown -->
+          <div class="relative">
+            <!-- Parent Button -->
+            <button
+              id="homeToggle"
+              class="hover:text-violet-600 transition-colors focus:outline-none flex items-center gap-1 cursor-pointer"
+            >
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="homeMenu"
+              class="absolute hidden bg-white dark:bg-slate-950 shadow-lg mt-2 rounded w-40"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../Home/Home.html"
+                  class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+            </ul>
+          </div>
           <a
-            href="../Home/Home.html"
+            href="../About/About.html"
             class="hover:text-violet-600 transition-colors"
-            >Home</a
-          >
-          <a href="../About/About.html" class="hover:text-violet-600 transition-colors"
             >About Us</a
           >
           <a
@@ -170,13 +197,38 @@
         class="mobile-menu lg:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-md"
       >
         <ul class="flex flex-col space-y-4 p-4 text-sm font-medium">
-          <li>
-            <a
-              href="../Home/Home.html"
-              class="nav-link block hover:text-violet-600 transition-colors"
-              >Home</a
+          <!-- Home dropDown  -->
+          <div class="relative">
+            <button
+              id="mobileToggle"
+              class="flex items-center gap-1 w-full text-left hover:text-violet-600 transition-colors md:hidden"
             >
-          </li>
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="mobileLink"
+              class="hidden bg-white dark:bg-slate-950 mt-2 rounded w-full md:absolute"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../Home/Home.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+            </ul>
+          </div>
           <li>
             <a
               href="../About/About.html"
@@ -243,6 +295,31 @@
           </li>
         </ul>
       </nav>
+
+      <!-- Dropdown script  -->
+      <script>
+        const homeToggle = document.getElementById("homeToggle");
+        const homeMenu = document.getElementById("homeMenu");
+
+        homeToggle.addEventListener("click", () => {
+          homeMenu.classList.toggle("hidden");
+        });
+
+        const mobileToggle = document.getElementById("mobileToggle");
+        const mobileLink = document.getElementById("mobileLink");
+
+        // Home dropdown toggle (mobile only)
+        mobileToggle.addEventListener("click", () => {
+          mobileLink.classList.toggle("hidden");
+        });
+
+        // Optional: close menu if clicked outside
+        window.addEventListener("click", (e) => {
+          if (!homeToggle.contains(e.target) && !homeMenu.contains(e.target)) {
+            homeMenu.classList.add("hidden");
+          }
+        });
+      </script>
     </header>
 
     <!-- breadcrumb -->
@@ -289,11 +366,7 @@
           />
         </svg>
 
-        <a
-          class="text-violet-700 font-bold"
-          href="./Donate.html"
-          >Donate Now</a
-        >
+        <a class="text-violet-700 font-bold" href="./Donate.html">Donate Now</a>
       </div>
     </section>
 
@@ -466,9 +539,10 @@
           ></div>
         </div>
         <form
-        data-aos="fade-left"
+          data-aos="fade-left"
           data-aos-delay="200"
-         class="px-4 my-auto space-y-6">
+          class="px-4 my-auto space-y-6"
+        >
           <div>
             <h1 class="text-center text-2xl md:text-4xl font-semibold">
               Donate Here
@@ -619,11 +693,7 @@
         data-aos-delay="150"
       >
         <div class="md:max-w-96 flex flex-col items-start md:p-4 space-y-2">
-          <img
-            class="w-36 h-fit"
-            src="../Assets/Logo.png"
-            alt="logo"
-          />
+          <img class="w-36 h-fit" src="../Assets/Logo.png" alt="logo" />
           <p class="mt-2 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -635,7 +705,9 @@
           class="flex-1 flex items-start justify-center md:justify-end gap-20 p-4"
         >
           <div>
-            <h2 class="font-semibold mb-5 text-gray-800 dark:text-gray-400">Company</h2>
+            <h2 class="font-semibold mb-5 text-gray-800 dark:text-gray-400">
+              Company
+            </h2>
             <ul class="text-sm space-y-2">
               <li><a href="../Home/Home.html">Home</a></li>
               <li><a href="../About/About.html">About us</a></li>
@@ -645,7 +717,9 @@
             </ul>
           </div>
           <div class="">
-            <h2 class="font-semibold mb-5 text-gray-800 dark:text-gray-400">Get in touch</h2>
+            <h2 class="font-semibold mb-5 text-gray-800 dark:text-gray-400">
+              Get in touch
+            </h2>
             <div class="text-sm space-y-2">
               <p>+1-212-456-7890</p>
               <p>contact@example.com</p>

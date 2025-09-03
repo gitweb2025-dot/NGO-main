@@ -130,11 +130,39 @@
         <nav
           class="hidden md:flex space-x-2 md:space-x-3 lg:space-x-5 text-sm font-medium"
         >
-          <a
-            href="../Home/Home.html"
-            class="hover:text-violet-600 transition-colors"
-            >Home</a
-          >
+          <!-- Home with Dropdown -->
+          <div class="relative">
+            <!-- Parent Button -->
+            <button
+              id="homeToggle"
+              class="hover:text-violet-600 transition-colors focus:outline-none flex items-center gap-1 cursor-pointer"
+            >
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="homeMenu"
+              class="absolute hidden bg-white dark:bg-slate-950 shadow-lg mt-2 rounded w-40"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../Home/Home.html"
+                  class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+            </ul>
+          </div>
           <a
             href="../About/About2.html"
             class="hover:text-violet-600 transition-colors"
@@ -206,13 +234,38 @@
         class="mobile-menu lg:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-600 shadow-md"
       >
         <ul class="flex flex-col space-y-4 p-4 text-sm font-medium">
-          <li>
-            <a
-              href="../Home/Home.html"
-              class="nav-link block hover:text-violet-600 transition-colors"
-              >Home</a
+          <!-- Home dropDown  -->
+          <div class="relative">
+            <button
+              id="mobileToggle"
+              class="flex items-center gap-1 w-full text-left hover:text-violet-600 transition-colors md:hidden"
             >
-          </li>
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="mobileLink"
+              class="hidden bg-white dark:bg-slate-950 mt-2 rounded w-full md:absolute"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../Home/Home.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+            </ul>
+          </div>
           <li>
             <a
               href="../About/About2.html"
@@ -278,6 +331,31 @@
           </li>
         </ul>
       </nav>
+
+      <!-- Dropdown script  -->
+      <script>
+        const homeToggle = document.getElementById("homeToggle");
+        const homeMenu = document.getElementById("homeMenu");
+
+        homeToggle.addEventListener("click", () => {
+          homeMenu.classList.toggle("hidden");
+        });
+
+        const mobileToggle = document.getElementById("mobileToggle");
+        const mobileLink = document.getElementById("mobileLink");
+
+        // Home dropdown toggle (mobile only)
+        mobileToggle.addEventListener("click", () => {
+          mobileLink.classList.toggle("hidden");
+        });
+
+        // Optional: close menu if clicked outside
+        window.addEventListener("click", (e) => {
+          if (!homeToggle.contains(e.target) && !homeMenu.contains(e.target)) {
+            homeMenu.classList.add("hidden");
+          }
+        });
+      </script>
     </header>
 
     <!-- BreadCrumb -->
@@ -331,8 +409,10 @@
     </section>
 
     <!-- Home-Section  -->
-    <main class="overflow-hidden overflow-x-hidden pb-3 md:pb-8">
-      <div class="grid lg:grid-cols-2 items-center m-4 gap-3 md:gap-6">
+    <main class="overflow-hidden overflow-x-hidden pb-8">
+      <div
+        class="grid lg:grid-cols-2 items-center gap-6 max-w-[1500px] mx-auto px-3"
+      >
         <!-- content -->
         <div class="flex flex-col w-full space-y-4">
           <p
@@ -385,12 +465,12 @@
 
         <!-- image -->
         <div
-          data-aos="fade-left"
-          data-aos-delay="100"
+          data-aos="fade-up-left"
+          data-aos-delay="200"
           class="flex items-center justify-center h-full relative"
         >
           <img
-            class="rounded-2xl w-full h-[300px] object-cover object-center"
+            class="rounded-2xl w-full md:h-[300px] object-cover object-center"
             src="https://i.postimg.cc/xTcybHqQ/medium-shot-volunteers-with-food-packs-1.jpg"
             alt="image"
           />
@@ -401,13 +481,29 @@
     <!-- form -->
 
     <section class="overflow-hidden overflow-x-hidden pb-3 md:pb-8">
-      <div class="grid grid-cols-2">
-        <div>
-          <form class="max-w-md space-y-4">
+      <div class="grid md:grid-cols-2 max-w-[1500px] gap-8 mx-auto px-3">
+        <div class="space-y-6">
+          <div class="space-y-2">
+            <div data-aos="fade-up-right" data-aos-delay="50">
+              <h1 class="font-bold text-xl md:text-2xl">Connect us</h1>
+              <p class="w-16 h-0.5 bg-black dark:bg-gray-600 rounded-3xl"></p>
+            </div>
+            <p data-aos="fade-up-right" data-aos-delay="150" class="text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nam
+              esse ipsa voluptatem ea autem dolor facere ab fugit.
+            </p>
+          </div>
+
+          <!-- form -->
+          <form
+            data-aos="fade-right"
+            data-aos-delay="50"
+            class="max-w-xl space-y-4 shadow-[0px_0px_17px_6px_rgba(0,_0,_0,_0.1)] dark:bg-white/5 border-1 border-white/20 p-4 rounded-2xl"
+          >
             <div class="flex flex-col gap-2">
-              <label>Name</label>
+              <label class="font-semibold">Name</label>
               <div
-                class="flex items-center gap-2 px-2 py-2 border-2 dark:border-gray-600 rounded-md"
+                class="flex items-center gap-2 px-2 py-2 border-2 border-gray-400 dark:border-gray-600 rounded-md"
               >
                 <i class="fa-solid fa-user"></i>
                 <input
@@ -418,9 +514,9 @@
               </div>
             </div>
             <div class="flex flex-col gap-2">
-              <label>E-mail</label>
+              <label class="font-semibold">E-mail</label>
               <div
-                class="flex items-center gap-2 px-2 py-2 border-2 dark:border-gray-600 rounded-md"
+                class="flex items-center gap-2 px-2 py-2 border-2 border-gray-400 dark:border-gray-600 rounded-md"
               >
                 <i class="fa-solid fa-envelope"></i>
                 <input
@@ -431,20 +527,346 @@
               </div>
             </div>
             <div class="flex flex-col gap-2">
-              <label>Message</label>
-
-              <div class="flex items-center gap-2 px-2 py-2 border-2 dark:border-gray-600 rounded-md">
-                <i class="fa-solid fa-message"></i>
-                <textarea
+              <label class="font-semibold">Topic</label>
+              <select
+                class="px-2 py-2 border-2 border-gray-400 dark:border-gray-600 rounded-md outline-0"
+              >
+                <option class="dark:bg-gray-900">General Inquiry</option>
+                <option class="dark:bg-gray-900">Donation Inquiry</option>
+                <option class="dark:bg-gray-900">Safety Inquiry</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="font-semibold">Message</label>
+              <textarea
                 placeholder="Enter Your Message"
-                class="resize-y scroll-p-2 rounded-md"
+                class="resize-y w-full h-full px-2 py-2 outline-0 border-2 border-gray-400 dark:border-gray-600 rounded-md"
               ></textarea>
-              </div>
-              
+            </div>
+            <div class="w-fit">
+              <a
+                class="flex items-center gap-2 px-6 py-2 border-2 bg-violet-500 border-violet-500 rounded-3xl text-white dark:text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                Submit
+              </a>
             </div>
           </form>
         </div>
+
+        <div class="space-y-6">
+          <div class="space-y-2">
+            <div data-aos="zoom-in" data-aos-delay="50">
+              <h1 class="text-xl md:text-2xl font-semibold">Contact us</h1>
+              <p class="w-16 h-0.5 bg-black rounded-3xl dark:bg-gray-600"></p>
+            </div>
+            <p data-aos="zoom-in" data-aos-delay="150" class="text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+              recusandae labore suscipit provident animi eligendi quia. Debitis
+              quas rerum.
+            </p>
+          </div>
+          <div
+            data-aos="fade-left"
+            data-aos-delay="100"
+            class="grid grid-rows-4 gap-3 py-3 md:py-8"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="px-6 py-6 rounded-2xl bg-gray-200 dark:bg-white/5 text-violet-500 dark:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-house-icon lucide-house"
+                >
+                  <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                  <path
+                    d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h1 class="font-semibold text-lg">Address</h1>
+                <a href="../404.html" class="text-sm"
+                  >Lorem ipsum dolor sit amet</a
+                >
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="px-6 py-6 rounded-2xl bg-gray-200 dark:bg-white/5 text-violet-500 dark:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-phone-icon lucide-phone"
+                >
+                  <path
+                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h1 class="font-semibold text-lg">Call</h1>
+                <a href="../404.html" class="text-sm">+123 456 7891</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="px-6 py-6 rounded-2xl bg-gray-200 dark:bg-white/5 text-violet-500 dark:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail-icon lucide-mail"
+                >
+                  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                </svg>
+              </div>
+              <div>
+                <h1 class="font-semibold text-lg">E-mail</h1>
+                <a href="../404.html" class="text-sm">xyz@xyz.com</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="px-6 py-6 rounded-2xl bg-gray-200 dark:bg-white/5 text-violet-500 dark:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-globe-icon lucide-globe"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                  <path d="M2 12h20" />
+                </svg>
+              </div>
+              <div>
+                <h1 class="font-semibold text-lg">Website</h1>
+                <a href="../404.html" class="text-sm">Loremipsumdolor.com</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div
+                class="px-6 py-6 rounded-2xl bg-gray-200 dark:bg-white/5 text-violet-500 dark:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-circle-fading-plus-icon lucide-circle-fading-plus"
+                >
+                  <path d="M12 2a10 10 0 0 1 7.38 16.75" />
+                  <path d="M12 8v8" />
+                  <path d="M16 12H8" />
+                  <path d="M2.5 8.875a10 10 0 0 0-.5 3" />
+                  <path d="M2.83 16a10 10 0 0 0 2.43 3.4" />
+                  <path d="M4.636 5.235a10 10 0 0 1 .891-.857" />
+                  <path d="M8.644 21.42a10 10 0 0 0 7.631-.38" />
+                </svg>
+              </div>
+              <div class="flex flex-col gap-1 justify-center">
+                <h1 class="font-semibold text-lg">Follow On</h1>
+                <ul class="flex items-center gap-3 text-sm">
+                  <li
+                    class="transform hover:scale-125 transition-all duration-300 ease-in"
+                  >
+                    <a href="../404.html"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li
+                    class="transform hover:scale-125 transition-all duration-300 ease-in"
+                  >
+                    <a href="../404.html"
+                      ><i class="fa-solid fa-envelope"></i
+                    ></a>
+                  </li>
+                  <li
+                    class="transform hover:scale-125 transition-all duration-300 ease-in"
+                  >
+                    <a href="../404.html"
+                      ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li
+                    class="transform hover:scale-125 transition-all duration-300 ease-in"
+                  >
+                    <a href="../404.html"
+                      ><i class="fa-brands fa-youtube"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- Faq -->
+
+    <section class="overflow-hidden overflow-x-hidden pb-3 md:pb-6">
+      <div class="flex flex-col items-center text-center px-4">
+        <p
+          data-aos="fade-left"
+          data-aos-delay="50"
+          class="text-base font-medium text-slate-600"
+        >
+          FAQ
+        </p>
+        <h1
+          data-aos="fade-right"
+          data-aos-delay="100"
+          class="text-xl md:text-4xl font-semibold mt-2 leading-tight uppercase"
+        >
+          Frequently Asked Questions
+        </h1>
+        <p
+          data-aos="fade-left"
+          data-aos-delay="150"
+          class="text-sm text-slate-500 mt-4 max-w-4xl"
+        >
+          We know you may have questions about our mission, donations, and how
+          you can get involved. Here are some of the most common questions we
+          receive from our donors, volunteers, and supporters.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+          <div data-aos="fade-right" data-aos-delay="200">
+            <img
+              class="w-full md:h-[450px] object-cover rounded-2xl"
+              src="../Assets/Faq-2.jpg"
+              alt="Faq"
+            />
+          </div>
+
+          <div
+            data-aos="fade-left"
+            data-aos-delay="250"
+            id="faqContainer"
+            class="max-w-6xl w-full mt-6 flex flex-col gap-4 items-center justify-center text-left"
+          ></div>
+        </div>
+      </div>
+
+      <script>
+        const faqsData = [
+          {
+            question: "1. How are my donations used?",
+            answer:
+              "Your donations directly support our key programs — education, healthcare, food, and shelter. We ensure every contribution makes a real difference in people’s lives.",
+          },
+          {
+            question: "2. Is my donation tax-deductible?",
+            answer:
+              "Yes! Donations to our organization are tax-deductible under applicable laws. We provide official receipts for every contribution.",
+          },
+          {
+            question: "3. Can I donate items instead of money?",
+            answer:
+              "Yes, we accept essential items like food, clothes, books, and medical supplies. Please reach out to us for drop-off details.",
+          },
+          {
+            question: "4. How can I volunteer with your organization?",
+            answer:
+              "You can join as a volunteer by filling out our online form. Whether you can give time occasionally or regularly, we’ll find a way for you to contribute.",
+          },
+          {
+            question: "5. How can I stay updated about your activities?",
+            answer:
+              "Stay connected by subscribing to our newsletter and following us on social media for the latest news, stories, and impact reports.",
+          },
+        ];
+
+        const faqContainer = document.getElementById("faqContainer");
+
+        faqContainer.innerHTML = faqsData
+          .map(
+            (faq, index) => `
+    <div class="faq-item flex flex-col items-start w-full" data-index="${index}">
+        <div class="faq-header flex items-center justify-between w-full cursor-pointer border border-gray-400/50 p-4 rounded transition-all">
+            <h2 class="text-sm">${faq.question}</h2>
+            <svg class="faq-icon transition-all duration-500 ease-in-out" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="#1D293D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <p class="faq-answer text-sm text-slate-500 px-4 overflow-hidden max-h-0 opacity-0 -translate-y-2 transition-all duration-500 ease-in-out">
+            ${faq.answer}
+        </p>
+    </div>
+    `
+          )
+          .join("");
+
+        let openIndex = null;
+
+        document.querySelectorAll(".faq-header").forEach((header, index) => {
+          header.addEventListener("click", () => {
+            const allAnswers = document.querySelectorAll(".faq-answer");
+            const allIcons = document.querySelectorAll(".faq-icon");
+
+            allAnswers.forEach((el, i) => {
+              if (i === index) {
+                const isOpen = el.classList.contains("opacity-100");
+                el.classList.toggle("opacity-100", !isOpen);
+                el.classList.toggle("max-h-[300px]", !isOpen);
+                el.classList.toggle("translate-y-0", !isOpen);
+                el.classList.toggle("pt-4", !isOpen);
+                el.classList.toggle("max-h-0", isOpen);
+                el.classList.toggle("-translate-y-2", isOpen);
+                allIcons[i].classList.toggle("rotate-180", !isOpen);
+              } else {
+                el.classList.remove(
+                  "opacity-100",
+                  "max-h-[300px]",
+                  "translate-y-0",
+                  "pt-4"
+                );
+                el.classList.add("max-h-0", "-translate-y-2");
+                allIcons[i].classList.remove("rotate-180");
+              }
+            });
+          });
+        });
+      </script>
     </section>
 
     <!-- connect us  -->

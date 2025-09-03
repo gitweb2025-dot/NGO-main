@@ -1,159 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Swiper demo</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
     <link rel="stylesheet" href="./output.css" />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <!-- Demo styles -->
-    <style>
-      /* html,
-      body {
-        position: relative;
-        height: 100%;
-      } */
-
-      /* body {
-        background: #000;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-      } */
-
-      /* .swiper {
-        width: 100%;
-        height: 100%;
-      } */
-
-      /* .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #444;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      } */
-
-      /* .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      } */
-
-      /* .swiper {
-        margin-left: auto;
-        margin-right: auto;
-      } */
-    </style>
   </head>
-
   <body>
-    <section class="overflow-hidden overflow-x-hidden">
-      <!-- Swiper -->
-      <div class="max-w-[1500px] mx-auto h-full">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div
-              class="text-center font-medium bg-green-300 content-center w-full swiper-slide"
-            >
-              Slide 1
-            </div>
-            <div
-              class="text-center font-medium bg-green-300 content-center w-full swiper-slide"
-            >
-              Slide 2
-            </div>
-            <div
-              class="text-center font-medium bg-green-300 content-center w-full swiper-slide"
-            >
-              Slide 3
-            </div>
-            <div
-              class="text-center font-medium bg-green-300 content-center w-full swiper-slide"
-            >
-              Slide 4
-            </div>
-            <div
-              class="text-center font-medium bg-green-300 content-center w-full swiper-slide"
-            >
-              Slide 5
-            </div>
-            <div
-              class="text-center font-medium bg-green-300 content-center w-full swiper-slide"
-            >
-              Slide 6
-            </div>
-            <div
-              class="text-center font-medium bg-green-300 content-center w-full swiper-slide"
-            >
-              Slide 7
-            </div>
-            <div
-              class="text-center font-medium bg-green-300 content-center w-full swiper-slide"
-            >
-              Slide 8
-            </div>
-            <div
-              class="text-center font-medium bg-green-300 content-center w-full swiper-slide"
-            >
-              Slide 9
-            </div>
-          </div>
-          <div class="flex justify-between items-center">
-            <button class="swiper-prev bg-green-500 text-2xl rounded-full cursor-pointer">
-              <i class="fa-solid fa-angles-left"></i>
-            </button>
-            <button class="swiper-next cursor-pointer bg-green-500">
-              <i class="fa-solid fa-angles-right"></i>
-            </button>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
+    <!-- Navbar -->
+    <nav class="bg-white shadow px-6 py-4">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="../Home/Home.html" class="text-xl font-bold text-violet-600">
+          Charity
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-violet-600 focus:outline-none"
+        >
+          ☰
+        </button>
       </div>
-    </section>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <!-- Links -->
+      <ul
+        id="navLinks"
+        class="hidden flex-col space-y-2 mt-4 md:flex md:flex-row md:space-x-6 md:mt-0"
+      >
+        <!-- Home with Dropdown (Mobile only) -->
+        <li class="relative">
+          <button
+            id="mobileToggle"
+            class="w-full text-left hover:text-violet-600 transition-colors md:hidden"
+          >
+            Home ▾
+          </button>
 
-    <!-- Initialize Swiper -->
+          <!-- Dropdown Menu -->
+          <ul
+            id="mobileLink"
+            class="hidden bg-white shadow-lg mt-2 rounded w-full md:absolute md:w-40"
+          >
+            <li>
+              <a
+                href="../Home/Home1.html"
+                class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+              >
+                Home 1
+              </a>
+            </li>
+            <li>
+              <a
+                href="../Home/Home2.html"
+                class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+              >
+                Home 2
+              </a>
+            </li>
+          </ul>
+
+          <!-- Desktop Home link (simple) -->
+          <a
+            href="../Home/Home.html"
+            class="hidden md:inline hover:text-violet-600 transition-colors"
+          >
+            Home
+          </a>
+        </li>
+
+        <!-- Other Links -->
+        <li>
+          <a
+            href="../About/About.html"
+            class="hover:text-violet-600 transition-colors"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="../Contact/Contact.html"
+            class="hover:text-violet-600 transition-colors"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- JavaScript -->
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-next",
-          prevEl: ".swiper-prev",
-        },
+      const menuBtn = document.getElementById("menuBtn");
+      const navLinks = document.getElementById("navLinks");
+      const mobileToggle = document.getElementById("mobileToggle");
+      const mobileLink = document.getElementById("mobileLink");
+
+      // Mobile menu toggle
+      menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("hidden");
+      });
+
+      // Home dropdown toggle (mobile only)
+      mobileToggle.addEventListener("click", () => {
+        mobileLink.classList.toggle("hidden");
       });
     </script>
   </body>

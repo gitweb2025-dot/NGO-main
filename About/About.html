@@ -85,21 +85,47 @@
         <!-- Logo -->
         <!-- <a href="#" class="text-xl font-bold tracking-tight">Brand</a> -->
         <a class="" href="../index.html"
-          ><img
-            class="h-16 object-cover"
-            src="../Assets/Logo.png"
-            alt="logo"
+          ><img class="h-16 object-cover" src="../Assets/Logo.png" alt="logo"
         /></a>
 
         <!-- Desktop Nav -->
         <nav
           class="hidden md:flex space-x-2 md:space-x-3 lg:space-x-5 text-sm font-medium"
         >
-          <a
-            href="../Home/Home.html"
-            class="hover:text-violet-600 transition-colors"
-            >Home</a
-          >
+          <!-- Home with Dropdown -->
+          <div class="relative">
+            <!-- Parent Button -->
+            <button
+              id="homeToggle"
+              class="hover:text-violet-600 transition-colors focus:outline-none flex items-center gap-1 cursor-pointer"
+            >
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="homeMenu"
+              class="absolute hidden bg-white dark:bg-slate-950 shadow-lg mt-2 rounded w-40"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../Home/Home.html"
+                  class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+            </ul>
+          </div>
+
           <a href="./About.html" class="hover:text-violet-600 transition-colors"
             >About Us</a
           >
@@ -108,10 +134,14 @@
             class="hover:text-violet-600 transition-colors"
             >Services</a
           >
-          <a href="../Blog/Blog.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../Blog/Blog.html"
+            class="hover:text-violet-600 transition-colors"
             >Blogs</a
           >
-          <a href="../Contact/Contact.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../Contact/Contact.html"
+            class="hover:text-violet-600 transition-colors"
             >Contact</a
           >
           <a href="../404.html" class="hover:text-violet-600 transition-colors"
@@ -166,13 +196,38 @@
         class="mobile-menu lg:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-md"
       >
         <ul class="flex flex-col space-y-4 p-4 text-sm font-medium">
-          <li>
-            <a
-              href="../Home/Home.html"
-              class="nav-link block hover:text-violet-600 transition-colors"
-              >Home</a
+          <!-- Home dropDown  -->
+          <div class="relative">
+            <button
+              id="mobileToggle"
+              class="flex items-center gap-1 w-full text-left hover:text-violet-600 transition-colors md:hidden"
             >
-          </li>
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="mobileLink"
+              class="hidden bg-white dark:bg-slate-950 mt-2 rounded w-full md:absolute"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../Home/Home2.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+            </ul>
+          </div>
           <li>
             <a
               href="./About.html"
@@ -239,6 +294,31 @@
           </li>
         </ul>
       </nav>
+
+      <!-- Dropdown script  -->
+      <script>
+        const homeToggle = document.getElementById("homeToggle");
+        const homeMenu = document.getElementById("homeMenu");
+
+        homeToggle.addEventListener("click", () => {
+          homeMenu.classList.toggle("hidden");
+        });
+
+        const mobileToggle = document.getElementById("mobileToggle");
+        const mobileLink = document.getElementById("mobileLink");
+
+        // Home dropdown toggle (mobile only)
+        mobileToggle.addEventListener("click", () => {
+          mobileLink.classList.toggle("hidden");
+        });
+
+        // Optional: close menu if clicked outside
+        window.addEventListener("click", (e) => {
+          if (!homeToggle.contains(e.target) && !homeMenu.contains(e.target)) {
+            homeMenu.classList.add("hidden");
+          }
+        });
+      </script>
     </header>
 
     <!-- breadcrumb -->
@@ -285,11 +365,7 @@
           />
         </svg>
 
-        <a
-          class="text-violet-700 font-bold"
-          href="./About.html"
-          >About</a
-        >
+        <a class="text-violet-700 font-bold" href="./About.html">About</a>
       </div>
     </section>
 
@@ -331,12 +407,13 @@
     <section
       class="dark:text-white mt-4 my-4 overflow-hidden overflow-x-hidden"
     >
-      <div class="grid md:grid-cols-2 gap-8 my-6 place-items-center px-4 md:px-6 max-w-[1500px] mx-auto">
+      <div
+        class="grid md:grid-cols-2 gap-8 my-6 place-items-center px-4 md:px-6 max-w-[1500px] mx-auto"
+      >
         <div data-aos="fade-right" data-aos-delay="250">
           <div
             class="p-4 md:p-8 rounded-2xl shadow-lg space-y-4 bg-gray-100 hover:bg-violet-300 dark:hover:bg-white/20 dark:bg-white/5 border-2 border-black/5 transition duration-300 ease-in"
           >
-
             <h1 class="text-xl md:text-3xl font-bold leading-tight">
               Our Mission
             </h1>
@@ -351,7 +428,6 @@
           <div
             class="p-4 md:p-8 rounded-2xl shadow-lg space-y-4 bg-gray-100 hover:bg-violet-300 dark:hover:bg-white/20 dark:bg-white/5 border-2 border-black/5 transition duration-300 ease-in"
           >
-
             <h1 class="text-xl md:text-3xl font-bold leading-tight">
               Our Vision
             </h1>
@@ -431,7 +507,10 @@
 
     <!-- Our Impact  -->
 
-    <section id="impact" class="py-6 md:py-12 px-4 overflow-hidden overflow-x-hidden">
+    <section
+      id="impact"
+      class="py-6 md:py-12 px-4 overflow-hidden overflow-x-hidden"
+    >
       <div class="text-center pb-10">
         <h1
           data-aos="fade-right"
@@ -448,7 +527,11 @@
           data-aos="flip-left"
           data-aos-delay="100"
         >
-          <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-400 mb-2">Donors</h3>
+          <h3
+            class="text-xl font-semibold text-gray-700 dark:text-gray-400 mb-2"
+          >
+            Donors
+          </h3>
           <span
             class="counter text-4xl font-bold text-orange-500"
             data-target="1500"
@@ -462,7 +545,11 @@
           data-aos="flip-up"
           data-aos-delay="300"
         >
-          <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-400 mb-2">Meals Served</h3>
+          <h3
+            class="text-xl font-semibold text-gray-700 dark:text-gray-400 mb-2"
+          >
+            Meals Served
+          </h3>
           <span
             class="counter text-4xl font-bold text-orange-500"
             data-target="25000"
@@ -476,7 +563,9 @@
           data-aos="flip-right"
           data-aos-delay="500"
         >
-          <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-400 mb-2">
+          <h3
+            class="text-xl font-semibold text-gray-700 dark:text-gray-400 mb-2"
+          >
             Children Helped
           </h3>
           <span
@@ -749,7 +838,8 @@
             class="bg-white/10 px-4 py-2.5 border dark:border-white/20 rounded outline-none max-w-66 w-full"
             placeholder="Enter your email"
           />
-          <a href="../404.html"
+          <a
+            href="../404.html"
             class="flex items-center justify-center gap-2 group text-white bg-violet-600 px-4 md:px-7 py-2.5 rounded active:scale-95 transition-all"
           >
             Subscribe
@@ -794,11 +884,7 @@
         data-aos-delay="150"
       >
         <div class="md:max-w-96 flex flex-col items-start md:p-4 space-y-2">
-          <img
-            class="w-36 h-fit"
-            src="../Assets/Logo.png"
-            alt="logo"
-          />
+          <img class="w-36 h-fit" src="../Assets/Logo.png" alt="logo" />
           <p class="mt-2 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -810,7 +896,9 @@
           class="flex-1 flex items-start justify-center md:justify-end gap-20 p-4"
         >
           <div>
-            <h2 class="font-semibold mb-5 text-gray-800 dark:text-gray-400">Company</h2>
+            <h2 class="font-semibold mb-5 text-gray-800 dark:text-gray-400">
+              Company
+            </h2>
             <ul class="text-sm space-y-2">
               <li><a href="../Home/Home.html">Home</a></li>
               <li><a href="./About.html">About us</a></li>
@@ -820,7 +908,9 @@
             </ul>
           </div>
           <div class="">
-            <h2 class="font-semibold mb-5 text-gray-800 dark:text-gray-400">Get in touch</h2>
+            <h2 class="font-semibold mb-5 text-gray-800 dark:text-gray-400">
+              Get in touch
+            </h2>
             <div class="text-sm space-y-2">
               <a href="../404.html">+1-212-456-7890</a>
               <a href="../404.html">contact@example.com</a>

@@ -130,11 +130,39 @@
         <nav
           class="hidden md:flex space-x-2 md:space-x-3 lg:space-x-5 text-sm font-medium"
         >
-          <a
-            href="../Home/Home.html"
-            class="hover:text-violet-600 transition-colors"
-            >Home</a
-          >
+          <!-- Home with Dropdown -->
+          <div class="relative">
+            <!-- Parent Button -->
+            <button
+              id="homeToggle"
+              class="hover:text-violet-600 transition-colors focus:outline-none flex items-center gap-1 cursor-pointer"
+            >
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="homeMenu"
+              class="absolute hidden bg-white dark:bg-slate-950 shadow-lg mt-2 rounded w-40"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../Home/Home.html"
+                  class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+            </ul>
+          </div>
           <a
             href="./About2.html"
             class="hover:text-violet-600 transition-colors"
@@ -150,7 +178,7 @@
             class="hover:text-violet-600 transition-colors"
             >Blogs</a
           >
-          <a href="../404.html" class="hover:text-violet-600 transition-colors"
+          <a href="../Contact/Contact2.html" class="hover:text-violet-600 transition-colors"
             >Contact</a
           >
           <a href="../404.html" class="hover:text-violet-600 transition-colors"
@@ -204,13 +232,38 @@
         class="mobile-menu lg:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-md"
       >
         <ul class="flex flex-col space-y-4 p-4 text-sm font-medium">
-          <li>
-            <a
-              href="../Home/Home.html"
-              class="nav-link block hover:text-violet-600 transition-colors"
-              >Home</a
+          <!-- Home dropDown  -->
+          <div class="relative">
+            <button
+              id="mobileToggle"
+              class="flex items-center gap-1 w-full text-left hover:text-violet-600 transition-colors md:hidden"
             >
-          </li>
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="mobileLink"
+              class="hidden bg-white dark:bg-slate-950 mt-2 rounded w-full md:absolute"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../Home/Home.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+            </ul>
+          </div>
           <li>
             <a
               href="./About2.html"
@@ -234,7 +287,7 @@
           </li>
           <li>
             <a
-              href="../404.html"
+              href="../Contact/Contact2.html"
               class="nav-link block hover:text-violet-600 transition-colors"
               >Contact</a
             >
@@ -276,6 +329,31 @@
           </li>
         </ul>
       </nav>
+
+      <!-- Dropdown script  -->
+      <script>
+        const homeToggle = document.getElementById("homeToggle");
+        const homeMenu = document.getElementById("homeMenu");
+
+        homeToggle.addEventListener("click", () => {
+          homeMenu.classList.toggle("hidden");
+        });
+
+        const mobileToggle = document.getElementById("mobileToggle");
+        const mobileLink = document.getElementById("mobileLink");
+
+        // Home dropdown toggle (mobile only)
+        mobileToggle.addEventListener("click", () => {
+          mobileLink.classList.toggle("hidden");
+        });
+
+        // Optional: close menu if clicked outside
+        window.addEventListener("click", (e) => {
+          if (!homeToggle.contains(e.target) && !homeMenu.contains(e.target)) {
+            homeMenu.classList.add("hidden");
+          }
+        });
+      </script>
     </header>
 
     <!-- BreadCrumb -->
@@ -917,7 +995,7 @@
               <li><a href="./About2.html">About us</a></li>
               <li><a href="../Service/Service2.html">Services</a></li>
               <li><a href="../Blog/Blog2.html">Blogs</a></li>
-              <li><a href="../404.html">Contact us</a></li>
+              <li><a href="../Contact/Contact2.html">Contact us</a></li>
             </ul>
           </div>
           <div class="">

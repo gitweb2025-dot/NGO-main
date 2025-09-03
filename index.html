@@ -83,7 +83,7 @@
     class="antialiased bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100"
   >
     <!-- Navbar  -->
-     
+
     <header
       class="sticky top-0 z-500 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur"
     >
@@ -97,11 +97,40 @@
         <nav
           class="hidden md:flex space-x-2 md:space-x-3 lg:space-x-5 text-sm font-medium"
         >
-          <a
-            href="./Home/Home.html"
-            class="hover:text-violet-600 transition-colors"
-            >Home</a
-          >
+          <!-- Home with Dropdown -->
+          <div class="relative">
+            <!-- Parent Button -->
+            <button
+              id="homeToggle"
+              class="hover:text-violet-600 transition-colors focus:outline-none flex items-center gap-1 cursor-pointer"
+            >
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="homeMenu"
+              class="absolute hidden bg-white dark:bg-slate-950 shadow-lg mt-2 rounded w-40"
+            >
+              <li>
+                <a
+                  href="./index.html"
+                  class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./Home/Home.html"
+                  class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+            </ul>
+          </div>
+
           <a
             href="./About/About.html"
             class="hover:text-violet-600 transition-colors"
@@ -173,13 +202,39 @@
         class="mobile-menu lg:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-md"
       >
         <ul class="flex flex-col space-y-4 p-4 text-sm font-medium">
-          <li>
-            <a
-              href="./Home/Home.html"
-              class="nav-link block hover:text-violet-600 transition-colors"
-              >Home</a
+          <!-- Home dropDown  -->
+          <div class="relative">
+            <button
+              id="mobileToggle"
+              class="flex items-center gap-1 w-full text-left hover:text-violet-600 transition-colors md:hidden"
             >
-          </li>
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="mobileLink"
+              class="hidden bg-white dark:bg-slate-950 mt-2 rounded w-full md:absolute"
+            >
+              <li>
+                <a
+                  href="./index.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 1
+                </a>
+              </li>
+              <li class=""></li>
+              <li>
+                <a
+                  href="./Home/Home.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+            </ul>
+          </div>
           <li>
             <a
               href="./About/About.html"
@@ -245,6 +300,31 @@
           </li>
         </ul>
       </nav>
+
+      <!-- Dropdown script  -->
+      <script>
+        const homeToggle = document.getElementById("homeToggle");
+        const homeMenu = document.getElementById("homeMenu");
+
+        homeToggle.addEventListener("click", () => {
+          homeMenu.classList.toggle("hidden");
+        });
+
+        const mobileToggle = document.getElementById("mobileToggle");
+        const mobileLink = document.getElementById("mobileLink");
+
+        // Home dropdown toggle (mobile only)
+        mobileToggle.addEventListener("click", () => {
+          mobileLink.classList.toggle("hidden");
+        });
+
+        // Optional: close menu if clicked outside
+        window.addEventListener("click", (e) => {
+          if (!homeToggle.contains(e.target) && !homeMenu.contains(e.target)) {
+            homeMenu.classList.add("hidden");
+          }
+        });
+      </script>
     </header>
 
     <!-- Home  -->
@@ -258,7 +338,7 @@
           class="w-full h-full rounded-2xl absolute inset-0 bg-gradient-to-r from-black to-black"
         >
           <img
-            class="w-full h-[750px] rounded-2xl object-center object-cover z-10 opacity-25"
+            class="w-full h-[600px] md:h-[750px] rounded-2xl object-center object-cover z-10 opacity-40 md:opacity-50"
             src="./Assets/Home-Bg.jpg"
             alt="background"
           />
@@ -266,7 +346,7 @@
 
         <!-- content  -->
         <div
-          class="h-[750px] space-y-1.5 md:space-y-3 py-3 md:py-16 flex flex-col items-start w-full justify-start lg:justify-center p-4 md:p-10 text-white dark:text-white z-50"
+          class="h-[600px] md:h-[750px] space-y-1.5 md:space-y-3 py-3 md:py-16 flex flex-col items-start w-full justify-center md:justify-start lg:justify-center p-4 md:p-10 text-white dark:text-white z-50"
         >
           <p
             class="px-6 py-2 rounded-full text-xs border border-[rgb(125,13,150)]"
@@ -298,21 +378,20 @@
             limits.
           </p>
           <div data-aos="fade-up-right" data-aos-delay="200">
-            <div
-              class="sm:flex gap-6 mt-2 md:mt-8 z-10 space-y-1.5 md:space-y-0"
-            >
+            <div class="flex items-center gap-6 mt-4 md:mt-8 z-10">
               <a
                 href="./404.html"
-                class="flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs md:text-sm font-medium border-2 bg-violet-700 border-violet-700 text-white dark:text-white transform hover:scale-95 transition duration-200 ease-out z-10"
+                class="flex items-center justify-center gap-2 px-3 md:px-6 py-1.5 md:py-3 rounded-full text-xs md:text-sm font-medium border-2 bg-violet-700 border-violet-700 text-white dark:text-white transform hover:scale-95 transition duration-200 ease-out z-10"
               >
                 <i class="fa-solid fa-gift text-white"></i> Donate Now
               </a>
               <a
                 href="./404.html"
-                class="flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs md:text-sm font-medium border-2 border-violet-700 text-white dark:text-white transform hover:scale-95 transition duration-200 ease-out z-10"
+                class="flex items-center justify-center gap-2 px-3 md:px-6 py-1.5 md:py-3 rounded-full text-xs md:text-sm font-medium border-2 border-violet-700 text-white dark:text-white transform hover:scale-95 transition duration-200 ease-out z-10"
               >
                 Learn More
               </a>
+              
             </div>
           </div>
         </div>
@@ -321,7 +400,7 @@
         <section
           data-aos="fade-up-left"
           data-aos-delay="200"
-          class="absolute right-10 md:right-14 bottom-14 xs:block z-50"
+          class="absolute right-10 md:right-14 bottom-14 xs:block z-50 invisible md:visible"
         >
           <!-- Swiper -->
           <div class="swiper w-64 h-80">
