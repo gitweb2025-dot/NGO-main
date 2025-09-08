@@ -177,7 +177,7 @@
         <div class="hidden lg:flex text-sm gap-4 font-medium">
           <a
             class="flex items-center gap-2 px-6 py-3 border-2 border-violet-500 rounded-3xl text-black dark:text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
-            href="../404.html"
+            href="../Donate/Donate.html"
           >
             <i class="fa-solid fa-gift text-xl text-violet-600"></i> Donate Now
           </a>
@@ -654,37 +654,40 @@
             class="flex flex-wrap items-center gap-3 mb-6 max-w-[1500px] mx-auto px-4 pt-10"
           >
             <button
-              class="filter-btn px-4 py-2 bg-violet-500 text-white rounded-lg"
+              class="filter-btn px-4 py-2 bg-violet-500 dark:bg-violet-50 text-slate-950 dark:text-slate-900 rounded-lg"
               data-filter="all"
             >
               All
             </button>
             <button
-              class="filter-btn px-4 py-2 bg-violet-50 rounded-lg"
+              class="filter-btn px-4 py-2 bg-violet-50 dark:text-slate-900 rounded-lg"
               data-filter="education"
             >
               Education
             </button>
             <button
-              class="filter-btn px-4 py-2 bg-violet-50 rounded-lg"
+              class="filter-btn px-4 py-2 bg-violet-50 dark:text-slate-900 rounded-lg"
               data-filter="healthcare"
             >
               Healthcare
             </button>
             <button
-              class="filter-btn px-4 py-2 bg-violet-50 rounded-lg"
+              class="filter-btn px-4 py-2 bg-violet-50 dark:text-slate-900 rounded-lg"
               data-filter="hunger"
             >
               Hunger Relief
             </button>
 
             <!-- Search -->
-            <input
-              id="searchInput"
-              type="text"
-              placeholder="Search..."
-              class="md:ml-auto px-3 py-2 border rounded-lg w-64"
-            />
+            <div class="md:ml-auto px-3 py-2 border rounded-lg w-64">
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="Search..."
+                class="outline-0"
+              />
+              <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+            </div>
           </div>
 
           <!-- Cards Grid -->
@@ -780,7 +783,7 @@
                   </h3>
                   <div class="flex justify-between space-y-1 mt-1">
                     <p class="text-xs text-indigo-600 font-medium">
-                      Environmental Care
+                      Health Care
                     </p>
                     <p class="text-xs text-emerald-600 font-bold">
                       Raised - $180k
@@ -1056,7 +1059,7 @@
             </div>
           </div>
 
-          <!-- JavaScript -->
+          <!-- Search & filter JS -->
           <script>
             const filterButtons = document.querySelectorAll(".filter-btn");
             const cards = document.querySelectorAll(".card");
@@ -1143,7 +1146,10 @@
 
     <!-- connect us  -->
 
-    <section class="scale-in-top overflow-hidden overflow-x-hidden" style="animation-delay: 0.5s;">
+    <section
+      class="scale-in-top overflow-hidden overflow-x-hidden"
+      style="animation-delay: 0.5s"
+    >
       <div
         class="flex flex-col items-center max-w-5xl lg:w-full rounded-2xl px-4 py-4 md:py-8 mx-2 lg:mx-auto my-2 text-black dark:text-white"
       >

@@ -75,7 +75,7 @@
   </head>
 
   <body
-    class="antialiased bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100"
+    class="antialiased bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 w-full"
   >
     <!-- Topbar -->
 
@@ -413,17 +413,30 @@
       <div
         class="grid lg:grid-cols-2 items-center gap-6 max-w-[1500px] mx-auto px-3"
       >
+        <!-- image -->
+        <div
+          data-aos="fade-up-right"
+          data-aos-delay="200"
+          class="flex items-center justify-center h-full relative"
+        >
+          <img
+            class="rounded-2xl w-full md:h-[300px] object-cover object-center"
+            src="https://i.postimg.cc/xTcybHqQ/medium-shot-volunteers-with-food-packs-1.jpg"
+            alt="image"
+          />
+        </div>
+
         <!-- content -->
         <div class="flex flex-col w-full space-y-4">
           <p
-            data-aos="fade-up-right"
+            data-aos="fade-up-left"
             data-aos-delay="50"
             class="w-fit text-xs rounded-3xl px-4 py-2 border-2 border-gray-300 font-semibold text-gray-500 uppercase"
           >
             Donate Us
           </p>
           <h1
-            data-aos="fade-up-right"
+            data-aos="fade-up-left"
             data-aos-delay="100"
             class="text-xl md:text-3xl lg:text-5xl font-semibold"
           >
@@ -434,80 +447,146 @@
             >
             Lives
           </h1>
-          <p data-aos="fade-up-right" data-aos-delay="150" class="text-sm">
+          <p
+            data-aos="fade-up-left"
+            data-aos-delay="150"
+            class="text-sm md:text-[16px]"
+          >
             Every contribution, big or small, helps us bring hope, dignity, and
             opportunity to those who need it most.
           </p>
 
-          <!--  -->
-          <div class="mt-4 w-full bg-gray-200 p-3 rounded-2xl">
+          <!-- Goal -->
+          <div
+            data-aos="fade-up-left"
+            data-aos-delay="150"
+            class="mt-4 w-full bg-gray-100 dark:bg-white/10 p-3 rounded-2xl"
+          >
             <div
-              class="flex flex-wrap space-y-3 md:space-y-0 items-center justify-between pb-6"
+              class="flex flex-wrap space-y-3 sm:space-y-0 items-center justify-between text-slate-950"
             >
-              <h1 class="text-sm font-semibold">
+              <h1 class="text-sm font-semibold p-4 bg-green-200 rounded-xl">
                 Goal <span class="font-medium">- $540k</span>
               </h1>
-              <h1 class="text-sm font-semibold">
+              <h1 class="text-sm font-semibold p-4 bg-red-200 rounded-xl">
+                Donated <span class="font-medium">- $140k</span>
+              </h1>
+              <h1 class="text-sm font-semibold p-4 bg-yellow-200 rounded-xl">
                 To Go <span class="font-medium">- $400k</span>
               </h1>
-              <h1 class="text-sm font-semibold">
-                Donated <span class="font-medium">- $140k</span>
+              <h1 class="text-sm font-semibold p-4 bg-cyan-200 rounded-xl">
+                We Served <span class="font-medium">- $240k</span>
               </h1>
             </div>
 
-            <div class="w-full h-2 rounded-3xl bg-gray-400 overflow-hidden">
+            <!-- <div
+              class="w-full h-2 rounded-3xl bg-gray-400 dark:bg-gray-200 overflow-hidden"
+            >
               <div
                 data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine" 
+                data-aos-delay="500"
+                data-aos-easing="ease-in-out"
                 class="h-2 rounded-3xl bg-violet-500 w-4/6"
               ></div>
             </div>
             <div class="flex items-center justify-between pt-2">
               <p class="text-sm font-bold">Raised</p>
-              <p class="text-sm font-bold">25%</p>
-            </div>
+              <p class="text-sm font-bold">70%</p>
+            </div> -->
           </div>
-        </div>
-
-        <!-- image -->
-        <div
-          data-aos="fade-up-left"
-          data-aos-delay="200"
-          class="flex items-center justify-center h-full relative"
-        >
-          <img
-            class="rounded-2xl w-full md:h-[300px] object-cover object-center"
-            src="https://i.postimg.cc/xTcybHqQ/medium-shot-volunteers-with-food-packs-1.jpg"
-            alt="image"
-          />
         </div>
       </div>
     </main>
+
+    <!-- Content -->
+    <section class="mx-4 pt-8 md:mx-5 overflow-hidden overflow-x-hidden">
+      <div class="mx-auto max-w-[1500px] space-y-3">
+        <div class="space-y-2">
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="text-2xl md:text-4xl lg:text-5xl font-bold"
+          >
+            Impact-Focused
+          </h1>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="150"
+            class="text-sm md:text-lg text-gray-500"
+          >
+            When you give, you’re not just donating money—you’re giving a child
+            a chance to learn, a family access to healthcare, and a community
+            the hope of a brighter future. Join hands with us today and become
+            the reason someone smiles tomorrow.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <p
+              data-aos="fade-up-right"
+              data-aos-delay="50"
+              class="py-3 text-lg md:text-xl font-bold"
+            >
+              Your Gift Creates Impact
+            </p>
+            <ul class="space-y-4 text-sm md:text-lg">
+              <li
+                data-aos="fade-up-right"
+                data-aos-delay="100"
+                class="flex items-center gap-4 text-slate-950 dark:text-gray-300"
+              >
+                <i class="fa-solid fa-hand-point-right"></i> ₹500 feeds a child
+                for a week
+              </li>
+              <li
+                data-aos="fade-up-right"
+                data-aos-delay="150"
+                class="flex items-center gap-4 text-slate-950 dark:text-gray-300"
+              >
+                <i class="fa-solid fa-hand-point-right"></i> ₹1000 provides
+                medical care for one family
+              </li>
+              <li
+                data-aos="fade-up-right"
+                data-aos-delay="200"
+                class="flex items-center gap-4 text-slate-950 dark:text-gray-300"
+              >
+                <i class="fa-solid fa-hand-point-right"></i> ₹2500 supports a
+                child’s education for a month
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h1
+              data-aos="fade-up-left"
+              data-aos-delay="50"
+              class="py-3 text-lg md:text-xl font-bold"
+            >
+              Your Kindness Changes Everything
+            </h1>
+            <p
+              data-aos="fade-up-left"
+              data-aos-delay="100"
+              class="text-sm md:text-[16px] text-gray-500"
+            >
+              We believe in the power of people helping people. Every rupee you
+              give becomes a lifeline for someone in need. With gratitude and
+              faith in humanity, we invite you to join us in building brighter
+              futures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Donation Form -->
 
     <section class="mx-4 pt-8 md:mx-5 overflow-hidden overflow-x-hidden">
       <div class="grid md:grid-cols-2 gap-12 max-w-[1500px] mx-auto">
-        <div
-          data-aos="fade-right"
-          data-aos-delay="100"
-          class="flex items-center justify-center w-full md:h-[650px] rounded-2xl relative"
-        >
-          <img
-            class="w-full md:h-[650px] object-cover object-[20%_80%] rounded-2xl"
-            src="https://i.postimg.cc/dVyN8Rtm/image.png"
-            alt="Donation"
-          />
-          <!-- overlay -->
-          <div
-            class="absolute inset-0 flex justify-center w-full md:h-[650px] bg-gradient-to-r from-black to-black/50 rounded-2xl opacity-85"
-          ></div>
-        </div>
         <form
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-delay="200"
-          class="my-auto space-y-6"
+          class="my-auto space-y-6 p-2 rounded-2xl"
         >
           <div>
             <h1 class="text-center text-2xl md:text-4xl font-semibold">
@@ -516,16 +595,16 @@
           </div>
           <div class="flex flex-col justify-center gap-2 max-w-2xl">
             <label class="px-1"
-              >First Name <span class="text-red-600 text-lg">*</span></label
+              >Name <span class="text-red-600 text-lg">*</span></label
             >
             <input
               required
               type="text"
-              placeholder="First Name"
+              placeholder="Enter Your Name"
               class="py-2 px-1 outline-none border-2 border-gray-300 rounded-md"
             />
           </div>
-          <div class="flex flex-col justify-center gap-2 max-w-2xl">
+          <!-- <div class="flex flex-col justify-center gap-2 max-w-2xl">
             <label class="px-1"
               >Last Name <span class="text-red-600 text-lg">*</span></label
             >
@@ -535,7 +614,7 @@
               placeholder="Last Name"
               class="py-2 px-1 outline-none border-2 border-gray-300 rounded-md"
             />
-          </div>
+          </div> -->
           <div class="flex flex-col justify-center gap-2 max-w-2xl">
             <label class="px-1"
               >Email <span class="text-red-600 text-lg">*</span></label
@@ -554,7 +633,7 @@
             >
             <select
               required
-              class="py-2 px-1 outline-none border-2 border-gray-300 rounded-md"
+              class="py-2 px-1 outline-none border-2 border-gray-300 dark:bg-gray-950 rounded-md"
             >
               <option disabled value="">Donation Amount</option>
               <option value="">20$</option>
@@ -581,6 +660,22 @@
             </a>
           </div>
         </form>
+
+        <div
+          data-aos="fade-left"
+          data-aos-delay="100"
+          class="flex items-center justify-center w-full md:h-[600px] rounded-2xl relative"
+        >
+          <img
+            class="w-full md:h-[600px] object-cover object-[20%_80%] rounded-2xl"
+            src="https://i.postimg.cc/dVyN8Rtm/image.png"
+            alt="Donation"
+          />
+          <!-- overlay -->
+          <div
+            class="absolute inset-0 flex justify-center w-full md:h-[600px] bg-gradient-to-r from-black to-black/50 rounded-2xl opacity-85"
+          ></div>
+        </div>
       </div>
     </section>
 
