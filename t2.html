@@ -201,4 +201,441 @@
       </div>
     </div>
   </body>
+
+  <body>
+    <!-- Filter Controls -->
+    <div class="flex flex-wrap items-center gap-3 mb-6">
+      <button
+        class="filter-btn px-4 py-2 bg-blue-500 text-white rounded-lg"
+        data-filter="all"
+      >
+        All
+      </button>
+      <button
+        class="filter-btn px-4 py-2 bg-blue-50 rounded-lg"
+        data-filter="education"
+      >
+        Education
+      </button>
+      <button
+        class="filter-btn px-4 py-2 bg-blue-50 rounded-lg"
+        data-filter="healthcare"
+      >
+        Healthcare
+      </button>
+      <button
+        class="filter-btn px-4 py-2 bg-blue-50 rounded-lg"
+        data-filter="hunger"
+      >
+        Hunger Relief
+      </button>
+
+      <!-- Search -->
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Search..."
+        class="md:ml-auto px-3 py-2 border rounded-lg w-64"
+      />
+    </div>
+
+    <!-- Cards Grid -->
+    <div
+      id="cardsContainer"
+      class="grid xl:grid-cols-2 justify-center items-center max-w-[1500px] gap-8 pt-12 mx-auto px-4 md:px-6 pb-6"
+    >
+      <!-- card 1 -->
+      <div class="card" data-category="education">
+        <div
+          data-aos="fade-up-right"
+          data-aos-delay="50"
+          class="shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)] border border-gray-300 dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl lg:flex"
+        >
+          <div>
+            <img
+              class="rounded-2xl w-full lg:w-[400px] h-[250px] object-cover"
+              src="https://i.postimg.cc/43NQ2Hvz/image.png"
+              alt="image"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center space-y-2 md:px-4 py-2">
+            <h1 class="text-xl md:text-2xl font-semibold dark:text-white">
+              Environment Care
+            </h1>
+            <h3
+              class="md:text-md text-slate-900 dark:text-white/50 font-medium"
+            >
+              Protecting nature through sustainable practices for a better
+              environment tomorrow.
+            </h3>
+            <div class="flex justify-between space-y-1 mt-1">
+              <p class="text-xs text-indigo-600 font-medium">
+                Environmental Care
+              </p>
+              <p class="text-xs text-emerald-600 font-bold">Raised - $120k</p>
+            </div>
+            <!-- Funded  -->
+            <div class="flex justify-between space-y-2">
+              <p class="text-xs font-bold">Funded</p>
+              <p class="text-xs text-red-600 font-semibold">Receieved - $20k</p>
+            </div>
+
+            <!-- buttons -->
+            <div class="flex justify-between gap-2">
+              <a
+                class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 rounded-3xl text-violet-500 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                Learn more <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a
+                class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                <i class="fa-solid fa-gift text-xs text-white"></i>
+                Donate Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card" data-category="healthcare">
+        <div
+          data-aos="fade-up-left"
+          data-aos-delay="100"
+          class="shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)] border border-gray-300 dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl lg:flex"
+        >
+          <div>
+            <img
+              class="rounded-2xl w-full lg:w-[400px] h-[250px] object-cover"
+              src="https://i.postimg.cc/BnKBgHMn/image.png"
+              alt="image"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center space-y-2 md:px-4 py-2">
+            <h1 class="text-xl md:text-2xl font-semibold dark:text-white">
+              Immunization Access
+            </h1>
+            <h3
+              class="md:text-md text-slate-900 dark:text-white/50 font-medium"
+            >
+              Protecting nature through sustainable practices for a better
+              environment tomorrow.
+            </h3>
+            <div class="flex justify-between space-y-1 mt-1">
+              <p class="text-xs text-indigo-600 font-medium">
+                Environmental Care
+              </p>
+              <p class="text-xs text-emerald-600 font-bold">Raised - $180k</p>
+            </div>
+            <!-- Funded  -->
+            <div class="flex justify-between space-y-2">
+              <p class="text-xs font-bold">Funded</p>
+              <p class="text-xs text-red-600 font-semibold">Receieved - $40k</p>
+            </div>
+
+            <!-- buttons -->
+            <div class="flex justify-between gap-2">
+              <a
+                class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 rounded-3xl text-violet-500 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                Learn more <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a
+                class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                <i class="fa-solid fa-gift text-xs text-white"></i>
+                Donate Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card" data-category="hunger">
+        <div
+          data-aos="zoom-in-right"
+          data-aos-delay="150"
+          class="w-full shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)] border border-gray-300 dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl lg:flex"
+        >
+          <div>
+            <img
+              class="rounded-2xl w-full lg:w-[400px] h-[250px] object-cover"
+              src="https://i.postimg.cc/fRS9X85S/image.png"
+              alt="image"
+            />
+          </div>
+          <div class="flex flex-col justify-center space-y-2 md:px-4 py-2">
+            <h1 class="text-xl md:text-2xl font-semibold dark:text-white">
+              Community Development
+            </h1>
+            <h3
+              class="md:text-md text-slate-900 dark:text-white/50 font-medium"
+            >
+              Supporting local communities with livelihood training and crisis
+              relief initiatives.
+            </h3>
+            <div class="flex justify-between space-y-1 mt-1">
+              <p class="text-xs text-indigo-600 font-medium">
+                Develop Community with volunteer
+              </p>
+              <p class="text-xs text-emerald-600 font-bold">Goal - $80k</p>
+            </div>
+            <!-- Funded  -->
+            <div class="flex justify-between space-y-2">
+              <p class="text-xs font-bold">Funded</p>
+              <p class="text-xs text-red-600 font-bold">Receieved - $20k</p>
+            </div>
+
+            <!-- buttons -->
+            <div class="flex justify-between gap-2">
+              <a
+                class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 rounded-3xl text-violet-500 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                Learn more <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a
+                class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                <i class="fa-solid fa-gift text-xs text-white"></i>
+                Donate Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="card" data-category="education">
+        <div
+          data-aos="zoom-in-left"
+          data-aos-delay="200"
+          class="w-full shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)] border border-gray-300 dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl lg:flex"
+        >
+          <div>
+            <img
+              class="rounded-2xl w-full lg:w-[400px] h-[250px] object-cover"
+              src="https://i.postimg.cc/sDrjKwVZ/image.png"
+              alt="image"
+            />
+          </div>
+          <div class="flex flex-col justify-center space-y-2 md:px-4 py-2">
+            <h1 class="text-xl md:text-2xl font-semibold dark:text-white">
+              Child Welfare
+            </h1>
+            <h3
+              class="md:text-md text-slate-900 dark:text-white/50 font-medium"
+            >
+              Empowering youth and women with vocational skills, guidance for a
+              stable future.
+            </h3>
+            <div class="flex justify-between space-y-1 mt-1">
+              <p class="text-xs text-indigo-600 font-medium">
+                Protecting Child
+              </p>
+              <p class="text-xs text-emerald-600 font-bold">Goal - $69k</p>
+            </div>
+            <!-- Funded  -->
+            <div class="flex justify-between space-y-2">
+              <p class="text-xs font-bold">Funded</p>
+              <p class="text-xs text-red-600 font-bold">Receieved - $50k</p>
+            </div>
+
+            <!-- buttons -->
+            <div class="flex justify-between gap-2">
+              <a
+                class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 rounded-3xl text-violet-500 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                Learn more <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a
+                class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                <i class="fa-solid fa-gift text-xs text-white"></i>
+                Donate Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="card" data-category="healthcare">
+        <div
+          data-aos="fade-up-right"
+          data-aos-delay="250"
+          class="w-full shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)] border border-gray-300 dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl lg:flex"
+        >
+          <div>
+            <img
+              class="rounded-2xl w-full lg:w-[400px] h-[250px] object-cover"
+              src="https://i.postimg.cc/gJtzgW2z/image.png"
+              alt="image"
+            />
+          </div>
+          <div class="flex flex-col justify-center space-y-2 md:px-4 py-2">
+            <h1 class="text-xl md:text-2xl font-semibold dark:text-white">
+              Food & Nutrition
+            </h1>
+            <h3
+              class="md:text-md text-slate-900 dark:text-white/50 font-medium"
+            >
+              Serving daily meals, food distribution camps to support for
+              families in need.
+            </h3>
+            <div class="flex justify-between space-y-1 mt-1">
+              <p class="text-xs text-indigo-600 font-medium">Hunger Relief</p>
+              <p class="text-xs text-emerald-600 font-bold">Goal - $620k</p>
+            </div>
+            <!-- Funded  -->
+            <div class="flex justify-between space-y-2">
+              <p class="text-xs font-bold">Funded</p>
+              <p class="text-xs text-red-600 font-bold">Receieved - $500k</p>
+            </div>
+
+            <!-- buttons -->
+            <div class="flex justify-between gap-2">
+              <a
+                class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 rounded-3xl text-violet-500 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                Learn more <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a
+                class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                <i class="fa-solid fa-gift text-xs text-white"></i>
+                Donate Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="card" data-category="hunger">
+        <div
+          data-aos="fade-up-left"
+          data-aos-delay="300"
+          class="w-full shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)] border border-gray-300 dark:bg-white/5 dark:border-2 dark:border-white/10 p-4 rounded-2xl lg:flex"
+        >
+          <div>
+            <img
+              class="rounded-2xl w-full lg:w-[400px] h-[250px] object-cover"
+              src="https://i.postimg.cc/28g5Xs4T/image.png"
+              alt="image"
+            />
+          </div>
+          <div class="flex flex-col justify-center space-y-2 md:px-4 py-2">
+            <h1 class="text-xl md:text-2xl font-semibold dark:text-white">
+              Women Entrepreneurs Fund
+            </h1>
+            <h3
+              class="md:text-md text-slate-900 dark:text-white/50 font-medium"
+            >
+              Equipping women with vocational skills and resources to lead
+              independent lives.
+            </h3>
+            <div class="flex justify-between space-y-1 mt-1">
+              <p class="text-xs text-indigo-600 font-medium">
+                Empowering Women
+              </p>
+              <p class="text-xs text-emerald-600 font-bold">Goal - $80k</p>
+            </div>
+            <!-- Funded  -->
+            <div class="flex justify-between space-y-2">
+              <p class="text-xs font-bold">Funded</p>
+              <p class="text-xs text-red-600 font-bold">Receieved - $40k</p>
+            </div>
+
+            <!-- buttons -->
+            <div class="flex justify-between gap-2">
+              <a
+                class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 rounded-3xl text-violet-500 dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                Learn more <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a
+                class="flex items-center gap-2 px-3 py-2 border-2 border-violet-500 bg-violet-500 rounded-3xl text-white dark:text-white text-xs transform hover:scale-95 transition duration-200 ease-out"
+                href="../404.html"
+              >
+                <i class="fa-solid fa-gift text-xs text-white"></i>
+                Donate Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const cards = document.querySelectorAll(".card");
+      const searchInput = document.getElementById("searchInput");
+
+      // Filtering by category
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.dataset.filter;
+
+          // Update button styles
+          filterButtons.forEach((b) =>
+            b.classList.remove("bg-blue-500", "text-white")
+          );
+          btn.classList.add("bg-blue-500", "text-white");
+
+          cards.forEach((card) => {
+            const category = card.dataset.category;
+            const text = card.innerText.toLowerCase();
+            const search = searchInput.value.toLowerCase();
+
+            if (
+              (filter === "all" || category === filter) &&
+              text.includes(search)
+            ) {
+              card.classList.remove("hidden");
+            } else {
+              card.classList.add("hidden");
+            }
+          });
+        });
+      });
+
+      // Searching inside selected filter
+      searchInput.addEventListener("input", () => {
+        const activeBtn = document.querySelector(".filter-btn.bg-blue-500");
+        const filter = activeBtn ? activeBtn.dataset.filter : "all";
+        const search = searchInput.value.toLowerCase();
+
+        cards.forEach((card) => {
+          const category = card.dataset.category;
+          const text = card.innerText.toLowerCase();
+
+          if (
+            (filter === "all" || category === filter) &&
+            text.includes(search)
+          ) {
+            card.classList.remove("hidden");
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
