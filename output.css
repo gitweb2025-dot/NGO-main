@@ -777,6 +777,9 @@
   .items-center {
     align-items: center;
   }
+  .items-center-safe {
+    align-items: safe center;
+  }
   .items-end {
     align-items: flex-end;
   }
