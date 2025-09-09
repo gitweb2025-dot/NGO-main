@@ -2,45 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Polar Area Chart Example</title>
-    <!-- Chart.js CDN -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <link rel="stylesheet" href="./output.css" />
+     <link rel="stylesheet" href="./output.css" />
   </head>
   <body>
-    <h2>My Polar Area Chart</h2>
-    <!-- Canvas for Chart -->
     <div class="max-w-[1500px] mx-auto h-[500px] w-[500px]">
-      <canvas id="myChart" class=""></canvas>
+      <canvas id="myChart"></canvas>
     </div>
     <script>
-      // Setup data
       const data = {
-        labels: ["Red", "Green", "Yellow", "Grey", "Blue"],
+        labels: ["Red", "Blue", "Yellow"],
         datasets: [
           {
             label: "My First Dataset",
-            data: [11, 16, 7, 3, 14],
+            data: [300, 50, 100],
             backgroundColor: [
               "rgb(255, 99, 132)",
-              "rgb(75, 192, 192)",
-              "rgb(255, 205, 86)",
-              "rgb(201, 203, 207)",
               "rgb(54, 162, 235)",
+              "rgb(255, 205, 86)",
             ],
+            hoverOffset: 4,
           },
         ],
       };
 
-      // Config
       const config = {
-        type: "polarArea",
+        type: "doughnut",
         data: data,
         options: {},
       };
 
-      // Render chart
       new Chart(document.getElementById("myChart"), config);
     </script>
   </body>

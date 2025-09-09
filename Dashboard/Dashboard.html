@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NGO</title>
+
+    <!-- Aos Cdn Link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Font Awesome Cdn Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../output.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+        /* font-family: "Noto Serif Georgian", serif; */
+        overflow-x: hidden;
+      }
+
+      /* Hamburger animation */
+      .hamburger span {
+        display: block;
+        width: 1.5rem;
+        height: 0.125rem;
+        margin: 0.4rem auto;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: currentColor;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+
+      /* Mobile menu slide + fade */
+      .mobile-menu {
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .mobile-menu.open {
+        max-height: 500px;
+        /* enough for nav links */
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body
+    class="antialiased bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100"
+  >
+    <!-- Navbar  -->
+    <header
+      class="sticky top-0 z-500 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur"
+    >
+      <div class="container mx-auto flex items-center justify-between px-4">
+        <!-- Logo -->
+        <!-- <a href="#" class="text-xl font-bold tracking-tight">Brand</a> -->
+        <a class="" href="../index.html"
+          ><img class="h-16 object-cover" src="../Assets/Logo.png" alt="logo"
+        /></a>
+
+        <div class="flex items-center justify-center text-sm gap-4 font-medium">
+          <!-- Image with dropdown -->
+          <div class="relative">
+            <!-- Parent Button -->
+            <div class="flex items-center gap-3">
+              <button
+                id="homeToggle"
+                class="hover:text-violet-600 transition-colors focus:outline-none flex items-center gap-1 cursor-pointer"
+              >
+                <img
+                  class="h-10 object-cover rounded-full"
+                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200"
+                  alt="img"
+                />
+              </button>
+
+              <h1 class="text-[16px] md:text-lg">Hi Deva!</h1>
+            </div>
+            <!-- Dropdown Menu -->
+            <ul
+              id="homeMenu"
+              class="absolute hidden bg-white dark:bg-slate-950 shadow-lg mt-3 rounded w-40 border-2 border-gray-100 dark:border-white/5"
+            >
+              <a
+                href="../index.html"
+                class="flex items-center gap-3 px-2 md:px-4 py-4 hover:bg-violet-50 hover:text-violet-600"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+                <p>Edit Profile</p>
+              </a>
+              <a
+                href="../Home/Home.html"
+                class="flex items-center gap-3 px-2 md:px-4 py-4 hover:bg-violet-50 hover:text-violet-600 border-t-2 border-t-gray-100 dark:border-t-white/5"
+              >
+                <i class="fa-solid fa-power-off"></i>
+                <p class="">Logout</p>
+              </a>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Hamburger -->
+        <button
+          id="hamburger"
+          class="hamburger hidden focus:outline-none"
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav
+        id="mobileMenu"
+        class="mobile-menu lg:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-md"
+      >
+        <ul class="flex flex-col space-y-4 p-4 text-sm font-medium">
+          <!-- Home dropDown  -->
+          <div class="relative">
+            <button
+              id="mobileToggle"
+              class="flex items-center gap-1 w-full text-left hover:text-violet-600 transition-colors md:hidden"
+            >
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="mobileLink"
+              class="hidden bg-white dark:bg-slate-950 mt-2 rounded w-full md:absolute"
+            >
+              <!-- <li>
+                <a
+                  href="../index.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 1
+                </a>
+              </li> -->
+              <li>
+                <a
+                  href="../Home/Home2.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+            </ul>
+          </div>
+          <li>
+            <a
+              href="./About.html"
+              class="nav-link block hover:text-violet-600 transition-colors"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="../Service/Service.html"
+              class="nav-link block hover:text-violet-600 transition-colors"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="../Blog/Blog.html"
+              class="nav-link block hover:text-violet-600 transition-colors"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a
+              href="../Contact/Contact.html"
+              class="nav-link block hover:text-violet-600 transition-colors"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="../404.html"
+              class="nav-link block hover:text-violet-600 transition-colors"
+              >Dashboard</a
+            >
+          </li>
+          <li>
+            <a
+              href="../404.html"
+              class="nav-link text-violet-500 block hover:text-violet-600 transition-colors"
+            >
+              <i class="fa-solid fa-gift"></i> Donate Now</a
+            >
+          </li>
+          <li>
+            <a
+              href="./login.html"
+              class="flex items-center gap-2 nav-link hover:text-violet-600 transition-colors"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+              Login</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Dropdown script  -->
+      <script>
+        const homeToggle = document.getElementById("homeToggle");
+        const homeMenu = document.getElementById("homeMenu");
+
+        homeToggle.addEventListener("click", () => {
+          homeMenu.classList.toggle("hidden");
+        });
+
+        const mobileToggle = document.getElementById("mobileToggle");
+        const mobileLink = document.getElementById("mobileLink");
+
+        // Home dropdown toggle (mobile only)
+        mobileToggle.addEventListener("click", () => {
+          mobileLink.classList.toggle("hidden");
+        });
+
+        // Optional: close menu if clicked outside
+        window.addEventListener("click", (e) => {
+          if (!homeToggle.contains(e.target) && !homeMenu.contains(e.target)) {
+            homeMenu.classList.add("hidden");
+          }
+        });
+      </script>
+    </header>
+
+    <aside class="w-80 h-[93vh] bg-gray-300">
+      <div class="flex flex-col w-full text-sm">
+        <button
+          class="peer w-full text-left px-4 py-4 border rounded bg-white text-gray-700 border-gray-300 shadow-sm hover:bg-gray-50 focus:outline-none"
+        >
+          <span>Dashboard</span>
+        </button>
+
+        <ul
+          class="hidden overflow-hidden text-center peer-focus:block w-full bg-white border border-gray-300 rounded shadow-md mt-0 py-1 transition duration-300 ease-in-out"
+        >
+          <div class="flex flex-col">
+            <a href="../404.html" class="px-4 py-4 hover:bg-gray-500/10">
+              Line Chart
+              <!-- <a class="w-full h-full" href="../404.html">Line Chart</a> -->
+            </a>
+            <a href="../404.html" class="px-4 py-4 hover:bg-gray-500/10">
+              Bar Chart
+              <!-- <a class="w-full h-full" href="../404.html">Bar Chart</a> -->
+            </a>
+            <a href="../404.html" class="px-4 py-4 hover:bg-gray-500/10">
+              Graph
+              <!-- <a class="w-full h-full" href="../404.html">Graph</a> -->
+            </a>
+          </div>
+        </ul>
+      </div>
+      <div class="flex flex-col max-w-64 w-full text-sm">
+        <p class="font-medium text-gray-800 pb-2">Assigned to</p>
+        <button
+          class="peer group flex items-center justify-between w-full text-left px-2 py-2 border rounded bg-white text-gray-700 border-gray-300 shadow-sm hover:bg-gray-50 focus:outline-none"
+        >
+          <div class="flex items-center gap-2">
+            <span>Richard Nelson</span>
+          </div>
+          <svg
+            width="11"
+            height="17"
+            viewBox="0 0 11 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.92546 6L5.68538 1L1.44531 6"
+              stroke="#6B7280"
+              stroke-opacity="0.7"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M1.44564 11L5.68571 16L9.92578 11"
+              stroke="#6B7280"
+              stroke-opacity="0.7"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <ul
+          class="hidden overflow-hidden peer-focus:block w-64 bg-white border border-gray-300 rounded shadow-md mt-1 py-2 right-0"
+        >
+          <li
+            class="px-2 py-2 flex items-center gap-2 hover:bg-indigo-500 hover:text-white cursor-pointer"
+          >
+            <span>James Washington</span>
+          </li>
+          <li
+            class="px-2 py-2 flex items-center gap-2 bg-indigo-500 text-white cursor-pointer"
+          >
+            <span>Richard Nelson</span>
+          </li>
+          <li
+            class="px-2 py-2 flex items-center gap-2 hover:bg-indigo-500 hover:text-white cursor-pointer"
+          >
+
+            <span>Donald Jackman</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- data-aos  -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      AOS.init({
+        duration: 900,
+        // delay: 200, // default delay for all elements
+        once: false,
+        mirror: true,
+      });
+    </script>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const links = mobileMenu.querySelectorAll(".nav-link");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("open");
+      });
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("open");
+        });
+      });
+    </script>
+  </body>
+</html>

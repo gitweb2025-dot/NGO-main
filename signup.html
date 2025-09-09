@@ -88,13 +88,14 @@
       </div>
     </section>
 
-
     <!-- Login Section  -->
 
     <section class="overflow-hidden overflow-x-hidden">
       <div class="flex min-h-screen w-full">
         <div class="w-full flex flex-col items-center justify-center">
           <form
+            action="./404.html"
+            method="get"
             class="md:w-96 m-4 flex flex-col items-center justify-center dark:bg-white/5 border-2 border-black/10 p-12 rounded-2xl shadow-2xl"
             data-aos="zoom-in"
             data-aos-delay="100"
@@ -209,12 +210,11 @@
               <!-- <a class="text-sm underline" href="#">Forgot password?</a> -->
             </div>
 
-            <a
-              href="./404.html"
+            <input
+              type="submit"
+              value="Sign up"
               class="mt-8 px-8 py-3 rounded-full text-white bg-indigo-500 hover:opacity-90 transition-opacity"
-            >
-              Sign up
-            </a>
+            />
             <p class="text-gray-500/90 text-sm mt-4">
               Already have an account?
               <a class="text-indigo-400 hover:underline" href="./login.html"
