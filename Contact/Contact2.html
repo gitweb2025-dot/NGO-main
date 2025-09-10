@@ -496,6 +496,8 @@
 
           <!-- form -->
           <form
+            action="../404.html"
+            method="get"
             data-aos="fade-right"
             data-aos-delay="50"
             class="max-w-xl space-y-4 shadow-[0px_0px_17px_6px_rgba(0,_0,_0,_0.1)] dark:bg-white/5 border-1 border-white/20 p-4 rounded-2xl"
@@ -507,6 +509,7 @@
               >
                 <i class="fa-solid fa-user"></i>
                 <input
+                  required
                   type="text"
                   placeholder="Enter Your Name"
                   class="outline-0 w-full"
@@ -520,7 +523,8 @@
               >
                 <i class="fa-solid fa-envelope"></i>
                 <input
-                  type="text"
+                  required
+                  type="email"
                   placeholder="Enter Your E-mail"
                   class="outline-0 w-full"
                 />
@@ -529,6 +533,7 @@
             <div class="flex flex-col gap-2">
               <label class="font-semibold">Topic</label>
               <select
+                required
                 class="px-2 py-2 border-2 border-gray-400 dark:border-gray-600 rounded-md outline-0"
               >
                 <option class="dark:bg-gray-900">General Inquiry</option>
@@ -539,17 +544,18 @@
             <div class="flex flex-col gap-2">
               <label class="font-semibold">Message</label>
               <textarea
+                required
                 placeholder="Enter Your Message"
                 class="resize-y w-full h-full px-2 py-2 outline-0 border-2 border-gray-400 dark:border-gray-600 rounded-md"
               ></textarea>
             </div>
             <div class="w-fit">
-              <a
+              <button
+                type="submit"
                 class="flex items-center gap-2 px-6 py-2 border-2 bg-violet-500 border-violet-500 rounded-3xl text-white dark:text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
-                href="../404.html"
               >
                 Submit
-              </a>
+              </button>
             </div>
           </form>
         </div>
