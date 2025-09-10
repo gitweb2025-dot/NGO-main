@@ -90,13 +90,77 @@
           ><img class="h-16 object-cover" src="../Assets/Logo.png" alt="logo"
         /></a>
 
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden md:flex space-x-2 md:space-x-3 lg:space-x-5 text-sm font-medium"
+        >
+          <!-- Home with Dropdown -->
+          <div class="relative">
+            <!-- Parent Button -->
+            <button
+              id="homeToggle"
+              class="hover:text-violet-600 transition-colors focus:outline-none flex items-center gap-1 cursor-pointer"
+            >
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="homeMenu"
+              class="absolute hidden bg-white dark:bg-slate-950 shadow-lg mt-2 rounded w-40"
+            >
+              <li>
+                <a
+                  href="../Home/Home.html"
+                  class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+              <!-- <li>
+                <a
+                  href="./Home.html"
+                  class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li> -->
+            </ul>
+          </div>
+          <a
+            href="../About/About.html"
+            class="hover:text-violet-600 transition-colors"
+            >About Us</a
+          >
+          <a
+            href="../Service/Service.html"
+            class="hover:text-violet-600 transition-colors"
+            >Services</a
+          >
+          <a
+            href="../Blog/Blog.html"
+            class="hover:text-violet-600 transition-colors"
+            >Blogs</a
+          >
+          <a
+            href="../Contact/Contact.html"
+            class="hover:text-violet-600 transition-colors"
+            >Contact</a
+          >
+          <a
+            href="./Dashboard.html"
+            class="hover:text-violet-600 transition-colors"
+            >Dashboard</a
+          >
+        </nav>
+
         <div class="flex items-center justify-center text-sm gap-4 font-medium">
           <!-- Image with dropdown -->
           <div class="relative">
             <!-- Parent Button -->
             <div class="flex items-center gap-3">
               <button
-                id="homeToggle"
+                id="imageToggle"
                 class="hover:text-violet-600 transition-colors focus:outline-none flex items-center gap-1 cursor-pointer"
               >
                 <img
@@ -110,7 +174,7 @@
             </div>
             <!-- Dropdown Menu -->
             <ul
-              id="homeMenu"
+              id="imageMenu"
               class="absolute hidden bg-white dark:bg-slate-950 shadow-lg mt-3 rounded w-40 border-2 border-gray-100 dark:border-white/5"
             >
               <!-- <a
@@ -129,19 +193,124 @@
               </a>
             </ul>
           </div>
-        </div>
 
-        <!-- Hamburger -->
-        <button
-          id="hamburger"
-          class="hamburger hidden focus:outline-none"
-          aria-label="Menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+          <!-- Hamburger -->
+          <button
+            id="hamburger"
+            class="hamburger md:hidden focus:outline-none"
+            aria-label="Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
+
+      <!-- Mobile Menu -->
+      <nav
+        id="mobileMenu"
+        class="mobile-menu lg:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-md"
+      >
+        <ul class="flex flex-col space-y-4 p-4 text-sm font-medium">
+          <!-- Home with Dropdown (Mobile only) -->
+          <div class="relative">
+            <button
+              id="mobileToggle"
+              class="flex items-center gap-1 w-full text-left hover:text-violet-600 transition-colors md:hidden"
+            >
+              Home <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="mobileLink"
+              class="hidden bg-white dark:bg-slate-950 mt-2 rounded w-full md:absolute"
+            >
+              <li>
+                <a
+                  href="../Home/Home.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li>
+              <!-- <li>
+                <a
+                  href="./Home.html"
+                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
+                >
+                  Home 2
+                </a>
+              </li> -->
+            </ul>
+          </div>
+
+          <li>
+            <a
+              href="../About/About.html"
+              class="nav-link block hover:text-violet-600 transition-colors"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="../Service/Service.html"
+              class="nav-link block hover:text-violet-600 transition-colors"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="../Blog/Blog.html"
+              class="nav-link block hover:text-violet-600 transition-colors"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a
+              href="../Contact/Contact.html"
+              class="nav-link block hover:text-violet-600 transition-colors"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="./Dashboard.html"
+              class="nav-link block hover:text-violet-600 transition-colors"
+              >Dashboard</a
+            >
+          </li>
+          <li>
+            <a
+              href="../Donate/Donate2.html"
+              class="nav-link text-violet-500 block hover:text-violet-600 transition-colors"
+              ><i class="fa-solid fa-gift"></i> Donate Now</a
+            >
+          </li>
+          <li>
+            <a
+              href="../login.html"
+              class="flex items-center gap-2 nav-link hover:text-violet-600 transition-colors"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+              Login</a
+            >
+          </li>
+        </ul>
+      </nav>
 
       <!-- Dropdown script  -->
       <script>
@@ -152,18 +321,36 @@
           homeMenu.classList.toggle("hidden");
         });
 
-        // const mobileToggle = document.getElementById("mobileToggle");
-        // const mobileLink = document.getElementById("mobileLink");
+        // image dropdown
+        const imageToggle = document.getElementById("imageToggle");
+        const imageMenu = document.getElementById("imageMenu");
 
-        // // Home dropdown toggle (mobile only)
-        // mobileToggle.addEventListener("click", () => {
-        //   mobileLink.classList.toggle("hidden");
-        // });
+        imageToggle.addEventListener("click", () => {
+          imageMenu.classList.toggle("hidden");
+        });
+
+        const mobileToggle = document.getElementById("mobileToggle");
+        const mobileLink = document.getElementById("mobileLink");
+
+        // Home dropdown toggle (mobile only)
+        mobileToggle.addEventListener("click", () => {
+          mobileLink.classList.toggle("hidden");
+        });
 
         // Optional: close menu if clicked outside
         window.addEventListener("click", (e) => {
           if (!homeToggle.contains(e.target) && !homeMenu.contains(e.target)) {
             homeMenu.classList.add("hidden");
+          }
+        });
+
+        // optional to close image
+        window.addEventListener("click", (e) => {
+          if (
+            !imageToggle.contains(e.target) &&
+            !imageMenu.contains(e.target)
+          ) {
+            imageMenu.classList.add("hidden");
           }
         });
       </script>
@@ -277,15 +464,18 @@
         <div class="pb-4 text-xl font-semibold">
           <h1>User Profiles</h1>
         </div>
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center justify-center gap-8">
+        <div
+          class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center justify-center gap-8"
+        >
+          <!-- card1  -->
           <div
             class="bg-white dark:bg-white/5 rounded-2xl pb-4 overflow-hidden border border-gray-300 p-2"
           >
             <div class="w-64 flex justify-center pt-10">
-              <div class="w-28 h-28 rounded-full overflow-hidden">
+              <div class="w-28 h-28 object-cover rounded-full overflow-hidden">
                 <img
-                  class="h-24 object-cover object-top"
-                  src="https://avatar.iran.liara.run/public/21"
+                  class="h-full w-full object-cover object-top"
+                  src="https://i.postimg.cc/1RBWy6d4/image.png"
                   alt="userImage2"
                 />
               </div>
@@ -301,14 +491,15 @@
             </div>
           </div>
 
+          <!-- card 2  -->
           <div
             class="bg-white rounded-2xl pb-4 overflow-hidden border border-gray-500/30 p-2 dark:bg-white/5"
           >
             <div class="w-64 flex justify-center pt-10">
               <div class="w-28 h-28 rounded-full overflow-hidden">
                 <img
-                  class="h-24 object-cover object-top"
-                  src="https://avatar.iran.liara.run/public/6"
+                  class="h-full w-full object-cover object-top"
+                  src="https://i.postimg.cc/DzhsWpJh/image.png"
                   alt="userImage2"
                 />
               </div>
@@ -344,14 +535,15 @@
             </div>
           </div>
 
+          <!-- card3  -->
           <div
             class="bg-white rounded-2xl pb-4 overflow-hidden border border-gray-500/30 dark:bg-white/5 p-2"
           >
             <div class="w-64 flex justify-center pt-10">
               <div class="w-28 h-28 rounded-full overflow-hidden">
                 <img
-                  class="h-24 object-cover object-top"
-                  src="https://avatar.iran.liara.run/public/43"
+                  class="h-full w-full object-cover object-top"
+                  src="https://i.postimg.cc/LXLjndvm/image.png"
                   alt="userImage2"
                 />
               </div>
@@ -387,14 +579,15 @@
             </div>
           </div>
 
+          <!-- card 4  -->
           <div
             class="bg-white rounded-2xl pb-4 overflow-hidden border border-gray-500/30 dark:bg-white/5 p-2"
           >
             <div class="w-64 flex justify-center pt-10">
               <div class="w-28 h-28 rounded-full overflow-hidden">
                 <img
-                  class="h-24 object-cover object-top"
-                  src="https://avatar.iran.liara.run/public/36"
+                  class="h-full w-full object-cover object-top"
+                  src="https://i.postimg.cc/0yX4Cmvb/image.png"
                   alt="userImage2"
                 />
               </div>
@@ -430,14 +623,15 @@
             </div>
           </div>
 
+          <!-- card 5  -->
           <div
             class="bg-white rounded-2xl pb-4 overflow-hidden border border-gray-500/30 dark:bg-white/5 p-2"
           >
             <div class="w-64 flex justify-center pt-10">
               <div class="w-28 h-28 rounded-full overflow-hidden">
                 <img
-                  class="h-24 object-cover object-top"
-                  src="https://avatar.iran.liara.run/public/85"
+                  class="h-full w-full object-cover object-top"
+                  src="https://i.postimg.cc/MGRYjjpk/image.png"
                   alt="userImage2"
                 />
               </div>
@@ -616,7 +810,7 @@
       });
     </script>
 
-    <!-- <script>
+    <script>
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
       const links = mobileMenu.querySelectorAll(".nav-link");
@@ -632,6 +826,6 @@
           mobileMenu.classList.remove("open");
         });
       });
-    </script> -->
+    </script>
   </body>
 </html>
