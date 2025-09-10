@@ -178,7 +178,9 @@
             class="hover:text-violet-600 transition-colors"
             >Blogs</a
           >
-          <a href="../Contact/Contact2.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../Contact/Contact2.html"
+            class="hover:text-violet-600 transition-colors"
             >Contact</a
           >
           <a href="../404.html" class="hover:text-violet-600 transition-colors"
@@ -189,7 +191,7 @@
         <div class="hidden lg:flex text-sm gap-4 font-medium">
           <a
             class="flex items-center gap-2 px-6 py-3 border-2 border-violet-500 rounded-3xl text-black dark:text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
-            href="../404.html"
+            href="../Donate/Donate2.html"
           >
             <i class="fa-solid fa-gift text-xl text-violet-600"></i> Donate Now
           </a>
@@ -301,7 +303,7 @@
           </li>
           <li>
             <a
-              href="../404.html"
+              href="../Donate/Donate2.html"
               class="nav-link text-violet-500 block hover:text-violet-600 transition-colors"
               ><i class="fa-solid fa-gift"></i> Donate Now</a
             >
@@ -919,17 +921,21 @@
             offers, and inspiration.
           </p>
         </div>
-        <div
+        <form
+          method="get"
+          action="../404.html"
           class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6"
           data-aos="fade-left"
           data-aos-delay="200"
         >
           <input
-            type="text"
+            required
+            type="email"
             class="bg-white/10 px-4 py-2.5 border dark:border-white/20 rounded outline-none max-w-66 w-full"
             placeholder="Enter your email"
           />
-          <a
+          <button
+            type="submit"
             href="../404.html"
             class="flex items-center justify-center gap-2 group text-white bg-black px-4 md:px-7 py-2.5 rounded active:scale-95 transition-all"
           >
@@ -951,8 +957,8 @@
                 d="M19 12H5m14 0-4 4m4-4-4-4"
               />
             </svg>
-          </a>
-        </div>
+          </button>
+        </form>
         <p
           data-aos="fade-right"
           data-aos-delay="250"

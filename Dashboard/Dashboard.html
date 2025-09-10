@@ -106,22 +106,22 @@
                 />
               </button>
 
-              <h1 class="text-[16px] md:text-lg">Hi Deva!</h1>
+              <h1 class="text-[16px] md:text-lg">Hi Dev!</h1>
             </div>
             <!-- Dropdown Menu -->
             <ul
               id="homeMenu"
               class="absolute hidden bg-white dark:bg-slate-950 shadow-lg mt-3 rounded w-40 border-2 border-gray-100 dark:border-white/5"
             >
-              <a
-                href="../index.html"
+              <!-- <a
+                href="../404.html"
                 class="flex items-center gap-3 px-2 md:px-4 py-4 hover:bg-violet-50 hover:text-violet-600"
               >
                 <i class="fa-solid fa-pen-to-square"></i>
                 <p>Edit Profile</p>
-              </a>
+              </a> -->
               <a
-                href="../Home/Home.html"
+                href="../index.html"
                 class="flex items-center gap-3 px-2 md:px-4 py-4 hover:bg-violet-50 hover:text-violet-600 border-t-2 border-t-gray-100 dark:border-t-white/5"
               >
                 <i class="fa-solid fa-power-off"></i>
@@ -143,111 +143,6 @@
         </button>
       </div>
 
-      <!-- Mobile Menu -->
-      <nav
-        id="mobileMenu"
-        class="mobile-menu lg:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-md"
-      >
-        <ul class="flex flex-col space-y-4 p-4 text-sm font-medium">
-          <!-- Home dropDown  -->
-          <div class="relative">
-            <button
-              id="mobileToggle"
-              class="flex items-center gap-1 w-full text-left hover:text-violet-600 transition-colors md:hidden"
-            >
-              Home <i class="fa-solid fa-caret-down"></i>
-            </button>
-
-            <!-- Dropdown Menu -->
-            <ul
-              id="mobileLink"
-              class="hidden bg-white dark:bg-slate-950 mt-2 rounded w-full md:absolute"
-            >
-              <!-- <li>
-                <a
-                  href="../index.html"
-                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
-                >
-                  Home 1
-                </a>
-              </li> -->
-              <li>
-                <a
-                  href="../Home/Home2.html"
-                  class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
-                >
-                  Home 2
-                </a>
-              </li>
-            </ul>
-          </div>
-          <li>
-            <a
-              href="./About.html"
-              class="nav-link block hover:text-violet-600 transition-colors"
-              >About Us</a
-            >
-          </li>
-          <li>
-            <a
-              href="../Service/Service.html"
-              class="nav-link block hover:text-violet-600 transition-colors"
-              >Services</a
-            >
-          </li>
-          <li>
-            <a
-              href="../Blog/Blog.html"
-              class="nav-link block hover:text-violet-600 transition-colors"
-              >Blogs</a
-            >
-          </li>
-          <li>
-            <a
-              href="../Contact/Contact.html"
-              class="nav-link block hover:text-violet-600 transition-colors"
-              >Contact</a
-            >
-          </li>
-          <li>
-            <a
-              href="../404.html"
-              class="nav-link block hover:text-violet-600 transition-colors"
-              >Dashboard</a
-            >
-          </li>
-          <li>
-            <a
-              href="../404.html"
-              class="nav-link text-violet-500 block hover:text-violet-600 transition-colors"
-            >
-              <i class="fa-solid fa-gift"></i> Donate Now</a
-            >
-          </li>
-          <li>
-            <a
-              href="./login.html"
-              class="flex items-center gap-2 nav-link hover:text-violet-600 transition-colors"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                />
-              </svg>
-              Login</a
-            >
-          </li>
-        </ul>
-      </nav>
-
       <!-- Dropdown script  -->
       <script>
         const homeToggle = document.getElementById("homeToggle");
@@ -257,13 +152,13 @@
           homeMenu.classList.toggle("hidden");
         });
 
-        const mobileToggle = document.getElementById("mobileToggle");
-        const mobileLink = document.getElementById("mobileLink");
+        // const mobileToggle = document.getElementById("mobileToggle");
+        // const mobileLink = document.getElementById("mobileLink");
 
-        // Home dropdown toggle (mobile only)
-        mobileToggle.addEventListener("click", () => {
-          mobileLink.classList.toggle("hidden");
-        });
+        // // Home dropdown toggle (mobile only)
+        // mobileToggle.addEventListener("click", () => {
+        //   mobileLink.classList.toggle("hidden");
+        // });
 
         // Optional: close menu if clicked outside
         window.addEventListener("click", (e) => {
@@ -275,18 +170,28 @@
     </header>
 
     <!-- Main content -->
-    <div class="p-6 space-y-8">
+    <div class="p-6 space-y-8 max-w-[1500px] mx-auto">
+      <div class="pb-3 space-y-2">
+        <h1 class="text-2xl md:text-3xl font-semibold">Welcome Back, Dev!</h1>
+        <p>Quick summary of their impact: “Your contributions have supported 15 children this year.”</p>
+      </div>
       <!-- Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white dark:bg-white/10 p-6 rounded-xl shadow text-center">
+        <div
+          class="bg-white dark:bg-white/10 p-6 rounded-xl shadow text-center"
+        >
           <h2 class="text-gray-500 text-sm">Total Donations</h2>
           <p class="text-2xl font-bold text-violet-600">$120,000</p>
         </div>
-        <div class="bg-white dark:bg-white/10 p-6 rounded-xl shadow text-center">
+        <div
+          class="bg-white dark:bg-white/10 p-6 rounded-xl shadow text-center"
+        >
           <h2 class="text-gray-500 text-sm">Active Donors</h2>
           <p class="text-2xl font-bold text-violet-600">450</p>
         </div>
-        <div class="bg-white dark:bg-white/10 p-6 rounded-xl shadow text-center">
+        <div
+          class="bg-white dark:bg-white/10 p-6 rounded-xl shadow text-center"
+        >
           <h2 class="text-gray-500 text-sm">Programs</h2>
           <p class="text-2xl font-bold text-violet-600">25</p>
         </div>
@@ -295,7 +200,9 @@
       <!-- Charts -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <!-- Bar Chart -->
-        <div class="bg-white dark:bg-white/10 p-6 rounded-xl shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)]">
+        <div
+          class="bg-white dark:bg-white/10 p-6 rounded-xl shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)]"
+        >
           <h2 class="text-lg font-semibold mb-4">Donations by Category</h2>
           <div class="h-64">
             <canvas id="barChart"></canvas>
@@ -303,7 +210,9 @@
         </div>
 
         <!-- Doughnut Chart -->
-        <div class="bg-white dark:bg-white/10 p-6 rounded-xl shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)]">
+        <div
+          class="bg-white dark:bg-white/10 p-6 rounded-xl shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)]"
+        >
           <h2 class="text-lg font-semibold mb-4">Programs Funding</h2>
           <div class="h-64">
             <canvas id="doughnutChart"></canvas>
@@ -311,7 +220,9 @@
         </div>
 
         <!-- Pie Chart -->
-        <div class="bg-white dark:bg-white/10 p-6 rounded-xl shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)]">
+        <div
+          class="bg-white dark:bg-white/10 p-6 rounded-xl shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)]"
+        >
           <h2 class="text-lg font-semibold mb-4">User Roles</h2>
           <div class="h-64">
             <canvas id="pieChart"></canvas>
@@ -320,7 +231,9 @@
       </div>
 
       <!-- Users Data -->
-      <div class="bg-white dark:bg-white/5 p-6 rounded-xl shadow overflow-x-auto">
+      <div
+        class="bg-white dark:bg-white/5 p-6 rounded-xl shadow overflow-x-auto max-w-[1500px] mx-auto"
+      >
         <h2 class="text-lg font-semibold mb-4">Users</h2>
         <table class="w-full text-left border-collapse">
           <thead>
@@ -354,8 +267,215 @@
         </table>
       </div>
 
+      <!-- User Profiles  -->
+      <section
+        class="max-w-[1500px] mx-auto px-4 overflow-hidden overflow-x-hidden"
+      >
+        <div class="pb-4 text-xl font-semibold">
+          <h1>User Profiles</h1>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-8">
+          <div
+            class="bg-white rounded-2xl pb-4 overflow-hidden border border-gray-300"
+          >
+            <div class="w-64 flex justify-center pt-10">
+              <div class="w-28 h-28 rounded-full overflow-hidden">
+                <img
+                  class="h-32 object-cover object-top"
+                  src="https://avatar.iran.liara.run/public/21"
+                  alt="userImage2"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="font-medium mt-3">John</p>
+              <p class="text-gray-500 text-sm">john@gmail.com</p>
+              <button
+                class="border text-sm text-gray-500 border-gray-500/30 w-28 h-8 rounded-full mt-5"
+              >
+                <p class="mb-1">message</p>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl pb-4 overflow-hidden border border-gray-500/30"
+          >
+            <div class="w-64 flex justify-center pt-10">
+              <div class="w-28 h-28 rounded-full overflow-hidden">
+                <img
+                  class="h-32 object-cover object-top"
+                  src="https://avatar.iran.liara.run/public/6"
+                  alt="userImage2"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="font-medium mt-3">Kelvin</p>
+              <p class="text-gray-500 text-sm">kelvin@gmail.com</p>
+              <button
+                class="border text-sm text-gray-500 border-gray-300 w-28 h-8 rounded-full mt-5 flex items-center justify-center gap-1"
+              >
+                <svg
+                  class="mt-0.5"
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m7.107 11.684.31-.521-.736-.436-.309.522zm-2.28-.521.308.521.735-.435-.309-.522zm1.545.086a.297.297 0 0 1-.502 0l-.735.435a1.15 1.15 0 0 0 1.972 0zM5.267.854h1.708V0H5.267zm6.121 4.413v.57h.854v-.57zm-10.534.57v-.57H0v.57zm-.854 0c0 .657 0 1.171.028 1.586.029.42.088.768.221 1.09l.79-.327c-.084-.2-.133-.446-.159-.82-.026-.38-.026-.86-.026-1.53zm3.731 3.838c-.715-.012-1.09-.058-1.383-.18l-.327.79c.459.19.98.232 1.695.244zM.249 8.513c.333.802.97 1.44 1.772 1.772l.327-.79a2.42 2.42 0 0 1-1.31-1.309zm11.14-2.677c0 .67-.001 1.15-.027 1.53-.026.374-.075.62-.158.82l.79.327c.133-.322.192-.67.22-1.09.028-.415.028-.93.028-1.587zM8.525 10.53c.715-.012 1.237-.054 1.695-.244l-.327-.79c-.293.122-.668.168-1.383.18zm2.678-2.343a2.42 2.42 0 0 1-1.31 1.31l.327.789a3.27 3.27 0 0 0 1.772-1.772zM6.975.854c.94 0 1.616 0 2.142.05.52.05.852.145 1.116.307l.446-.729C10.259.225 9.78.11 9.199.054 8.621 0 7.898 0 6.974 0zm5.267 4.413c0-.924 0-1.646-.054-2.223-.056-.583-.17-1.06-.428-1.48l-.728.446c.161.264.256.595.306 1.115.05.527.05 1.202.05 2.142zm-2.01-4.056c.326.2.6.473.8.799l.728-.447c-.27-.44-.64-.81-1.081-1.08zM5.268 0c-.924 0-1.646 0-2.223.054-.583.056-1.06.17-1.48.428l.446.729c.264-.162.595-.257 1.115-.306.527-.05 1.202-.05 2.142-.05zM.854 5.267c0-.94 0-1.615.05-2.142.05-.52.145-.851.307-1.115l-.729-.447c-.257.421-.372.898-.428 1.481C0 3.621 0 4.344 0 5.267zm.71-4.785A3.3 3.3 0 0 0 .482 1.563l.729.447c.2-.326.473-.6.799-.8zM5.56 10.728a6 6 0 0 0-.316-.503 1.3 1.3 0 0 0-.388-.368l-.43.739a.4.4 0 0 1 .128.131c.07.095.147.226.271.436zm-1.845-.199c.25.004.409.008.53.02a.45.45 0 0 1 .182.047l.429-.739a1.3 1.3 0 0 0-.518-.156c-.169-.019-.374-.022-.608-.026zm3.7.634c.124-.21.202-.34.271-.436a.4.4 0 0 1 .128-.131l-.43-.739a1.3 1.3 0 0 0-.388.368c-.099.135-.2.307-.316.502zM8.51 9.675c-.234.004-.439.007-.608.026-.178.02-.351.06-.518.156l.43.739a.45.45 0 0 1 .182-.046 6 6 0 0 1 .529-.02z"
+                    fill="#6B7280"
+                  />
+                  <path
+                    d="M3.844 5.552h.005m2.268 0h.005m2.272 0H8.4"
+                    stroke="#6B7280"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="mb-1">message</p>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl pb-4 overflow-hidden border border-gray-500/30"
+          >
+            <div class="w-64 flex justify-center pt-10">
+              <div class="w-28 h-28 rounded-full overflow-hidden">
+                <img
+                  class="h-32 object-cover object-top"
+                  src="https://avatar.iran.liara.run/public/43"
+                  alt="userImage2"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="font-medium mt-3">Mark</p>
+              <p class="text-gray-500 text-sm">mark@gmail.com</p>
+              <button
+                class="border text-sm text-gray-500 border-gray-300 w-28 h-8 rounded-full mt-5 flex items-center justify-center gap-1"
+              >
+                <svg
+                  class="mt-0.5"
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m7.107 11.684.31-.521-.736-.436-.309.522zm-2.28-.521.308.521.735-.435-.309-.522zm1.545.086a.297.297 0 0 1-.502 0l-.735.435a1.15 1.15 0 0 0 1.972 0zM5.267.854h1.708V0H5.267zm6.121 4.413v.57h.854v-.57zm-10.534.57v-.57H0v.57zm-.854 0c0 .657 0 1.171.028 1.586.029.42.088.768.221 1.09l.79-.327c-.084-.2-.133-.446-.159-.82-.026-.38-.026-.86-.026-1.53zm3.731 3.838c-.715-.012-1.09-.058-1.383-.18l-.327.79c.459.19.98.232 1.695.244zM.249 8.513c.333.802.97 1.44 1.772 1.772l.327-.79a2.42 2.42 0 0 1-1.31-1.309zm11.14-2.677c0 .67-.001 1.15-.027 1.53-.026.374-.075.62-.158.82l.79.327c.133-.322.192-.67.22-1.09.028-.415.028-.93.028-1.587zM8.525 10.53c.715-.012 1.237-.054 1.695-.244l-.327-.79c-.293.122-.668.168-1.383.18zm2.678-2.343a2.42 2.42 0 0 1-1.31 1.31l.327.789a3.27 3.27 0 0 0 1.772-1.772zM6.975.854c.94 0 1.616 0 2.142.05.52.05.852.145 1.116.307l.446-.729C10.259.225 9.78.11 9.199.054 8.621 0 7.898 0 6.974 0zm5.267 4.413c0-.924 0-1.646-.054-2.223-.056-.583-.17-1.06-.428-1.48l-.728.446c.161.264.256.595.306 1.115.05.527.05 1.202.05 2.142zm-2.01-4.056c.326.2.6.473.8.799l.728-.447c-.27-.44-.64-.81-1.081-1.08zM5.268 0c-.924 0-1.646 0-2.223.054-.583.056-1.06.17-1.48.428l.446.729c.264-.162.595-.257 1.115-.306.527-.05 1.202-.05 2.142-.05zM.854 5.267c0-.94 0-1.615.05-2.142.05-.52.145-.851.307-1.115l-.729-.447c-.257.421-.372.898-.428 1.481C0 3.621 0 4.344 0 5.267zm.71-4.785A3.3 3.3 0 0 0 .482 1.563l.729.447c.2-.326.473-.6.799-.8zM5.56 10.728a6 6 0 0 0-.316-.503 1.3 1.3 0 0 0-.388-.368l-.43.739a.4.4 0 0 1 .128.131c.07.095.147.226.271.436zm-1.845-.199c.25.004.409.008.53.02a.45.45 0 0 1 .182.047l.429-.739a1.3 1.3 0 0 0-.518-.156c-.169-.019-.374-.022-.608-.026zm3.7.634c.124-.21.202-.34.271-.436a.4.4 0 0 1 .128-.131l-.43-.739a1.3 1.3 0 0 0-.388.368c-.099.135-.2.307-.316.502zM8.51 9.675c-.234.004-.439.007-.608.026-.178.02-.351.06-.518.156l.43.739a.45.45 0 0 1 .182-.046 6 6 0 0 1 .529-.02z"
+                    fill="#6B7280"
+                  />
+                  <path
+                    d="M3.844 5.552h.005m2.268 0h.005m2.272 0H8.4"
+                    stroke="#6B7280"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="mb-1">message</p>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl pb-4 overflow-hidden border border-gray-500/30"
+          >
+            <div class="w-64 flex justify-center pt-10">
+              <div class="w-28 h-28 rounded-full overflow-hidden">
+                <img
+                  class="h-32 object-cover object-top"
+                  src="https://avatar.iran.liara.run/public/36"
+                  alt="userImage2"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="font-medium mt-3">Smith</p>
+              <p class="text-gray-500 text-sm">smith@gmail.com</p>
+              <button
+                class="border text-sm text-gray-500 border-gray-300 w-28 h-8 rounded-full mt-5 flex items-center justify-center gap-1"
+              >
+                <svg
+                  class="mt-0.5"
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m7.107 11.684.31-.521-.736-.436-.309.522zm-2.28-.521.308.521.735-.435-.309-.522zm1.545.086a.297.297 0 0 1-.502 0l-.735.435a1.15 1.15 0 0 0 1.972 0zM5.267.854h1.708V0H5.267zm6.121 4.413v.57h.854v-.57zm-10.534.57v-.57H0v.57zm-.854 0c0 .657 0 1.171.028 1.586.029.42.088.768.221 1.09l.79-.327c-.084-.2-.133-.446-.159-.82-.026-.38-.026-.86-.026-1.53zm3.731 3.838c-.715-.012-1.09-.058-1.383-.18l-.327.79c.459.19.98.232 1.695.244zM.249 8.513c.333.802.97 1.44 1.772 1.772l.327-.79a2.42 2.42 0 0 1-1.31-1.309zm11.14-2.677c0 .67-.001 1.15-.027 1.53-.026.374-.075.62-.158.82l.79.327c.133-.322.192-.67.22-1.09.028-.415.028-.93.028-1.587zM8.525 10.53c.715-.012 1.237-.054 1.695-.244l-.327-.79c-.293.122-.668.168-1.383.18zm2.678-2.343a2.42 2.42 0 0 1-1.31 1.31l.327.789a3.27 3.27 0 0 0 1.772-1.772zM6.975.854c.94 0 1.616 0 2.142.05.52.05.852.145 1.116.307l.446-.729C10.259.225 9.78.11 9.199.054 8.621 0 7.898 0 6.974 0zm5.267 4.413c0-.924 0-1.646-.054-2.223-.056-.583-.17-1.06-.428-1.48l-.728.446c.161.264.256.595.306 1.115.05.527.05 1.202.05 2.142zm-2.01-4.056c.326.2.6.473.8.799l.728-.447c-.27-.44-.64-.81-1.081-1.08zM5.268 0c-.924 0-1.646 0-2.223.054-.583.056-1.06.17-1.48.428l.446.729c.264-.162.595-.257 1.115-.306.527-.05 1.202-.05 2.142-.05zM.854 5.267c0-.94 0-1.615.05-2.142.05-.52.145-.851.307-1.115l-.729-.447c-.257.421-.372.898-.428 1.481C0 3.621 0 4.344 0 5.267zm.71-4.785A3.3 3.3 0 0 0 .482 1.563l.729.447c.2-.326.473-.6.799-.8zM5.56 10.728a6 6 0 0 0-.316-.503 1.3 1.3 0 0 0-.388-.368l-.43.739a.4.4 0 0 1 .128.131c.07.095.147.226.271.436zm-1.845-.199c.25.004.409.008.53.02a.45.45 0 0 1 .182.047l.429-.739a1.3 1.3 0 0 0-.518-.156c-.169-.019-.374-.022-.608-.026zm3.7.634c.124-.21.202-.34.271-.436a.4.4 0 0 1 .128-.131l-.43-.739a1.3 1.3 0 0 0-.388.368c-.099.135-.2.307-.316.502zM8.51 9.675c-.234.004-.439.007-.608.026-.178.02-.351.06-.518.156l.43.739a.45.45 0 0 1 .182-.046 6 6 0 0 1 .529-.02z"
+                    fill="#6B7280"
+                  />
+                  <path
+                    d="M3.844 5.552h.005m2.268 0h.005m2.272 0H8.4"
+                    stroke="#6B7280"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="mb-1">message</p>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl pb-4 overflow-hidden border border-gray-500/30"
+          >
+            <div class="w-64 flex justify-center pt-10">
+              <div class="w-28 h-28 rounded-full overflow-hidden">
+                <img
+                  class="h-32 object-cover object-top"
+                  src="https://avatar.iran.liara.run/public/85"
+                  alt="userImage2"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="font-medium mt-3">Johnson</p>
+              <p class="text-gray-500 text-sm">johnson@gmail.com</p>
+              <button
+                class="border text-sm text-gray-500 border-gray-300 w-28 h-8 rounded-full mt-5 flex items-center justify-center gap-1"
+              >
+                <svg
+                  class="mt-0.5"
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m7.107 11.684.31-.521-.736-.436-.309.522zm-2.28-.521.308.521.735-.435-.309-.522zm1.545.086a.297.297 0 0 1-.502 0l-.735.435a1.15 1.15 0 0 0 1.972 0zM5.267.854h1.708V0H5.267zm6.121 4.413v.57h.854v-.57zm-10.534.57v-.57H0v.57zm-.854 0c0 .657 0 1.171.028 1.586.029.42.088.768.221 1.09l.79-.327c-.084-.2-.133-.446-.159-.82-.026-.38-.026-.86-.026-1.53zm3.731 3.838c-.715-.012-1.09-.058-1.383-.18l-.327.79c.459.19.98.232 1.695.244zM.249 8.513c.333.802.97 1.44 1.772 1.772l.327-.79a2.42 2.42 0 0 1-1.31-1.309zm11.14-2.677c0 .67-.001 1.15-.027 1.53-.026.374-.075.62-.158.82l.79.327c.133-.322.192-.67.22-1.09.028-.415.028-.93.028-1.587zM8.525 10.53c.715-.012 1.237-.054 1.695-.244l-.327-.79c-.293.122-.668.168-1.383.18zm2.678-2.343a2.42 2.42 0 0 1-1.31 1.31l.327.789a3.27 3.27 0 0 0 1.772-1.772zM6.975.854c.94 0 1.616 0 2.142.05.52.05.852.145 1.116.307l.446-.729C10.259.225 9.78.11 9.199.054 8.621 0 7.898 0 6.974 0zm5.267 4.413c0-.924 0-1.646-.054-2.223-.056-.583-.17-1.06-.428-1.48l-.728.446c.161.264.256.595.306 1.115.05.527.05 1.202.05 2.142zm-2.01-4.056c.326.2.6.473.8.799l.728-.447c-.27-.44-.64-.81-1.081-1.08zM5.268 0c-.924 0-1.646 0-2.223.054-.583.056-1.06.17-1.48.428l.446.729c.264-.162.595-.257 1.115-.306.527-.05 1.202-.05 2.142-.05zM.854 5.267c0-.94 0-1.615.05-2.142.05-.52.145-.851.307-1.115l-.729-.447c-.257.421-.372.898-.428 1.481C0 3.621 0 4.344 0 5.267zm.71-4.785A3.3 3.3 0 0 0 .482 1.563l.729.447c.2-.326.473-.6.799-.8zM5.56 10.728a6 6 0 0 0-.316-.503 1.3 1.3 0 0 0-.388-.368l-.43.739a.4.4 0 0 1 .128.131c.07.095.147.226.271.436zm-1.845-.199c.25.004.409.008.53.02a.45.45 0 0 1 .182.047l.429-.739a1.3 1.3 0 0 0-.518-.156c-.169-.019-.374-.022-.608-.026zm3.7.634c.124-.21.202-.34.271-.436a.4.4 0 0 1 .128-.131l-.43-.739a1.3 1.3 0 0 0-.388.368c-.099.135-.2.307-.316.502zM8.51 9.675c-.234.004-.439.007-.608.026-.178.02-.351.06-.518.156l.43.739a.45.45 0 0 1 .182-.046 6 6 0 0 1 .529-.02z"
+                    fill="#6B7280"
+                  />
+                  <path
+                    d="M3.844 5.552h.005m2.268 0h.005m2.272 0H8.4"
+                    stroke="#6B7280"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="mb-1">message</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Donation List -->
-      <div class="bg-white dark:bg-white/5 p-6 rounded-xl shadow overflow-x-auto">
+      <div
+        class="bg-white dark:bg-white/5 p-6 rounded-xl shadow overflow-x-auto max-w-[1500px] mx-auto"
+      >
         <h2 class="text-lg font-semibold mb-4">Recent Donations</h2>
         <table class="w-full text-left border-collapse">
           <thead>
@@ -493,7 +613,7 @@
       });
     </script>
 
-    <script>
+    <!-- <script>
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
       const links = mobileMenu.querySelectorAll(".nav-link");
@@ -509,6 +629,6 @@
           mobileMenu.classList.remove("open");
         });
       });
-    </script>
+    </script> -->
   </body>
 </html>
