@@ -75,53 +75,15 @@
   </head>
 
   <body
-    class="antialiased bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 w-full"
+    class="antialiased bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100"
   >
-    <!-- Topbar -->
-
-    <div
-      class="sticky top-0 px-4 bg-violet-200 dark:bg-gray-600 w-full flex items-center justify-between overflow-hidden overflow-x-hidden z-1000"
-    >
-      <div class="md:flex items-center space-x-4 hidden">
-        <a href="../404.html" class="text-[12px]">
-          <i class="fa-solid fa-location-dot"></i>Lorem ipsum dolor sit amet
-          consectetur
-        </a>
-        <a href="../404.html" class="text-[12px]">
-          <i class="fa-solid fa-phone"></i>+91-1234567890
-        </a>
-      </div>
-
-      <ul class="flex text-sm">
-        <li
-          class="m-0 p-2 hover:text-pink-500 transform hover:scale-125 transition-all duration-300 ease-in"
-        >
-          <a href="../404.html"><i class="fa-brands fa-instagram"></i></a>
-        </li>
-        <li
-          class="p-2 hover:text-violet-500 transform hover:scale-125 transition-all duration-300 ease-in"
-        >
-          <a href="../404.html"><i class="fa-solid fa-envelope"></i></a>
-        </li>
-        <li
-          class="p-2 hover:text-violet-400 transform hover:scale-125 transition-all duration-300 ease-in"
-        >
-          <a href="../404.html"><i class="fa-brands fa-twitter"></i></a>
-        </li>
-        <li
-          class="p-2 hover:text-red-700 transform hover:scale-125 transition-all duration-300 ease-in"
-        >
-          <a href="../404.html"><i class="fa-brands fa-youtube"></i></a>
-        </li>
-      </ul>
-    </div>
-
     <!-- Navbar  -->
     <header
-      class="sticky top-9 z-500 border-b border-slate-200 dark:border-slate-600 bg-white/90 dark:bg-slate-950/90 backdrop-blur"
+      class="sticky top-0 z-500 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur"
     >
       <div class="container mx-auto flex items-center justify-between px-4">
         <!-- Logo -->
+        <!-- <a href="#" class="text-xl font-bold tracking-tight">Brand</a> -->
         <a class="" href="../index.html"
           ><img class="h-16 object-cover" src="../Assets/Logo.png" alt="logo"
         /></a>
@@ -145,41 +107,42 @@
               id="homeMenu"
               class="absolute hidden bg-white dark:bg-slate-950 shadow-lg mt-2 rounded w-40"
             >
-              <li>
+              <!-- <li>
                 <a
                   href="../index.html"
                   class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
                 >
                   Home 1
                 </a>
-              </li>
-              <!-- <li>
+              </li> -->
+              <li>
                 <a
                   href="../Home/Home.html"
                   class="block px-4 py-2 hover:bg-violet-50 hover:text-violet-600"
                 >
                   Home 2
                 </a>
-              </li> -->
+              </li>
             </ul>
           </div>
+
           <a
-            href="../About/About2.html"
+            href="../About/About.html"
             class="hover:text-violet-600 transition-colors"
             >About Us</a
           >
           <a
-            href="../Service/Service2.html"
+            href="../Service/Service.html"
             class="hover:text-violet-600 transition-colors"
             >Services</a
           >
           <a
-            href="../Blog/Blog2.html"
+            href="../Blog/Blog.html"
             class="hover:text-violet-600 transition-colors"
             >Blogs</a
           >
           <a
-            href="../Contact/Contact2.html"
+            href="../Contact/Contact.html"
             class="hover:text-violet-600 transition-colors"
             >Contact</a
           >
@@ -191,12 +154,13 @@
         <div class="hidden lg:flex text-sm gap-4 font-medium">
           <a
             class="flex items-center gap-2 px-6 py-3 border-2 border-violet-500 rounded-3xl text-black dark:text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
-            href="../404.html"
+            href="../Donate/Donate.html"
           >
-            <i class="fa-solid fa-gift text-xl text-violet-600"></i> Donate Now
-          </a>
+            <i class="fa-solid fa-gift text-xl text-violet-600"></i> Donate
+            Now</a
+          >
           <a
-            class="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-[rgb(144,97,192)] to-[#7c3aed] rounded-3xl text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
+            class="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-[#A992F2] to-[rgb(118,3,200)] rounded-3xl text-white text-sm transform hover:scale-95 transition duration-200 ease-out"
             href="../login.html"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +195,7 @@
       <!-- Mobile Menu -->
       <nav
         id="mobileMenu"
-        class="mobile-menu lg:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-600 shadow-md"
+        class="mobile-menu lg:hidden bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-md"
       >
         <ul class="flex flex-col space-y-4 p-4 text-sm font-medium">
           <!-- Home dropDown  -->
@@ -248,48 +212,48 @@
               id="mobileLink"
               class="hidden bg-white dark:bg-slate-950 mt-2 rounded w-full md:absolute"
             >
-              <li>
+              <!-- <li>
                 <a
                   href="../index.html"
                   class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
                 >
                   Home 1
                 </a>
-              </li>
-              <!-- <li>
+              </li> -->
+              <li>
                 <a
-                  href="../Home/Home.html"
+                  href="../Home/Home2.html"
                   class="block px-2 py-2 hover:bg-violet-50 hover:text-violet-600"
                 >
                   Home 2
                 </a>
-              </li> -->
+              </li>
             </ul>
           </div>
           <li>
             <a
-              href="../About/About2.html"
+              href="../About/About.html"
               class="nav-link block hover:text-violet-600 transition-colors"
               >About Us</a
             >
           </li>
           <li>
             <a
-              href="../Service/Service2.html"
+              href="../Service/Service.html"
               class="nav-link block hover:text-violet-600 transition-colors"
               >Services</a
             >
           </li>
           <li>
             <a
-              href="../Blog/Blog2.html"
+              href="../Blog/Blog.html"
               class="nav-link block hover:text-violet-600 transition-colors"
               >Blogs</a
             >
           </li>
           <li>
             <a
-              href="./Contact2.html"
+              href="../Contact/Contact.html"
               class="nav-link block hover:text-violet-600 transition-colors"
               >Contact</a
             >
@@ -303,14 +267,15 @@
           </li>
           <li>
             <a
-              href="../404.html"
+              href="../Donate/Donate.html"
               class="nav-link text-violet-500 block hover:text-violet-600 transition-colors"
-              ><i class="fa-solid fa-gift"></i> Donate Now</a
+            >
+              <i class="fa-solid fa-gift"></i> Donate Now</a
             >
           </li>
           <li>
             <a
-              href="../login.html"
+              href="./login.html"
               class="flex items-center gap-2 nav-link hover:text-violet-600 transition-colors"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -358,323 +323,239 @@
       </script>
     </header>
 
-    <!-- BreadCrumb -->
-    <section class="overflow-hidden overflow-x-hidden">
-      <div
-        class="flex flex-wrap items-center space-x-2 text-sm text-gray-500 font-medium py-2 px-4 rounded-lg"
+    <!-- Hero Section -->
+    <section
+      class="max-w-6xl mx-auto py-8 px-6 text-center overflow-hidden overflow-x-hidden"
+    >
+      <h2
+        data-aos="zoom-in-up"
+        data-aos-delay="50"
+        class="text-2xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-purple-500 pb-4"
       >
-        <a href="../index.html">
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16 7.609c.352 0 .69.122.96.343l.111.1 6.25 6.25v.001a1.5 1.5 0 0 1 .445 1.071v7.5a.89.89 0 0 1-.891.891H9.125a.89.89 0 0 1-.89-.89v-7.5l.006-.149a1.5 1.5 0 0 1 .337-.813l.1-.11 6.25-6.25c.285-.285.67-.444 1.072-.444Zm5.984 7.876L16 9.5l-5.984 5.985v6.499h11.968z"
-              fill="#475569"
-              stroke="#475569"
-              stroke-width=".094"
-            />
-          </svg>
-        </a>
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="m14.413 10.663-6.25 6.25a.939.939 0 1 1-1.328-1.328L12.42 10 6.836 4.413a.939.939 0 1 1 1.328-1.328l6.25 6.25a.94.94 0 0 1-.001 1.328"
-            fill="#CBD5E1"
-          />
-        </svg>
-        <a href="../Home/Home.html">Home</a>
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="m14.413 10.663-6.25 6.25a.939.939 0 1 1-1.328-1.328L12.42 10 6.836 4.413a.939.939 0 1 1 1.328-1.328l6.25 6.25a.94.94 0 0 1-.001 1.328"
-            fill="#CBD5E1"
-          />
-        </svg>
-        <a href="./Donate2.html" class="text-violet-500">Donate</a>
-      </div>
+        Empower Change Through Sponsorship
+      </h2>
+      <p
+        data-aos="zoom-in-up"
+        data-aos-delay="100"
+        class="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-3"
+      >
+        Become a valued sponsor and support our initiatives in education,
+        healthcare, hunger relief, environment care, and community development.
+        Every sponsorship drives real impact.
+      </p>
+      <!-- <img
+        src="https://i.postimg.cc/3xFhS2rV/donation-hero.jpg"
+        alt="Sponsor Now"
+        class="w-full md:w-3/4 lg:w-1/2 mx-auto rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-500"
+      /> -->
     </section>
 
-    <!-- Home-Section  -->
-    <main class="overflow-hidden overflow-x-hidden pb-8">
-      <div
-        class="grid lg:grid-cols-2 items-center gap-6 max-w-[1500px] mx-auto px-3"
+    <!-- Sponsorship Tiers -->
+    <section
+      class="max-w-6xl mx-auto px-6 my-8 overflow-hidden overflow-x-hidden"
+    >
+      <h3
+        data-aos="zoom-in"
+        data-aos-delay="50"
+        class="text-2xl md:text-3xl font-bold text-center text-violet-700 dark:text-violet-400 mb-4"
       >
-        <!-- image -->
-        <div
-          data-aos="fade-up-right"
-          data-aos-delay="200"
-          class="flex items-center justify-center h-full relative"
-        >
-          <img
-            class="rounded-2xl w-full md:h-[300px] object-cover object-center"
-            src="https://i.postimg.cc/xTcybHqQ/medium-shot-volunteers-with-food-packs-1.jpg"
-            alt="image"
-          />
-        </div>
-
-        <!-- content -->
-        <div class="flex flex-col w-full space-y-4">
-          <p
-            data-aos="fade-up-left"
-            data-aos-delay="50"
-            class="w-fit text-xs rounded-3xl px-4 py-2 border-2 border-gray-300 font-semibold text-gray-500 uppercase"
-          >
-            Donate Us
-          </p>
-          <h1
-            data-aos="fade-up-left"
-            data-aos-delay="100"
-            class="text-xl md:text-3xl lg:text-5xl font-semibold"
-          >
-            Your Support
-            <span
-              class="bg-gradient-to-r from-violet-900 via-violet-600 to-violet-500 text-transparent bg-clip-text"
-              >Changes</span
-            >
-            Lives
-          </h1>
-          <p
-            data-aos="fade-up-left"
-            data-aos-delay="150"
-            class="text-sm md:text-[16px]"
-          >
-            Every contribution, big or small, helps us bring hope, dignity, and
-            opportunity to those who need it most.
-          </p>
-
-          <!-- Goal -->
+        Choose Your Sponsorship Tier
+      </h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Bronze Tier -->
+        <div data-aos="fade-right" data-aos-delay="50">
           <div
-            data-aos="fade-up-left"
-            data-aos-delay="150"
-            class="mt-4 w-full bg-gray-100 dark:bg-white/10 p-3 rounded-2xl"
+            class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-6 rounded-3xl shadow-lg text-center hover:scale-105 transform transition duration-300"
           >
-            <div
-              class="flex flex-wrap space-y-3 sm:space-y-0 items-center justify-between text-slate-950"
+            <i class="fas fa-gem text-4xl text-orange-500 mb-4"></i>
+            <h4
+              class="text-xl font-semibold mb-2 text-gray-800 dark:text-white uppercase"
             >
-              <h1 class="text-sm font-semibold p-4 bg-green-200 rounded-xl">
-                Goal <span class="font-medium">- $540k</span>
-              </h1>
-              <h1 class="text-sm font-semibold p-4 bg-red-200 rounded-xl">
-                Donated <span class="font-medium">- $140k</span>
-              </h1>
-              <h1 class="text-sm font-semibold p-4 bg-yellow-200 rounded-xl">
-                To Go <span class="font-medium">- $400k</span>
-              </h1>
-              <h1 class="text-sm font-semibold p-4 bg-cyan-200 rounded-xl">
-                We Served <span class="font-medium">- $240k</span>
-              </h1>
+              Bronze
+            </h4>
+            <div class="text-left">
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                Support with $100 per month and help us reach more communities.
+              </p>
+              <ul
+                class="text-gray-700 dark:text-gray-400 text-sm mb-2 list-disc list-inside"
+              >
+                <li>Monthly newsletter</li>
+                <li>Recognition on website</li>
+                <li>Support food & water for one family.</li>
+                <li>Receive monthly project updates.</li>
+              </ul>
             </div>
-
-            <!-- <div
-              class="w-full h-2 rounded-3xl bg-gray-400 dark:bg-gray-200 overflow-hidden"
-            >
-              <div
-                data-aos="fade-right"
-                data-aos-delay="500"
-                data-aos-easing="ease-in-out"
-                class="h-2 rounded-3xl bg-violet-500 w-4/6"
-              ></div>
-            </div>
-            <div class="flex items-center justify-between pt-2">
-              <p class="text-sm font-bold">Raised</p>
-              <p class="text-sm font-bold">70%</p>
-            </div> -->
+            <!-- <a
+            href="#sponsorForm"
+            class="bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-600 hover:to-orange-400 text-white font-bold px-6 py-2 rounded-2xl shadow-lg transition duration-300 transform hover:scale-105"
+          >
+            Sponsor $100
+          </a> -->
           </div>
         </div>
-      </div>
-    </main>
-
-    <!-- Content -->
-    <section class="mx-4 pt-8 md:mx-5 overflow-hidden overflow-x-hidden">
-      <div class="mx-auto max-w-[1500px] space-y-3">
-        <div class="space-y-2">
-          <h1
-            data-aos="fade-up"
-            data-aos-delay="100"
-            class="text-2xl md:text-4xl lg:text-5xl font-bold"
+        <!-- Silver Tier -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-6 rounded-3xl shadow-lg text-center hover:scale-105 transform transition duration-300"
           >
-            Impact-Focused
-          </h1>
-          <p
-            data-aos="fade-up"
-            data-aos-delay="150"
-            class="text-sm md:text-lg text-gray-500"
-          >
-            When you give, you’re not just donating money—you’re giving a child
-            a chance to learn, a family access to healthcare, and a community
-            the hope of a brighter future. Join hands with us today and become
-            the reason someone smiles tomorrow.
-          </p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-4">
-          <div>
-            <p
-              data-aos="fade-up-right"
-              data-aos-delay="50"
-              class="py-3 text-lg md:text-xl font-bold"
+            <i class="fas fa-gem text-4xl text-slate-400 mb-4"></i>
+            <h4
+              class="text-xl font-semibold mb-2 text-gray-800 dark:text-white uppercase"
             >
-              Your Gift Creates Impact
-            </p>
-            <ul class="space-y-4 text-sm md:text-lg">
-              <li
-                data-aos="fade-up-right"
-                data-aos-delay="100"
-                class="flex items-center gap-4 text-slate-950 dark:text-gray-300"
+              Silver
+            </h4>
+            <div class="text-left">
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                Sponsor $500 per month and directly impact multiple initiatives.
+              </p>
+              <ul
+                class="text-gray-700 dark:text-gray-400 text-sm mb-2 list-disc list-inside"
               >
-                <i class="fa-solid fa-hand-point-right"></i> ₹500 feeds a child
-                for a week
-              </li>
-              <li
-                data-aos="fade-up-right"
-                data-aos-delay="150"
-                class="flex items-center gap-4 text-slate-950 dark:text-gray-300"
-              >
-                <i class="fa-solid fa-hand-point-right"></i> ₹1000 provides
-                medical care for one family
-              </li>
-              <li
-                data-aos="fade-up-right"
-                data-aos-delay="200"
-                class="flex items-center gap-4 text-slate-950 dark:text-gray-300"
-              >
-                <i class="fa-solid fa-hand-point-right"></i> ₹2500 supports a
-                child’s education for a month
-              </li>
-            </ul>
+                <li>Monthly newsletter</li>
+                <li>Recognition on website & social media</li>
+                <li>Priority invites to events</li>
+                <li>Priority invites to events</li>
+              </ul>
+            </div>
+            <!-- <a
+            href="#sponsorForm"
+            class="bg-gradient-to-r from-slate-400 to-slate-600 hover:from-slate-600 hover:to-slate-400 text-white font-bold px-6 py-2 rounded-2xl shadow-lg transition duration-300 transform hover:scale-105"
+          >
+            Sponsor $500
+          </a> -->
           </div>
-          <div>
-            <h1
-              data-aos="fade-up-left"
-              data-aos-delay="50"
-              class="py-3 text-lg md:text-xl font-bold"
+        </div>
+
+        <!-- Gold Tier -->
+        <div data-aos="fade-left" data-aos-delay="150">
+          <div
+            class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-6 rounded-3xl shadow-lg text-center hover:scale-105 transform transition duration-300"
+          >
+            <i class="fas fa-gem text-4xl text-yellow-500 mb-4"></i>
+            <h4
+              class="text-xl font-semibold mb-2 text-gray-800 dark:text-white uppercase"
             >
-              Your Kindness Changes Everything
-            </h1>
-            <p
-              data-aos="fade-up-left"
-              data-aos-delay="100"
-              class="text-sm md:text-[16px] text-gray-500"
-            >
-              We believe in the power of people helping people. Every rupee you
-              give becomes a lifeline for someone in need. With gratitude and
-              faith in humanity, we invite you to join us in building brighter
-              futures.
-            </p>
+              Gold
+            </h4>
+            <div class="text-left">
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                Invest $1000 per month and be a lead sponsor across all
+                programs.
+              </p>
+              <ul
+                class="text-gray-700 dark:text-gray-400 text-sm mb-2 list-disc list-inside"
+              >
+                <li>Monthly newsletter</li>
+                <li>Website & social media recognition</li>
+                <li>VIP invitations to events</li>
+                <li>Special impact reports</li>
+              </ul>
+            </div>
+            <!-- <a
+            href="#sponsorForm"
+            class="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-600 hover:to-yellow-400 text-white font-bold px-6 py-2 rounded-2xl shadow-lg transition duration-300 transform hover:scale-105"
+          >
+            Sponsor $1000
+          </a> -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Donation Form -->
-
-    <section class="mx-4 pt-8 md:mx-5 overflow-hidden overflow-x-hidden">
-      <div class="grid md:grid-cols-2 gap-12 max-w-[1500px] mx-auto">
-        <form
-          action="../404.html"
-          method="get"
-          data-aos="fade-right"
-          data-aos-delay="200"
-          class="my-auto space-y-6 p-2 rounded-2xl"
-        >
-          <div>
-            <h1 class="text-center text-2xl md:text-4xl font-semibold">
-              Donate Here
-            </h1>
-          </div>
-          <div class="flex flex-col justify-center gap-2 max-w-2xl">
-            <label class="px-1"
-              >Name <span class="text-red-600 text-lg">*</span></label
-            >
-            <input
-              required
-              type="text"
-              placeholder="Enter Your Name"
-              class="py-2 px-1 outline-none border-2 border-gray-300 rounded-md"
-            />
-          </div>
-          <div class="flex flex-col justify-center gap-2 max-w-2xl">
-            <label class="px-1"
-              >Email <span class="text-red-600 text-lg">*</span></label
-            >
-            <input
-              required
-              type="email"
-              placeholder="Enter your Email"
-              class="py-2 px-1 outline-none border-2 border-gray-300 rounded-md"
-            />
-          </div>
-          <div class="flex flex-col justify-center gap-2 max-w-2xl">
-            <label class="px-1"
-              >Donation Amount
-              <span class="text-red-600 text-lg">*</span></label
-            >
-            <select
-              required
-              class="py-2 px-1 outline-none border-2 border-gray-300 dark:bg-gray-950 rounded-md"
-            >
-              <option disabled value="">Donation Amount</option>
-              <option value="">20$</option>
-              <option value="">50$</option>
-              <option value="">100$</option>
-              <option value="">200$</option>
-            </select>
-          </div>
-          <div class="flex flex-col justify-center gap-2 max-w-2xl">
-            <label class="px-1">Donation Amount</label>
-            <input
-              type="number"
-              placeholder="Custom Amount to Donate"
-              class="py-2 px-1 outline-none border-2 border-gray-300 rounded-md"
-            />
-          </div>
-
-          <div class="pb-6">
-            <input
-              type="submit"
-              value="Donate Now"
-              href="../404.html"
-              class="bg-gradient-to-r from-purple-400 to-purple-500 font-medium text-white dark:text-white rounded-full px-8 py-3 text-sm"
-            />
-          </div>
-        </form>
-
-        <div
-          data-aos="fade-left"
-          data-aos-delay="100"
-          class="flex items-center justify-center w-full md:h-[550px] rounded-2xl relative"
-        >
-          <img
-            class="w-full md:h-[550px] object-cover object-center rounded-2xl"
-            src="https://i.postimg.cc/TYfgb7Gw/image.png"
-            alt="Donation"
+    <!-- Sponsor Form Section -->
+    <section
+      data-aos="zoom-in-up"
+      data-aos-delay="150"
+      id="sponsorForm"
+      class="max-w-5xl mx-auto my-8 p-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden overflow-x-hidden"
+    >
+      <h3
+        class="text-3xl font-bold text-center text-violet-700 dark:text-violet-400 mb-8 uppercase"
+      >
+        Become a Sponsor
+      </h3>
+      <form
+        action="../404.html"
+        method="get"
+        class="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
+        <div>
+          <label
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Full Name</label
+          >
+          <input
+            required
+            type="text"
+            placeholder="Your Name"
+            class="mt-1 w-full rounded-xl border border-gray-300 dark:border-gray-600 p-3 dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-violet-500 focus:outline-none"
           />
-          <!-- overlay -->
-          <div
-            class="absolute inset-0 flex justify-center w-full md:h-[550px] bg-gradient-to-r from-black to-black rounded-2xl opacity-80"
-          ></div>
         </div>
-      </div>
+        <div>
+          <label
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Email</label
+          >
+          <input
+            required
+            type="email"
+            placeholder="Your Email"
+            class="mt-1 w-full rounded-xl border border-gray-300 dark:border-gray-600 p-3 dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-violet-500 focus:outline-none"
+          />
+        </div>
+        <div>
+          <label
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Phone</label
+          >
+          <input
+            required
+            type="tel"
+            placeholder="Your Phone Number"
+            class="mt-1 w-full rounded-xl border border-gray-300 dark:border-gray-600 p-3 dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-violet-500 focus:outline-none"
+          />
+        </div>
+        <div>
+          <label
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Sponsorship Tier</label
+          >
+          <select
+            required
+            class="mt-1 w-full rounded-xl border border-gray-300 dark:border-gray-600 p-3 dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-violet-500 focus:outline-none"
+          >
+            <option>Bronze - $100/month</option>
+            <option>Silver - $500/month</option>
+            <option>Gold - $1000/month</option>
+          </select>
+        </div>
+        <div class="md:col-span-2">
+          <label
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Message / Notes</label
+          >
+          <textarea
+            placeholder="Any message or special request..."
+            class="mt-1 w-full rounded-xl border border-gray-300 dark:border-gray-600 p-3 dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-violet-500 focus:outline-none h-36"
+          ></textarea>
+        </div>
+        <div class="md:col-span-2 text-center">
+          <button
+            type="submit"
+            class="bg-gradient-to-r from-violet-600 to-purple-500 hover:from-purple-500 hover:to-violet-600 text-white font-bold px-8 py-3 rounded-2xl shadow-lg transition duration-300 transform hover:scale-105"
+          >
+            Become a Sponsor <i class="fas fa-hand-holding-heart ml-2"></i>
+          </button>
+        </div>
+      </form>
     </section>
 
     <!-- connect us  -->
 
     <section class="overflow-hidden overflow-x-hidden">
       <div
-        class="flex flex-col items-center max-w-5xl lg:w-full rounded-2xl px-4 py-8 mx-2 lg:mx-auto my-2 text-black dark:bg-gray-900 dark:text-white"
+        class="flex flex-col items-center max-w-5xl lg:w-full rounded-2xl px-4 py-4 md:py-8 mx-2 lg:mx-auto my-2 text-black dark:text-white"
       >
         <div
           class="flex flex-col justify-center items-center text-center sapce-y-3"
@@ -728,9 +609,9 @@
           </button>
         </form>
         <p
-          data-aos="fade-right"
-          data-aos-delay="250"
           class="text-gray-500 mt-6 text-xs text-center"
+          data-aos="fade-right"
+          data-aos-delay="300"
         >
           By subscribing, you agree to our Privacy Policy and consent to receive
           updates.
@@ -761,19 +642,19 @@
           class="flex-1 flex items-start justify-center md:justify-end gap-20 p-4"
         >
           <div>
-            <h2 class="font-semibold mb-5 text-gray-600 dark:text-gray-400">
+            <h2 class="font-semibold mb-5 text-gray-800 dark:text-gray-400">
               Company
             </h2>
             <ul class="text-sm space-y-2">
               <li><a href="../Home/Home.html">Home</a></li>
-              <li><a href="../About/About2.html">About us</a></li>
-              <li><a href="../Service/Service2.html">Services</a></li>
-              <li><a href="../Blog/Blog2.html">Blogs</a></li>
-              <li><a href="../Contact/Contact2.html">Contact us</a></li>
+              <li><a href="../About/About.html">About us</a></li>
+              <li><a href="../Service/Service.html">Services</a></li>
+              <li><a href="../Blog/Blog.html">Blogs</a></li>
+              <li><a href="../Contact/Contact.html">Contact us</a></li>
             </ul>
           </div>
           <div class="">
-            <h2 class="font-semibold mb-5 text-gray-600 dark:text-gray-400">
+            <h2 class="font-semibold mb-5 text-gray-800 dark:text-gray-400">
               Get in touch
             </h2>
             <div class="text-sm space-y-2">
