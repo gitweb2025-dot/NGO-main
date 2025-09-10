@@ -283,7 +283,7 @@
           </li>
           <li>
             <a
-              href="../Donate/Donate2.html"
+              href="../Donate/Donate.html"
               class="nav-link text-violet-500 block hover:text-violet-600 transition-colors"
               ><i class="fa-solid fa-gift"></i> Donate Now</a
             >
@@ -388,35 +388,118 @@
       </div>
 
       <!-- Charts -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <!-- Bar Chart -->
-        <div
-          class="bg-white dark:bg-white/10 p-6 rounded-xl shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)]"
-        >
-          <h2 class="text-lg font-semibold mb-4">Donations by Category</h2>
-          <div class="h-64">
-            <canvas id="barChart"></canvas>
-          </div>
-        </div>
-
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <!-- Doughnut Chart -->
         <div
           class="bg-white dark:bg-white/10 p-6 rounded-xl shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)]"
         >
           <h2 class="text-lg font-semibold mb-4">Programs Funding</h2>
-          <div class="h-64">
+          <div class="h-80">
             <canvas id="doughnutChart"></canvas>
           </div>
         </div>
 
+        <!-- Bar Chart -->
+        <div
+          class="bg-white dark:bg-white/10 p-6 rounded-xl shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)]"
+        >
+          <h2 class="text-lg font-semibold mb-4">Donations by Category</h2>
+          <div class="h-80">
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- pie chart with users -->
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <!-- Pie Chart -->
         <div
           class="bg-white dark:bg-white/10 p-6 rounded-xl shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)]"
         >
           <h2 class="text-lg font-semibold mb-4">User Roles</h2>
-          <div class="h-64">
+          <div class="h-80">
             <canvas id="pieChart"></canvas>
           </div>
+        </div>
+
+        <!-- top Donors -->
+        <div
+          class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-[0px_0px_17px_4px_rgba(50,_50,_93,_0.25)]"
+        >
+          <h3 class="text-lg font-semibold mb-4">Top Donors</h3>
+          <ul class="space-y-4">
+            <li class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://i.pravatar.cc/40?img=1"
+                  class="w-8 h-8 rounded-full"
+                />
+                <span class="font-medium">Sophia Johnson</span>
+              </div>
+              <span class="font-bold text-green-500">$25,000</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://i.pravatar.cc/40?img=2"
+                  class="w-8 h-8 rounded-full"
+                />
+                <span class="font-medium">Michael Lee</span>
+              </div>
+              <span class="font-bold text-green-500">$18,500</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://i.pravatar.cc/40?img=3"
+                  class="w-8 h-8 rounded-full"
+                />
+                <span class="font-medium">Olivia Martinez</span>
+              </div>
+              <span class="font-bold text-green-500">$15,000</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://i.pravatar.cc/40?img=4"
+                  class="w-8 h-8 rounded-full"
+                />
+                <span class="font-medium">Martinez Luicifer</span>
+              </div>
+              <span class="font-bold text-green-500">$95,000</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://i.pravatar.cc/40?img=7"
+                  class="w-8 h-8 rounded-full"
+                />
+                <span class="font-medium">John Smith</span>
+              </div>
+              <span class="font-bold text-green-500">$80,000</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://i.pravatar.cc/40?img=8"
+                  class="w-8 h-8 rounded-full"
+                />
+                <span class="font-medium">Antony Mark</span>
+              </div>
+              <span class="font-bold text-green-500">$60,000</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://i.pravatar.cc/40?img=6"
+                  class="w-8 h-8 rounded-full"
+                />
+                <span class="font-medium">John Martinez</span>
+              </div>
+              <span class="font-bold text-green-500">$10,000</span>
+            </li>
+          </ul>
         </div>
       </div>
 
