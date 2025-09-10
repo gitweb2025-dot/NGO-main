@@ -2342,6 +2342,13 @@
       }
     }
   }
+  .hover\:bg-violet-900 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-violet-900);
+      }
+    }
+  }
   .hover\:bg-gradient-to-br {
     &:hover {
       @media (hover: hover) {
@@ -2749,6 +2756,11 @@
   .md\:inline {
     @media (width >= 48rem) {
       display: inline;
+    }
+  }
+  .md\:h-80 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 80);
     }
   }
   .md\:h-\[300px\] {
