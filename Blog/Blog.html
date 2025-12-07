@@ -1182,10 +1182,7 @@
 
     <!-- connect us  -->
 
-    <section
-      class="scale-in-top overflow-hidden overflow-x-hidden"
-      style="animation-delay: 0.5s"
-    >
+    <section class="overflow-hidden overflow-x-hidden">
       <div
         class="flex flex-col items-center max-w-5xl lg:w-full rounded-2xl px-4 py-4 md:py-8 mx-2 lg:mx-auto my-2 text-black dark:text-white"
       >
@@ -1203,13 +1200,14 @@
         <form
           method="get"
           action="../404.html"
+          id="connect"
           class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6"
-          data-aos="fade-left"
-          data-aos-delay="200"
         >
           <input
             required
             type="email"
+            pattern=".+@gmail\.com$"
+            title="Email must end with @gmail.com"
             class="bg-white/10 px-4 py-2.5 border dark:border-white/20 rounded outline-none max-w-66 w-full"
             placeholder="Enter your email"
           />
@@ -1238,7 +1236,18 @@
             </svg>
           </button>
         </form>
-        <p class="text-gray-500 mt-6 text-xs text-center">
+
+        <!-- // connect-form reset -->
+        <script>
+          const connect = document.querySelector("#connect");
+          connect.addEventListener("submit", () => {
+            connect.reset();
+          });
+        </script>
+
+        <p
+          class="text-gray-500 mt-6 text-xs text-center"
+        >
           By subscribing, you agree to our Privacy Policy and consent to receive
           updates.
         </p>

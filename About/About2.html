@@ -183,7 +183,9 @@
             class="hover:text-violet-600 transition-colors"
             >Contact</a
           >
-          <a href="../Dashboard/Dashboard2.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../Dashboard/Dashboard2.html"
+            class="hover:text-violet-600 transition-colors"
             >Dashboard</a
           >
         </nav>
@@ -927,6 +929,7 @@
         <form
           method="get"
           action="../404.html"
+          id="sub-form"
           class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6"
           data-aos="fade-left"
           data-aos-delay="200"
@@ -934,6 +937,8 @@
           <input
             required
             type="email"
+            pattern=".+@gmail\.com$"
+            title="Email must end with @gmail.com"
             class="bg-white/10 px-4 py-2.5 border dark:border-white/20 rounded outline-none max-w-66 w-full"
             placeholder="Enter your email"
           />
@@ -962,6 +967,14 @@
             </svg>
           </button>
         </form>
+
+        <!-- // sub-form reset -->
+        <script>
+          const subForm = document.querySelector("#sub-form");
+          subForm.addEventListener("submit", () => {
+            subForm.reset();
+          });
+        </script>
         <p
           data-aos="fade-right"
           data-aos-delay="250"

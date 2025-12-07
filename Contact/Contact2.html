@@ -183,7 +183,9 @@
             class="hover:text-violet-600 transition-colors"
             >Contact</a
           >
-          <a href="../Dashboard/Dashboard2.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../Dashboard/Dashboard2.html"
+            class="hover:text-violet-600 transition-colors"
             >Dashboard</a
           >
         </nav>
@@ -467,7 +469,7 @@
         <div
           data-aos="fade-up-left"
           data-aos-delay="200"
-          class="flex items-center justify-center h-full relative "
+          class="flex items-center justify-center h-full relative"
         >
           <img
             class="rounded-2xl w-full md:h-[300px] object-cover object-center"
@@ -498,6 +500,7 @@
           <form
             action="../404.html"
             method="get"
+            id="contact"
             data-aos="fade-right"
             data-aos-delay="50"
             class="max-w-xl space-y-4 shadow-[0px_0px_17px_6px_rgba(0,_0,_0,_0.1)] dark:bg-white/5 border-1 border-white/20 p-4 rounded-2xl"
@@ -525,6 +528,8 @@
                 <input
                   required
                   type="email"
+                  pattern=".+@gmail\.com$"
+                  title="Email must end with @gmail.com"
                   placeholder="Enter Your E-mail"
                   class="outline-0 w-full"
                 />
@@ -558,6 +563,14 @@
               </button>
             </div>
           </form>
+
+          <!-- // contact-form reset -->
+          <script>
+            const contact = document.querySelector("#contact");
+            contact.addEventListener("submit", () => {
+              contact.reset();
+            });
+          </script>
         </div>
 
         <div class="space-y-6">
@@ -793,10 +806,14 @@
           receive from our donors, volunteers, and supporters.
         </p>
 
-        <div class="grid md:grid-cols-2 gap-6 mt-4 ">
-          <div data-aos="fade-right" data-aos-delay="200" class="bg-gradient-to-br from-gray-500 to-violet-300 rounded-2xl">
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="200"
+            class="bg-gradient-to-br from-gray-500 to-violet-300 rounded-2xl"
+          >
             <img
-              class="w-full md:h-[450px] object-cover rounded-2xl "
+              class="w-full md:h-[450px] object-cover rounded-2xl"
               src="../Assets/con2.webp"
               alt="Faq"
             />
@@ -915,6 +932,7 @@
         <form
           method="get"
           action="../404.html"
+          id="sub-form"
           class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6"
           data-aos="fade-left"
           data-aos-delay="200"
@@ -922,6 +940,8 @@
           <input
             required
             type="email"
+            pattern=".+@gmail\.com$"
+            title="Email must end with @gmail.com"
             class="bg-white/10 px-4 py-2.5 border dark:border-white/20 rounded outline-none max-w-66 w-full"
             placeholder="Enter your email"
           />
@@ -950,6 +970,14 @@
             </svg>
           </button>
         </form>
+
+        <!-- // sub-form reset -->
+        <script>
+          const subForm = document.querySelector("#sub-form");
+          subForm.addEventListener("submit", () => {
+            subForm.reset();
+          });
+        </script>
         <p
           data-aos="fade-right"
           data-aos-delay="250"

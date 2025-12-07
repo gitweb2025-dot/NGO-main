@@ -183,7 +183,9 @@
             class="hover:text-violet-600 transition-colors"
             >Contact</a
           >
-          <a href="../Dashboard/Dashboard2.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../Dashboard/Dashboard2.html"
+            class="hover:text-violet-600 transition-colors"
             >Dashboard</a
           >
         </nav>
@@ -581,11 +583,15 @@
 
     <!-- Donation Form -->
 
-    <section id="Donate" class="scroll-mt-20 mx-4 pt-8 md:mx-5 overflow-hidden overflow-x-hidden">
+    <section
+      id="Donate"
+      class="scroll-mt-20 mx-4 pt-8 md:mx-5 overflow-hidden overflow-x-hidden"
+    >
       <div class="grid md:grid-cols-2 gap-12 max-w-[1500px] mx-auto">
         <form
           action="../404.html"
           method="get"
+          id="donate"
           data-aos="fade-right"
           data-aos-delay="200"
           class="my-auto space-y-6 p-2 rounded-2xl"
@@ -613,6 +619,8 @@
             <input
               required
               type="email"
+              pattern=".+@gmail\.com$"
+              title="Email must end with @gmail.com"
               placeholder="Enter your Email"
               class="py-2 px-1 outline-none border-2 border-gray-300 rounded-md"
             />
@@ -651,6 +659,14 @@
             />
           </div>
         </form>
+
+        <!-- // connect-form reset -->
+        <script>
+          const donate = document.querySelector("#donate");
+          donate.addEventListener("submit", () => {
+            donate.reset();
+          });
+        </script>
 
         <div
           data-aos="fade-left"
@@ -692,6 +708,7 @@
         <form
           method="get"
           action="../404.html"
+          id="sub-form"
           class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6"
           data-aos="fade-left"
           data-aos-delay="200"
@@ -699,13 +716,15 @@
           <input
             required
             type="email"
+            pattern=".+@gmail\.com$"
+            title="Email must end with @gmail.com"
             class="bg-white/10 px-4 py-2.5 border dark:border-white/20 rounded outline-none max-w-66 w-full"
             placeholder="Enter your email"
           />
           <button
             type="submit"
             href="../404.html"
-            class="flex items-center justify-center gap-2 group text-white bg-violet-600 px-4 md:px-7 py-2.5 rounded active:scale-95 transition-all"
+            class="flex items-center justify-center gap-2 group text-white bg-black px-4 md:px-7 py-2.5 rounded active:scale-95 transition-all"
           >
             Subscribe
             <svg
@@ -727,6 +746,14 @@
             </svg>
           </button>
         </form>
+
+        <!-- // sub-form reset -->
+        <script>
+          const subForm = document.querySelector("#sub-form");
+          subForm.addEventListener("submit", () => {
+            subForm.reset();
+          });
+        </script>
         <p
           data-aos="fade-right"
           data-aos-delay="250"

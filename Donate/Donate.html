@@ -145,7 +145,9 @@
             class="hover:text-violet-600 transition-colors"
             >Contact</a
           >
-          <a href="../Dashboard/Dashboard.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../Dashboard/Dashboard.html"
+            class="hover:text-violet-600 transition-colors"
             >Dashboard</a
           >
         </nav>
@@ -521,7 +523,10 @@
 
     <!-- Donation Form -->
 
-    <section id="Donate" class="scroll-mt-20 mx-4 pt-8 md:mx-5 overflow-hidden overflow-x-hidden">
+    <section
+      id="Donate"
+      class="scroll-mt-20 mx-4 pt-8 md:mx-5 overflow-hidden overflow-x-hidden"
+    >
       <div class="grid md:grid-cols-2 gap-12 max-w-[1500px] mx-auto">
         <div
           data-aos="fade-right"
@@ -542,6 +547,7 @@
         <form
           action="../404.html"
           method="get"
+          id="donate"
           data-aos="fade-left"
           data-aos-delay="200"
           class="my-auto space-y-6"
@@ -580,6 +586,8 @@
             <input
               required
               type="email"
+              pattern=".+@gmail\.com$"
+              title="Email must end with @gmail.com"
               placeholder="Enter your Email"
               class="py-2 px-1 outline-none border-2 border-gray-300 rounded-md"
             />
@@ -618,6 +626,14 @@
             />
           </div>
         </form>
+
+        <!-- // connect-form reset -->
+        <script>
+          const donate = document.querySelector("#donate");
+          donate.addEventListener("submit", () => {
+            donate.reset();
+          });
+        </script>
       </div>
     </section>
 

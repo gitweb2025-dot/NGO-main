@@ -85,10 +85,7 @@
         <!-- Logo -->
         <!-- <a href="#" class="text-xl font-bold tracking-tight">Brand</a> -->
         <a class="" href="../index.html"
-          ><img
-            class="h-16 object-cover"
-            src="../Assets/Logo.webp"
-            alt="logo"
+          ><img class="h-16 object-cover" src="../Assets/Logo.webp" alt="logo"
         /></a>
 
         <!-- Desktop Nav -->
@@ -128,7 +125,9 @@
               </li>
             </ul>
           </div>
-          <a href="../About/About.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../About/About.html"
+            class="hover:text-violet-600 transition-colors"
             >About Us</a
           >
           <a
@@ -146,7 +145,9 @@
             class="hover:text-violet-600 transition-colors"
             >Contact</a
           >
-          <a href="../Dashboard/Dashboard.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../Dashboard/Dashboard.html"
+            class="hover:text-violet-600 transition-colors"
             >Dashboard</a
           >
         </nav>
@@ -521,6 +522,7 @@
         <form
           action="../404.html"
           method="get"
+          id="contact"
           class="w-full mx-auto flex flex-col items-center justify-center text-sm dark:text-white text-gray-600 px-4 py-8 rounded-2xl border-2 border-gray-400/50"
           data-aos="fade-up-left"
           data-aos-delay="200"
@@ -577,6 +579,8 @@
               </svg>
               <input
                 type="email"
+                pattern=".+@gmail\.com$"
+                title="Email must end with @gmail.com"
                 class="h-full px-2 w-full outline-none bg-transparent text-black dark:text-gray-300"
                 placeholder="Enter your email address"
                 required
@@ -591,18 +595,24 @@
               required
             ></textarea>
 
-            
-              <input
-                class="px-6 bg-violet-500 hover:bg-violet-600 text-white py-2.5 w-fit rounded-full mt-5"
-                type="submit"
-                value="Submit"
-                href="../404.html"
-              />
-        
+            <input
+              class="px-6 bg-violet-500 hover:bg-violet-600 text-white py-2.5 w-fit rounded-full mt-5"
+              type="submit"
+              value="Submit"
+              href="../404.html"
+            />
           </div>
         </form>
       </div>
     </section>
+
+    <!-- // connect-form reset -->
+    <script>
+      const contact = document.querySelector("#contact");
+      contact.addEventListener("submit", () => {
+        contact.reset();
+      });
+    </script>
 
     <!-- Faq  -->
 

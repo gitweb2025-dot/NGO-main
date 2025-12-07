@@ -96,6 +96,7 @@
           <form
             action="./404.html"
             method="get"
+            id="signup"
             class="md:w-96 m-4 flex flex-col items-center justify-center dark:bg-white/5 border-2 border-black/10 p-12 rounded-2xl shadow-2xl"
             data-aos="zoom-in"
             data-aos-delay="100"
@@ -172,6 +173,8 @@
               <input
                 type="email"
                 placeholder="Email id"
+                pattern=".+@gmail\.com$"
+                title="Email must end with @gmail.com"
                 class="bg-transparent text-gray-700 dark:text-white/70 placeholder-gray-500/80 outline-none text-sm w-full h-full"
                 required
               />
@@ -194,6 +197,8 @@
               </svg>
               <input
                 type="password"
+                pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9])(?=.*\d).+"
+                title="Password must include at least: one uppercase letter, one lowercase letter, one special character, and one number"
                 placeholder="Password"
                 class="bg-transparent text-gray-700 dark:text-white/70 placeholder-gray-500/80 outline-none text-sm w-full h-full"
                 required
@@ -204,7 +209,7 @@
               class="w-full flex items-center justify-center mt-8 text-gray-700 dark:text-white/70"
             >
               <div class="flex items-center gap-2">
-                <input class="h-5" type="checkbox" id="checkbox" />
+                <input required class="h-5" type="checkbox" id="checkbox" />
                 <label class="text-sm" for="checkbox">Remember me</label>
               </div>
               <!-- <a class="text-sm underline" href="#">Forgot password?</a> -->
@@ -222,6 +227,14 @@
               >
             </p>
           </form>
+
+          <!-- // connect-form reset -->
+          <script>
+            const signup = document.querySelector("#signup");
+            signup.addEventListener("submit", () => {
+              signup.reset();
+            });
+          </script>
         </div>
       </div>
     </section>

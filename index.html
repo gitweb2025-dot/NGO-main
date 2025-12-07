@@ -151,7 +151,9 @@
             class="hover:text-violet-600 transition-colors"
             >Contact</a
           >
-          <a href="./Dashboard/Dashboard.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="./Dashboard/Dashboard.html"
+            class="hover:text-violet-600 transition-colors"
             >Dashboard</a
           >
         </nav>
@@ -414,7 +416,7 @@
                   alt="slide-image"
                 />
                 <div
-                  class="space-y-2 w-64 h-80  z-10 absolute flex flex-col justify-end items-start inset-0 "
+                  class="space-y-2 w-64 h-80 z-10 absolute flex flex-col justify-end items-start inset-0"
                 >
                   <div class="bg-white/10 p-3 backdrop:blur-2xl">
                     <h1 class="text-lg">Shelter & Safety</h1>
@@ -434,7 +436,7 @@
                   alt="slide-image"
                 />
                 <div
-                  class="space-y-2 w-64 h-80  z-10 absolute flex flex-col justify-end items-start inset-0 "
+                  class="space-y-2 w-64 h-80 z-10 absolute flex flex-col justify-end items-start inset-0"
                 >
                   <div class="bg-white/10 p-3 backdrop:blur-2xl">
                     <h1 class="text-lg">Child Rights & Protection</h1>
@@ -454,7 +456,7 @@
                   alt="slide-image"
                 />
                 <div
-                  class="space-y-2 w-64 h-80  z-10 absolute flex flex-col justify-end items-start inset-0 "
+                  class="space-y-2 w-64 h-80 z-10 absolute flex flex-col justify-end items-start inset-0"
                 >
                   <div class="bg-white/10 p-3 backdrop:blur-2xl">
                     <h1 class="text-lg">Education for Every Child</h1>
@@ -474,7 +476,7 @@
                   alt="slide-image"
                 />
                 <div
-                  class="space-y-2 w-64 h-80 z-10 absolute flex flex-col justify-end items-start inset-0 "
+                  class="space-y-2 w-64 h-80 z-10 absolute flex flex-col justify-end items-start inset-0"
                 >
                   <div class="bg-white/10 p-3 backdrop:blur-2xl">
                     <h1 class="text-lg">Education</h1>
@@ -656,11 +658,7 @@
               data-aos="fade-up-right"
             >
               <div class="mb-2 flex flex-col justify-center items-center">
-                <img
-                  class="h-16 w-16"
-                  src="./Assets/impact.webp"
-                  alt="logo"
-                />
+                <img class="h-16 w-16" src="./Assets/impact.webp" alt="logo" />
               </div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
                 1M+
@@ -690,11 +688,7 @@
               data-aos="fade-up-right"
             >
               <div class="mb-2 flex flex-col justify-center items-center">
-                <img
-                  class="h-16 w-16"
-                  src="./Assets/year.webp"
-                  alt="logo"
-                />
+                <img class="h-16 w-16" src="./Assets/year.webp" alt="logo" />
               </div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
                 25+
@@ -813,21 +807,21 @@
             data-aos="zoom-in-up"
             data-aos-delay="50"
             alt="image"
-            class="h-16 w-16 object-cover object-top  rounded-full border-4 border-white"
+            class="h-16 w-16 object-cover object-top rounded-full border-4 border-white"
           />
           <img
             src="./Assets/men3.webp"
             data-aos="zoom-in-up"
             data-aos-delay="100"
             alt="image"
-            class="h-16 w-16 object-cover object-top  rounded-full border-4 border-white"
+            class="h-16 w-16 object-cover object-top rounded-full border-4 border-white"
           />
           <img
             src="./Assets/men4.webp"
             data-aos="zoom-in-up"
             data-aos-delay="150"
             alt="image"
-            class="h-16 w-16 object-cover object-top  rounded-full border-4 border-white"
+            class="h-16 w-16 object-cover object-top rounded-full border-4 border-white"
           />
         </div>
         <h1
@@ -1030,8 +1024,9 @@
               country. The regulation, the tax treatment, and the way.
             </p>
             <form
-              action="./404.html"
+              id="connect"
               method="get"
+              action="./404.html"
               class="mt-8 md:flex space-y-4 md:space-y-0 md:space-x-4"
               data-aos="zoom-in-left"
               data-aos-delay="100"
@@ -1039,16 +1034,26 @@
               <input
                 required
                 type="email"
+                pattern=".+@gmail\.com$"
+                title="Email must end with @gmail.com"
                 placeholder="Your email address"
                 class="w-full outline-none rounded-md border border-gray-300 p-4 text-black dark:text-white"
               />
               <button
                 type="submit"
-                class="rounded-md bg-violet-500 flex items-center px-7 text-white"
+                class="rounded-md bg-violet-500 flex items-center px-7 py-3 text-white cursor-pointer"
               >
                 Submit
               </button>
             </form>
+
+            <!-- // connect-form reset -->
+            <script>
+              const connect = document.querySelector("#connect");
+              connect.addEventListener("submit", () => {
+                connect.reset();
+              });
+            </script>
 
             <!-- Follow on -->
             <div

@@ -1431,6 +1431,7 @@
         <form
           method="get"
           action="../404.html"
+          id="sub-form"
           class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6"
           data-aos="fade-left"
           data-aos-delay="200"
@@ -1438,13 +1439,15 @@
           <input
             required
             type="email"
+            pattern=".+@gmail\.com$"
+            title="Email must end with @gmail.com"
             class="bg-white/10 px-4 py-2.5 border dark:border-white/20 rounded outline-none max-w-66 w-full"
             placeholder="Enter your email"
           />
           <button
             type="submit"
             href="../404.html"
-            class="flex items-center justify-center gap-2 group text-white bg-violet-600 px-4 md:px-7 py-2.5 rounded active:scale-95 transition-all"
+            class="flex items-center justify-center gap-2 group text-white bg-black px-4 md:px-7 py-2.5 rounded active:scale-95 transition-all"
           >
             Subscribe
             <svg
@@ -1466,6 +1469,14 @@
             </svg>
           </button>
         </form>
+
+        <!-- // sub-form reset -->
+        <script>
+          const subForm = document.querySelector("#sub-form");
+          subForm.addEventListener("submit", () => {
+            subForm.reset();
+          });
+        </script>
         <p
           data-aos="fade-right"
           data-aos-delay="250"

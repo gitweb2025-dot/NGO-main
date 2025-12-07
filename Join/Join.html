@@ -146,7 +146,9 @@
             class="hover:text-violet-600 transition-colors"
             >Contact</a
           >
-          <a href="../Dashboard/Dashboard.html" class="hover:text-violet-600 transition-colors"
+          <a
+            href="../Dashboard/Dashboard.html"
+            class="hover:text-violet-600 transition-colors"
             >Dashboard</a
           >
         </nav>
@@ -500,6 +502,7 @@
           <form
             action="../404.html"
             method="get"
+            id="join"
             class="grid grid-cols-1 md:grid-cols-2 gap-6"
           >
             <div>
@@ -522,6 +525,8 @@
               <input
                 required
                 type="email"
+                pattern=".+@gmail\.com$"
+                title="Email must end with @gmail.com"
                 placeholder="Your Email"
                 class="mt-1 w-full rounded-xl border border-gray-300 dark:border-gray-600 p-3 dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-violet-500 focus:outline-none"
               />
@@ -533,7 +538,7 @@
               >
               <input
                 required
-                type="tel"
+                type="number"
                 placeholder="Your Phone Number"
                 class="mt-1 w-full rounded-xl border border-gray-300 dark:border-gray-600 p-3 dark:bg-gray-900 dark:text-white focus:ring-2 focus:ring-violet-500 focus:outline-none"
               />
@@ -574,6 +579,14 @@
               </button>
             </div>
           </form>
+
+          <!-- // connect-form reset -->
+          <script>
+            const join = document.querySelector("#join");
+            join.addEventListener("submit", () => {
+              join.reset();
+            });
+          </script>
         </section>
       </div>
     </section>
@@ -597,18 +610,24 @@
             offers, and inspiration.
           </p>
         </div>
-        <form method="get" action="../404.html"
+        <form
+          method="get"
+          action="../404.html"
+          id="connect"
           class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6"
           data-aos="fade-left"
           data-aos-delay="200"
         >
           <input
-          required
+            required
             type="email"
+            pattern=".+@gmail\.com$"
+            title="Email must end with @gmail.com"
             class="bg-white/10 px-4 py-2.5 border dark:border-white/20 rounded outline-none max-w-66 w-full"
             placeholder="Enter your email"
           />
-          <button type="submit"
+          <button
+            type="submit"
             href="../404.html"
             class="flex items-center justify-center gap-2 group text-white bg-violet-600 px-4 md:px-7 py-2.5 rounded active:scale-95 transition-all"
           >
@@ -632,6 +651,14 @@
             </svg>
           </button>
         </form>
+
+        <!-- // connect-form reset -->
+        <script>
+          const connect = document.querySelector("#connect");
+          connect.addEventListener("submit", () => {
+            connect.reset();
+          });
+        </script>
         <p
           class="text-gray-500 mt-6 text-xs text-center"
           data-aos="fade-right"
